@@ -9,6 +9,8 @@ public class Test {
 		
 		System.out.println("Alex Ong is Toxic");
 		
+		int he = 12;
+		
 	}
 	
 }
