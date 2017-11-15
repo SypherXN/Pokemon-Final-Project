@@ -7,6 +7,8 @@ public class Test {
 		
 		System.out.println("William Lee");
 		
+		System.out.println("Alex Ong is Toxic");
+		
 	}
 	
 }
