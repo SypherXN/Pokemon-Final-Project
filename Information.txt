@@ -1,159 +1,159 @@
 Created by William 11/15/17
 
-Based off of Pokémon Yellow
+Based off of Pokémon Red
 
  Ndex	Pokémon		Type 1		Type 2		Location
- #001	Bulbasaur	Grass		Poison		Cerulean City
- #002	Ivysaur		Grass		Poison		Evolve Bulbasaur
- #003	Venusaur	Grass		Poison		Evolve Ivysaur
- #004	Charmander	Fire					Cerulean City
- #005	Charmeleon	Fire					Evolve
- #006	Charizard	Fire		Flying		Evolve
- #007	Squirtle	Water					Cerulean City
- #008	Wartortle	Water					Evolve	
- #009	Blastoise	Water					Evolve
- #010	Caterpie	Bug						Viridian Forest
- #011	Metapod		Bug						Viridian Forest
- #012	Butterfree	Bug			Flying		
- #013	Weedle		Bug			Poison
- #014	Kakuna		Bug			Poison
- #015	Beedrill	Bug			Poison
- #016	Pidgey		Normal		Flying
- #017	Pidgeotto	Normal		Flying
- #018	Pidgeot		Normal		Flying
- #019	Rattata		Normal	
- #020	Raticate	Normal	
- #021	Spearow		Normal		Flying
- #022	Fearow		Normal		Flying
- #023	Ekans		Poison	
- #024	Arbok		Poison	
- #025	Pikachu		Electric	
- #026	Raichu		Electric	
- #027	Sandshrew	Ground	
- #028	Sandslash	Ground	
- #029	Nidoran♀	Poison	
- #030	Nidorina	Poison	
- #031	Nidoqueen	Poison		Ground
- #032	Nidoran♂	Poison	
- #033	Nidorino	Poison	
- #034	Nidoking	Poison		Ground
- #035	Clefairy	Normal	
- #036	Clefable	Normal	
- #037	Vulpix		Fire	
- #038	Ninetales	Fire	
- #039	Jigglypuff	Normal	
- #040	Wigglytuff	Normal	
- #041	Zubat		Poison		Flying
- #042	Golbat		Poison		Flying
- #043	Oddish		Grass		Poison
- #044	Gloom		Grass		Poison
- #045	Vileplume	Grass		Poison
- #046	Paras		Bug			Grass
- #047	Parasect	Bug			Grass
- #048	Venonat		Bug			Poison
- #049	Venomoth	Bug			Poison
- #050	Diglett		Ground	
- #051	Dugtrio		Ground	
- #052	Meowth		Normal	
- #053	Persian		Normal	
- #054	Psyduck		Water	
- #055	Golduck		Water	
- #056	Mankey		Fighting	
- #057	Primeape	Fighting	
- #058	Growlithe	Fire	
- #059	Arcanine	Fire	
- #060	Poliwag		Water	
- #061	Poliwhirl	Water	
- #062	Poliwrath	Water		Fighting
- #063	Abra		Psychic	
- #064	Kadabra		Psychic	
- #065	Alakazam	Psychic	
- #066	Machop		Fighting	
- #067	Machoke		Fighting	
- #068	Machamp		Fighting	
- #069	Bellsprout	Grass		Poison
- #070	Weepinbell	Grass		Poison
- #071	Victreebel	Grass		Poison
- #072	Tentacool	Water		Poison
- #073	Tentacruel	Water		Poison
- #074	Geodude		Rock		Ground
- #075	Graveler	Rock		Ground
- #076	Golem		Rock		Ground
- #077	Ponyta		Fire	
- #078	Rapidash	Fire	
- #079	Slowpoke	Water		Psychic
- #080	Slowbro		Water		Psychic
- #081	Magnemite	Electric	Steel
- #082	Magneton	Electric	Steel
- #083	Farfetch'd	Normal		Flying
- #084	Doduo		Normal		Flying
- #085	Dodrio		Normal		Flying
- #086	Seel		Water	
- #087	Dewgong		Water		Ice
- #088	Grimer		Poison	
- #089	Muk			Poison	
- #090	Shellder	Water	
- #091	Cloyster	Water		Ice
- #092	Gastly		Ghost		Poison
- #093	Haunter		Ghost		Poison
- #094	Gengar		Ghost		Poison
- #095	Onix		Rock		Ground
- #096	Drowzee		Psychic	
- #097	Hypno		Psychic	
- #098	Krabby		Water	
- #099	Kingler		Water	
- #100	Voltorb		Electric	
- #101	Electrode	Electric	
- #102	Exeggcute	Grass		Psychic
- #103	Exeggutor	Grass		Psychic
- #104	Cubone		Ground	
- #105	Marowak		Ground	
- #106	Hitmonlee	Fighting	
- #107	Hitmonchan	Fighting	
- #108	Lickitung	Normal	
- #109	Koffing		Poison	
- #110	Weezing		Poison	
- #111	Rhyhorn		Ground		Rock
- #112	Rhydon		Ground		Rock
- #113	Chansey		Normal	
- #114	Tangela		Grass	
- #115	Kangaskhan	Normal	
- #116	Horsea		Water	
- #117	Seadra		Water	
- #118	Goldeen		Water	
- #119	Seaking		Water	
- #120	Staryu		Water	
- #121	Starmie		Water		Psychic
- #122	Mr. Mime	Psychic
- #123	Scyther		Bug			Flying
- #124	Jynx		Ice			Psychic
- #125	Electabuzz	Electric	
- #126	Magmar		Fire	
- #127	Pinsir		Bug	
- #128	Tauros		Normal	
- #129	Magikarp	Water	
- #130	Gyarados	Water		Flying
- #131	Lapras		Water		Ice
- #132	Ditto		Normal	
- #133	Eevee		Normal	
- #134	Vaporeon	Water	
- #135	Jolteon		Electric	
- #136	Flareon		Fire	
- #137	Porygon		Normal	
- #138	Omanyte		Rock		Water
- #139	Omastar		Rock		Water
- #140	Kabuto		Rock		Water
- #141	Kabutops	Rock		Water
- #142	Aerodactyl	Rock		Flying
- #143	Snorlax		Normal	
- #144	Articuno	Ice			Flying
- #145	Zapdos		Electric	Flying
- #146	Moltres		Fire		Flying
- #147	Dratini		Dragon	
- #148	Dragonair	Dragon	
- #149	Dragonite	Dragon		Flying
- #150	Mewtwo		Psychic	
- #151	Mew			Psychic	
+ #001	Bulbasaur	Grass		Poison		Pallet Town
+ #002	Ivysaur		Grass		Poison		Evolve Bulbasaur (Level 16)
+ #003	Venusaur	Grass		Poison		Evolve Ivysaur (Level 32)
+ #004	Charmander	Fire					Pallet Town
+ #005	Charmeleon	Fire					Evolve Charmander (Level 16)
+ #006	Charizard	Fire		Flying		Evolve Charmeleon (Level 32)
+ #007	Squirtle	Water					Pallet Town
+ #008	Wartortle	Water					Evolve Squirtle (Level 16)
+ #009	Blastoise	Water					Evolve Wartortle (Level 36)
+ #010	Caterpie	Bug						Viridian Forest, Route 25
+ #011	Metapod		Bug						Viridian Forest, Route 25
+ #012	Butterfree	Bug			Flying		Evolve Metapod (Level 10)
+ #013	Weedle		Bug			Poison		Routes 2, 24, 25 & Viridian Forest
+ #014	Kakuna		Bug			Poison		Routes 24, 25 & Viridian Forest
+ #015	Beedrill	Bug			Poison		Evolve Kakuna (Level 10)
+ #016	Pidgey		Normal		Flying		Routes 1, 2, 3, 4, 5, 6, 7, 8, 12, 13, 14, 15, 21, 24, 25 Grasses
+ #017	Pidgeotto	Normal		Flying 		Routes 14, 15, 21 Grasses
+ #018	Pidgeot		Normal		Flying		Evolve Pidgeotto (Level 36)
+ #019	Rattata		Normal					Routes 1, 2, 4, 9, 16, 21, 22 Grasses
+ #020	Raticate	Normal					Routes 16, 17, 18, 21
+ #021	Spearow		Normal		Flying		Routes 3, 4, 9, 10, 11, 16, 17, 18, 22, 23
+ #022	Fearow		Normal		Flying		Routes 17, 18, 23
+ #023	Ekans		Poison					Routes 4, 8, 9, 10, 11, 23 
+ #024	Arbok		Poison					Route 23 Grasses & Cerulean Cave 1F and B1F Walking 
+ #025	Pikachu		Electric				Viridian Forest Grasses & Power Plant Walking 
+ #026	Raichu		Electric				Cerulean Cave 1F & B1F Walking 
+ #027	Sandshrew	Ground					Unobtainable In Red (Trade) 
+ #028	Sandslash	Ground					Unobtainable In Red (Trade) 
+ #029	Nidoran♀	Poison					Route 22 & Safari Zone Grasses 
+ #030	Nidorina	Poison					Safari Zone Grasses
+ #031	Nidoqueen	Poison		Ground		Evolve Nidorina (Moon Stone) 
+ #032	Nidoran♂	Poison					Route 22 & Safari Zone Grasses 
+ #033	Nidorino	Poison					Safari Zone Grasses 
+ #034	Nidoking	Poison		Ground		Evolve Nidorino (Moon Stone) 
+ #035	Clefairy	Normal					Mt. Moom Walking 
+ #036	Clefable	Normal					Evolve Clefairy (Moon Stone) 
+ #037	Vulpix		Fire					Unobtainable In Red (Trade) 
+ #038	Ninetales	Fire					Unobtainable In Red (Trade) 
+ #039	Jigglypuff	Normal					Route 3 Grasses
+ #040	Wigglytuff	Normal					Cerulean Cave 2F Walking 
+ #041	Zubat		Poison		Flying		Mt. Moon, Rock Tunnel, Seafoam Islands & Victory Road Walking 
+ #042	Golbat		Poison		Flying		Cerulean Cave, Seafoam Islands & Victory Road Walking 
+ #043	Oddish		Grass		Poison		Routes 5, 6, 7, 12, 13, 14, 15, 24, 25 Grasses 
+ #044	Gloom		Grass		Poison		Routes 12, 13, 14, 15 Grasses 
+ #045	Vileplume	Grass		Poison		Evolve Gloom (Leaf Stone) 
+ #046	Paras		Bug			Grass		Mt. Moon Walking & Safari Zone Grasses 
+ #047	Parasect	Bug			Grass		Cerulean Cave Walking & Safari Zone Grasses 
+ #048	Venonat		Bug			Poison		Routes 12, 13, 14, 15 & Safari Zone Grasses 
+ #049	Venomoth	Bug			Poison		Cerulean Cave, Victory Road Walking & Safari Zone Grasses 
+ #050	Diglett		Ground					Diglett Cave Walking
+ #051	Dugtrio		Ground					Diglett Cave Walking
+ #052	Meowth		Normal					Unobtainable In Red (Trade) 
+ #053	Persian		Normal					Unobtainable In Red (Trade) 
+ #054	Psyduck		Water					Seafoam Islands Walking & Routes 24, 25, Cerulean City & Safari Zone Super Rod 
+ #055	Golduck		Water					Seafoam Islands Walking 
+ #056	Mankey		Fighting				Routes 5, 6, 7, 8 Grasses 
+ #057	Primeape	Fighting				Evolve Mankey (Level 28) 
+ #058	Growlithe	Fire					Routes 7 & 8 Grasses & Pokemon Mansion Walking 
+ #059	Arcanine	Fire					Evolve Growlithe (Fire Stone) 
+ #060	Poliwag		Water					Routes 6, 10, 11, 12, 13, 17, 18, 19, 20, 21, 22, 23, 24, 25, Pallet Town, Virdian City, Cerulean Cave, Vermilion City, Celadon City, Fuchsia City, Cinnabar Island, Cerulean Cave, Safari Zone & Seafoam Islands Good Rod 
+ #061	Poliwhirl	Water					Route 10 & Celadon City Super Rod 
+ #062	Poliwrath	Water		Fighting	Evolve Poliwhirl (Water Stone) 
+ #063	Abra		Psychic					Routes 24 & 25 Grasses 
+ #064	Kadabra		Psychic					Cerulean Cave 1F & 2F Walking 
+ #065	Alakazam	Psychic					Evolve Kadabra (Trade) 
+ #066	Machop		Fighting				Rock Tunnel & Victory Rock Walking 
+ #067	Machoke		Fighting				Victory Road Walking 
+ #068	Machamp		Fighting				Evolve Machoke (Trade) 
+ #069	Bellsprout	Grass		Poison		Unobtainable In Red (Trade) 
+ #070	Weepinbell	Grass		Poison		Unobtainable In Red (Trade) 
+ #071	Victreebel	Grass		Poison		Unobtainable In Red (Trade) 
+ #072	Tentacool	Water		Poison		Routes 12, 13, 17, Pallet Town & Viridian City Super Rod & Routes 19, 20, 21 Surfing 
+ #073	Tentacruel	Water		Poison		Evolve Tentacool (Level 30)
+ #074	Geodude		Rock		Ground		Mt. Moon, Rock Tunnel & Victory Road Walking 
+ #075	Graveler	Rock		Ground		Victory Road Walking 
+ #076	Golem		Rock		Ground		Evolve Graveler (Trade) 
+ #077	Ponyta		Fire					Pokemon Mansion Walking 
+ #078	Rapidash	Fire					Evolve Ponyta (Level 40) 
+ #079	Slowpoke	Water		Psychic		Route 10, Celadon City & Safari Zone Super Rod & Seafoam Islands Walking 
+ #080	Slowbro		Water		Psychic		Route 23 & Cerulean Cave Super Rod & Seafoam Islands Walking 
+ #081	Magnemite	Electric	Steel		Power Plant Walking 
+ #082	Magneton	Electric	Steel		Cerulean Cave & Power Plant Walking 
+ #083	Farfetch'd	Normal		Flying		Vermilion City Trade
+ #084	Doduo		Normal		Flying		Routes 16, 17, 18 & Safari Zone Grasses 
+ #085	Dodrio		Normal		Flying		Cerulean Cave 1F & 2F Walking 
+ #086	Seel		Water					Seafoam Islands Walking 
+ #087	Dewgong		Water		Ice			Seafoam Islands Walking 
+ #088	Grimer		Poison					Pokemon Mansion Walking 
+ #089	Muk			Poison					Pokemon Mansion Walking 
+ #090	Shellder	Water					Routes 6, 11, 19, 20, 21 & Seafoam Islands Super Rod & Seafoam Islands Walking 
+ #091	Cloyster	Water		Ice			Evolve Shellder (Water Stone) 
+ #092	Gastly		Ghost		Poison		Pokemon Tower Walking 
+ #093	Haunter		Ghost		Poison		Pokemon Tower Walking 
+ #094	Gengar		Ghost		Poison		Evolve Haunter (Trade) 
+ #095	Onix		Rock		Ground		Rock Tunnel & Victory Road Walking 
+ #096	Drowzee		Psychic					Route 11 Grasses 
+ #097	Hypno		Psychic					Cerulean Cave 1F Walking 
+ #098	Krabby		Water					Routes 6, 11, 12, 13, 17, 18, 24, 25, Cerulean City, Vermilion City, Fuchsia City, Cerulean Cave & Safari Zone Super Rod 
+ #099	Kingler		Water					Route 23 Super Rod 
+ #100	Voltorb		Electric				Route 10 Grasses & Power Plant Walking 
+ #101	Electrode	Electric				Cerulean Cave Walking 
+ #102	Exeggcute	Grass		Psychic		Safari Zone Grasses 
+ #103	Exeggutor	Grass		Psychic		Evolve Exeggcute (Leaf Stone) 
+ #104	Cubone		Ground					Pokemon Tower Walking
+ #105	Marowak		Ground					Cerulean Cave & Victory Road Walking 
+ #106	Hitmonlee	Fighting				Saffron City Dojo Gift 
+ #107	Hitmonchan	Fighting				Saffron City Dojo Gift 
+ #108	Lickitung	Normal					Route 18 Gate Trade 
+ #109	Koffing		Poison					Pokemon Mansion Walking 
+ #110	Weezing		Poison					Pokemon Mansion Walking 
+ #111	Rhyhorn		Ground		Rock		Safari Zone Grasses 
+ #112	Rhydon		Ground		Rock		Cerulean Cave Walking 
+ #113	Chansey		Normal					Cerulean Cave Walking & Safari Zone Grasses 
+ #114	Tangela		Grass					Route 21 Grasses 
+ #115	Kangaskhan	Normal					Safari Zone Grasses 
+ #116	Horsea		Water					Routes 19, 20, 21 & Seafoam Islands Super Rod 
+ #117	Seadra		Water					Route 23 & Cerulean Cave Super Rod & Seafoam Islands Walking 
+ #118	Goldeen		Water					Routes 6, 10, 11, 12, 13, 17, 18, 19, 20, 21, 22, 23, 24, 25, Pallet Town, Viridian City, Cerulean City, Vermilion City, Celadon City, Fuchsia City, Cinnabar Island, Cerulean Cave, Safari Zone, Seafoam Islands Good Rod 
+ #119	Seaking		Water					Route 23, Fuchsia City & Cerulean Cave Super Rod 
+ #120	Staryu		Water					Routes 19, 20, 21, Cinnabar Island & Seafoam Islands Super Rod
+ #121	Starmie		Water		Psychic		Evolve Staryu (Water Stone) 
+ #122	Mr. Mime	Psychic					Route 2 Trade 
+ #123	Scyther		Bug			Flying		Safari Zone Grasses 
+ #124	Jynx		Ice			Psychic		Cerulean City Trade 
+ #125	Electabuzz	Electric				Power Plant Walking 
+ #126	Magmar		Fire					Unobtainable In Red (Trade) 
+ #127	Pinsir		Bug						Unobtainable In Red (Trade) 
+ #128	Tauros		Normal					Safari Zone Grasses 
+ #129	Magikarp	Water					All Waters Old Rod 
+ #130	Gyarados	Water		Flying		Evolve Magikarp (Level 20) 
+ #131	Lapras		Water		Ice			Silph Co Gift Pokemon 
+ #132	Ditto		Normal					Routes 13, 14, 15, 23 Grasses & Cerulean Cave Walking 
+ #133	Eevee		Normal					Celadon City Gift Pokemon 
+ #134	Vaporeon	Water					Evolve Eevee (Water Stone) 
+ #135	Jolteon		Electric				Evolve Eevee (Thunder Stone) 
+ #136	Flareon		Fire					Evolve Eevee (Fire Stone) 
+ #137	Porygon		Normal					Celadon City Game Corner Prize 
+ #138	Omanyte		Rock		Water		Revive Helix Fossil On Cinnabar Island 
+ #139	Omastar		Rock		Water		Evolve Omanyte (Level 40) 
+ #140	Kabuto		Rock		Water		Revive Dome Fossil On Cinnabar Island 
+ #141	Kabutops	Rock		Water		Evolve Kabuto (Level 40) 
+ #142	Aerodactyl	Rock		Flying		Revive Old Amber On Cinnabar Island 
+ #143	Snorlax		Normal					Routes 12 & 16 Poke Flute 
+ #144	Articuno	Ice			Flying		Seafoam Islands 
+ #145	Zapdos		Electric	Flying		Power Plant 
+ #146	Moltres		Fire		Flying		Victory Road 
+ #147	Dratini		Dragon					Safari Zone Super Rod 
+ #148	Dragonair	Dragon					Evolve Dratini (Level 30) 
+ #149	Dragonite	Dragon		Flying		Evolve Dragonair (Level 55) 
+ #150	Mewtwo		Psychic					Cerulean Cave
+ #151	Mew			Psychic					Unobtainable Outside Mew Glitch
 
 Location
 
