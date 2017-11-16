@@ -44,6 +44,8 @@ public abstract class BasePokemon {
 		
 		String output = new String();
 		
+		output += "hi";
+		
 		return output;
 		
 	}
