@@ -54,7 +54,7 @@ public abstract class BasePokemon {
 	
 	public void changeMoves() {
 		
-	
+		System.out.println("Will is dumb");
 		
 	}
 	
