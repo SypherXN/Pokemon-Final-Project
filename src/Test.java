@@ -11,6 +11,8 @@ public class Test {
 		
 		int he = 12;
 		
+		System.out.println("");
+		
 	}
 	
 }
