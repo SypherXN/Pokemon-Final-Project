@@ -1,6 +1,6 @@
 Created by William 11/15/17
 oof
-Based off of Pokémon Yellow
+Based off of Pokémoassaan Yellow
 
  Ndex	Pokémon		Type 1		Type 2		Location
  #001	Bulbasaur	Grass		Poison		Cerulean City
