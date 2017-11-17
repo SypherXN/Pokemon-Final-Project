@@ -19,10 +19,10 @@ public class Pokedex {
 		Bulbasaur = new BasePokemon("Bulbasaur", "Grass", null, 45, 49, 49, 45, 1);
 	
 	/************* Pokemon Moves *************/
-	public static final Moves
+	public static final Move
 	//String name, int attack, int pp
 		
-		Tackle = new Moves("Tackle", 15, 5);
+		Tackle = new Move("Tackle", 15, 5);
 	
 	
 }

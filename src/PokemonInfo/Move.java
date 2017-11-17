@@ -4,7 +4,7 @@ package PokemonInfo;
  * Created by Matthew 11/15/17
  */
 
-public class Moves {
+public class Move {
 
 	public final String name;
 	private final int attack, pp;
@@ -14,7 +14,7 @@ public class Moves {
 	 * @param attack - attack of the move
 	 * @param pp - amount of moves
 	 */
-	public Moves(String name, int attack, int pp) {
+	public Move(String name, int attack, int pp) {
 		
 		this.name = name;
 		this.attack = attack;
