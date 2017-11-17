@@ -17,6 +17,12 @@ public class Type {
 		
 	}
 	
+	public String getName() {
+		
+		return type;
+		
+	}
+	
 	public boolean isEffective() {
 		
 		return false;
