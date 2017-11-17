@@ -2,6 +2,10 @@ package PokemonInfo;
 
 public class Type {
 
+	/*
+	 * Created by Matthew 11/16/17
+	 */
+	
 	public final String type;
 	
 	/*Creates a reference for the types of the Pokemon

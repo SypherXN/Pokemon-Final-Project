@@ -1,6 +1,10 @@
 package PokemonInfo;
 
 public class Game {
+	
+	/*
+	 * Created by Matthew 11/16/17
+	 */
 
 	/************* Pokemon Types *************/
 	public static final Type
