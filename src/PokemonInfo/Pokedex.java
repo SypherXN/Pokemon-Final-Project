@@ -1,6 +1,6 @@
 package PokemonInfo;
 
-public class Game {
+public class Pokedex {
 	
 	/*
 	 * Created by William 11/16/17
