@@ -3,7 +3,7 @@ package PokemonInfo;
 public class Game {
 	
 	/*
-	 * Created by Matthew 11/16/17
+	 * Created by William 11/16/17
 	 */
 
 	/************* Pokemon Types *************/
