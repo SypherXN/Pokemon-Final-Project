@@ -2,31 +2,50 @@ package PokemonInfo;
 
 public class Pokemon {
 
-	public int hp, attack, defense, speed, level, exp;
+	/*
+	 * Created by Matthew 11/17/17
+	 */
 	
-	public Pokemon(int hp, int attack, int defense, int speed, int level, int exp) {
-		
-		this.hp = hp;
-		this.attack = attack;
-		this.defense = defense;
-		this.speed = speed;
+	public int hp, attack, defense, speed, level, exp;
+	public final BasePokemon base;
+	
+	/* Creates a reference for Pokemon based off the BasePokemon
+	 * @param base - basepokemon object
+	 * @param level - level of the pokemon object
+	 */
+	public Pokemon(BasePokemon base, int level) {
+
+		this.base = 	base;
+		this.hp = base.getHP();
+		this.attack = base.getAttack();
+		this.defense = base.getDefense();
+		this.speed = base.getSpeed();
 		this.level = level;
-		this.exp = exp;
 		
 	}
 	
+	public void increaseHP() {	}
 	
+	public void increaseAttack() {	}
 	
-	public int getHP() { return hp; }
+	public void increaseDefense() {	}
 	
-	public int getAttack() { return attack; }
+	public void increaseSpeed() {	}
 	
-	public int getDefense() { return defense; }
+	public void increaseLevel() {	}
 	
-	public int getSpeed() { return speed; }
+	public void increaseEXP() {	}
 	
-	public int getLevel() { return level; }
+	public int getHP() 		{ return hp; }
 	
-	public int getExp() { return exp; }
+	public int getAttack() 	{ return attack; }
+	
+	public int getDefense() 	{ return defense; }
+	
+	public int getSpeed() 	{ return speed; }
+	
+	public int getLevel() 	{ return level; }
+	
+	public int getExp() 		{ return exp; }
 	
 }

@@ -20,15 +20,13 @@ public class Type {
 		
 		this.name = name;
 		this.type = type;
+		this.weaknessList = new ArrayList<> ();
+		this.resistanceList = new ArrayList<> ();
+		this.noEffectList = new ArrayList<> ();
 		
 	}
 	
-	public int getType() {
-		
-		return type;
-		
-	}
-	
+	//Adds Weaknesses of Types to weaknessList
 	public void addWeaknesses(Type...types) {
 		
 		for(int i = 0; i < types.length; i++) {
@@ -39,6 +37,7 @@ public class Type {
 		
 	}
 	
+	//Adds Resistances of Types to resistanceList
 	public void addResistances(Type...types) {
 		
 		for(int i = 0; i < types.length; i++) {
@@ -49,6 +48,7 @@ public class Type {
 		
 	}
 	
+	//Adds Nullification of Types to noEffectList
 	public void addNoEffect(Type...types) {
 		
 		for(int i = 0; i < types.length; i++) {
@@ -59,6 +59,7 @@ public class Type {
 		
 	}
 	
+	//Checks if otherType is found in weaknessList
 	public boolean isEffective(Type otherType) {
 		
 		if(weaknessList.contains(otherType)) {
@@ -71,6 +72,7 @@ public class Type {
 		
 	}
 	
+	//Checks if otherType is found in resistanceList
 	public boolean isResisted(Type otherType) {
 		
 		if(resistanceList.contains(otherType)) {
@@ -83,6 +85,7 @@ public class Type {
 		
 	}
 	
+	//Checks if otherType is found in noEffectList
 	public boolean noEffect(Type otherType) {
 		
 		if(noEffectList.contains(otherType)) {
@@ -94,5 +97,17 @@ public class Type {
 		return false;
 		
 	}
+	
+	public int getType() { return type; }
+	
+	public String getName() { return name; }
+	
+	public void printInformation() {
+		
+		System.out.println("Type Name: " + name + "\nWeaknesses: " + weaknessList + "\nResistances: " + resistanceList + "\nNo Effect: " + noEffectList);
+		
+	}
+	
+	public String toString() { return name; }
 	
 }

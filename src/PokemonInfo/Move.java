@@ -25,29 +25,13 @@ public class Move {
 		
 	}
 	
-	public String getName() {
-		
-		return name;
-		
-	}
+	public String getName() { return name; }
 	
-	public Type getType() {
-		
-		return type;
-		
-	}
+	public Type getType() { return type; }
 	
-	public int getAttack() {
-		
-		return attack;
-		
-	}
+	public int getAttack() { return attack; }
 	
-	public int getMaxPP() {
-		
-		return maxPP;
-		
-	}
+	public int getMaxPP() { return maxPP; }
 	
 	
 }

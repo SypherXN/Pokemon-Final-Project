@@ -7,7 +7,7 @@ public class Pokedex {
 	 */
 
 	/************* Pokemon Types *************/
-	//String type
+	//Type Name, Type Index
 	public static final Type
 	
 		Bug = 		new Type("Bug", 1),
@@ -26,17 +26,18 @@ public class Pokedex {
 		Rock = 		new Type("Rock", 14),
 		Water = 		new Type("Water", 15);
 	
-	public void initWeaknesses() {
+	//Initializes the Weaknesses of the Types
+	public static void initWeaknesses() {
 		
 		Bug.addWeaknesses();
-		Dragon.addWeaknesses();
+		Dragon.addWeaknesses(Dragon, Ice);
 		Ice.addWeaknesses();
 		Fighting.addWeaknesses();
 		Fire.addWeaknesses();
 		Flying.addWeaknesses();
 		Grass.addWeaknesses();
 		Ghost.addWeaknesses();
-		Ground.addWeaknesses();
+		Ground.addWeaknesses(Water);
 		Electric.addWeaknesses();
 		Normal.addWeaknesses();
 		Poison.addWeaknesses();
@@ -46,17 +47,18 @@ public class Pokedex {
 		
 	}
 	
-	public void initResistances() {
+	//Initializes the Resistances of the Types
+	public static void initResistances() {
 		
 		Bug.addResistances();
-		Dragon.addResistances();
+		Dragon.addResistances(Fire, Grass);
 		Ice.addResistances();
 		Fighting.addResistances();
 		Fire.addResistances();
 		Flying.addResistances();
 		Grass.addResistances();
 		Ghost.addResistances();
-		Ground.addResistances();
+		Ground.addResistances(Fire);
 		Electric.addResistances();
 		Normal.addResistances();
 		Poison.addResistances();
@@ -66,7 +68,8 @@ public class Pokedex {
 		
 	}
 	
-	public void initNoEffect() {
+	//Initializes the Nullification of the Types
+	public static void initNoEffect() {
 		
 		Bug.addNoEffect();
 		Dragon.addNoEffect();
@@ -76,7 +79,7 @@ public class Pokedex {
 		Flying.addNoEffect();
 		Grass.addNoEffect();
 		Ghost.addNoEffect();
-		Ground.addNoEffect();
+		Ground.addNoEffect(Electric);
 		Electric.addNoEffect();
 		Normal.addNoEffect();
 		Poison.addNoEffect();
@@ -87,17 +90,24 @@ public class Pokedex {
 	}
 	
 	/********** Base Pokemon Stats **********/
-	//Name, First Type, Second Type, Base HP, Base Attack, Base Defense, Base Speed, ID Number 
+	//Pokemon Name, First Type, Second Type, Base HP, Base Attack, Base Defense, Base Speed, ID Number 
 	public static final BasePokemon
 	
 		Bulbasaur = 	new BasePokemon("Bulbasaur", Grass, null, 45, 49, 49, 45, 1),
 		Ivysaur = 	new BasePokemon("Ivysaur", Grass, Poison, 60, 62, 63, 60, 2);
 	
 	/************* Pokemon Moves *************/
-	public static final Move
 	//Name, Move Type, Move Attack, Max PP
+	public static final Move
 		
 		Tackle = new Move("Tackle", Normal, 15, 5);
+	
+	/***************** Items *****************/
+	//Item Name, Item Value
+	public static final Item
+	
+		Potion = new Item("Potion", 50);
+	
 	
 	
 }

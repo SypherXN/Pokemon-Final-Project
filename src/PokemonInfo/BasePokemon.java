@@ -44,4 +44,15 @@ public class BasePokemon {
 	
 	public int getSpeed() { return speed; }
 	
+	public String toString() {
+		
+		String output = new String();
+		
+		output = "Name: " + name + "\nType: " + firstType.getName() + "," + secondType.getName() + "\nHP: " + hp + 
+				"\nAttack: " + attack + "\nDefense: " + defense + "\nSpeed: " + speed + "\nNumber: " + number;
+		
+		return output;
+		
+	}
+	
 }
