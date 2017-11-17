@@ -4,7 +4,7 @@ package PokemonInfo;
  * Created by Matthew 11/15/17
  */
 
-public abstract class Moves {
+public class Moves {
 
 	private final int attack;
 	
