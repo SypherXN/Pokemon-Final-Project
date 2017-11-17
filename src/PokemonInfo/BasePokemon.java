@@ -36,5 +36,12 @@ public class BasePokemon {
 		
 	}
 	
+	public int getHP() { return hp; }
+	
+	public int getAttack() { return attack; }
+	
+	public int getDefense() { return defense; }
+	
+	public int getSpeed() { return speed; }
 	
 }
