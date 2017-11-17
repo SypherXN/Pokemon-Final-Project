@@ -6,14 +6,19 @@ package PokemonInfo;
 
 public class Moves {
 
-	private final int attack;
+	public final String name;
+	private final int attack, pp;
 	
 	/* Creates a reference to Moves to store their information
+	 * @param name - name of the move
 	 * @param attack - attack of the move
+	 * @param pp - amount of moves
 	 */
-	public Moves(int attack) {
+	public Moves(String name, int attack, int pp) {
 		
+		this.name = name;
 		this.attack = attack;
+		this.pp = pp;
 		
 	}
 	

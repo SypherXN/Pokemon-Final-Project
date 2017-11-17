@@ -2,12 +2,14 @@ package PokemonInfo;
 
 public class Type {
 
-	private final String firstType, secondType;
+	public final String type;
 	
-	public Type(String firstType, String secondType) {
+	/*Creates a reference for the types of the Pokemon
+	 * @param type - type of the Pokemon
+	 */
+	public Type(String type) {
 		
-		this.firstType = firstType;
-		this.secondType = secondType;
+		this.type = type;
 		
 	}
 	

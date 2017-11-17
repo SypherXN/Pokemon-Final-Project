@@ -8,8 +8,8 @@ import java.util.*;
 
 public class BasePokemon {
 
-	private final String name, firstType, secondType; 
-	private final int hp, attack, defense, speed, number;
+	public final String name, firstType, secondType; 
+	public final int hp, attack, defense, speed, number;
 	
 	/* Creates a reference to Pokemon that contains their stats and info
 	 * @param name - name of the Pokemon
