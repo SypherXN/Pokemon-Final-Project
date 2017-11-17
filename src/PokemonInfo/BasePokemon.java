@@ -8,7 +8,8 @@ import java.util.*;
 
 public class BasePokemon {
 
-	public final String name, firstType, secondType; 
+	public final String name;
+	public final Type firstType, secondType;
 	public final int hp, attack, defense, speed, number;
 	
 	/* Creates a reference to Pokemon that contains their stats and info
@@ -19,7 +20,7 @@ public class BasePokemon {
 	 * @param defense - base defense of the Pokemon when caught
 	 * @param speed - base speed of the Pokemon when caught
 	 */
-	public BasePokemon(String name, String firstType, String secondType, int hp, int attack, int defense, int speed, int number) {
+	public BasePokemon(String name, Type firstType, Type secondType, int hp, int attack, int defense, int speed, int number) {
 		
 		//Pokemon Info
 		this.name = name;

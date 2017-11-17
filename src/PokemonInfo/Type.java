@@ -23,166 +23,31 @@ public class Type {
 		
 	}
 	
-	public boolean isEffective(Type otherType) {
+	public void addWeaknesses(Type...types) {
 		
-		if(this.type == 1) { //Bug
+		Type[] weaknessList = new Type[types.length];
+		
+		for(int i = 0; i < types.length; i++) {
 			
-			switch(otherType.getType()) {
-			
-				case 5:
-				case 6:
-				case 14:
-					return true;
-			
-			}
-			
-		} else if(this.type == 2) { //Dragon
-			
-			switch(otherType.getType()) {
-			
-				case 2:
-				case 3:
-					return true;
-			
-			}
-			
-		} else if(this.type == 3) { //Ice
-			
-			switch(otherType.getType()) {
-			
-				case 4:
-				case 5:
-				case 14:
-					return true;
-			
-			}
-			
-		} else if(this.type == 4) { //Fighting
-			
-			switch(otherType.getType()) {
-			
-				case 6:
-				case 13:
-					return true;
-			
-			}
-			
-		} else if(this.type == 5) { //Fire
-			
-			switch(otherType.getType()) {
-			
-				case 9:
-				case 14:
-				case 15:
-					return true;
-			
-			}
-			
-		} else if(this.type == 6) { //Flying
-			
-			switch(otherType.getType()) {
-			
-				case 3:
-				case 10:
-				case 14:
-					return true;
-			
-			}
-			
-		} else if(this.type == 7) { //Grass
-			
-			switch(otherType.getType()) {
-			
-				case 1:
-				case 3:
-				case 5:
-				case 6:
-				case 12:
-					return true;
-			
-			}
-			
-		} else if(this.type == 8) { //Ghost
-			
-			switch(otherType.getType()) {
-			
-				case 8:
-					return true;
-			
-			}
-			
-		} else if(this.type == 9) { //Ground
-			
-			switch(otherType.getType()) {
-			
-				case 3:
-				case 7:
-				case 15:
-					return true;
-			
-			}
-			
-		} else if(this.type == 10) { //Electric
-			
-			switch(otherType.getType()) {
-			
-				case 9:
-					return true;
-			
-			}
-			
-		} else if(this.type == 11) { //Normal
-			
-			switch(otherType.getType()) {
-			
-				case 4:
-					return true;
-			
-			}
-			
-		} else if(this.type == 12) { //Poison
-			
-			switch(otherType.getType()) {
-			
-				case 9:
-				case 13:
-					return true;
-			
-			}
-			
-		} else if(this.type == 13) { //Psychic
-			
-			switch(otherType.getType()) {
-			
-				case 1:
-				case 8:
-					return true;
-			
-			}
-			
-		} else if(this.type == 14) { //Rock
-			
-			switch(otherType.getType()) {
-			
-				case 4:
-				case 7:
-				case 9:
-				case 15:
-					return true;
-			
-			}
-			
-		} else if(this.type == 15) { //Water
-			
-			switch(otherType.getType()) {
-			
-				case 7:
-				case 10:
-					return true;
-			
-			}
+			weaknessList[i] = types[i];
 			
 		}
+		
+	}
+	
+	public void addResistances(Type...types) {
+		
+		Type[] resistanceList = new Type[types.length];
+		
+		for(int i = 0; i < types.length; i++) {
+			
+			resistanceList[i] = types[i];
+			
+		}
+		
+	}
+	
+	public boolean isEffective(Type otherType) {
 		
 		return false;
 		

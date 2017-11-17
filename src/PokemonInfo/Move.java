@@ -7,18 +7,45 @@ package PokemonInfo;
 public class Move {
 
 	public final String name;
-	private final int attack, pp;
+	public final Type type;
+	public final int attack, maxPP;
 	
 	/* Creates a reference to Moves to store their information
 	 * @param name - name of the move
+	 * @param type - type of the move
 	 * @param attack - attack of the move
 	 * @param pp - amount of moves
 	 */
-	public Move(String name, int attack, int pp) {
+	public Move(String name, Type type, int attack, int maxPP) {
 		
 		this.name = name;
+		this.type = type;
 		this.attack = attack;
-		this.pp = pp;
+		this.maxPP = maxPP;
+		
+	}
+	
+	public String getName() {
+		
+		return name;
+		
+	}
+	
+	public Type getType() {
+		
+		return type;
+		
+	}
+	
+	public int getAttack() {
+		
+		return attack;
+		
+	}
+	
+	public int getMaxPP() {
+		
+		return maxPP;
 		
 	}
 	
