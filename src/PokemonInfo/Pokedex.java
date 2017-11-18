@@ -96,11 +96,11 @@ public class Pokedex {
 		Bulbasaur = 	new BasePokemon("Bulbasaur", Grass, null, 45, 49, 49, 45, 1),
 		Ivysaur = 	new BasePokemon("Ivysaur", Grass, Poison, 60, 62, 63, 60, 2);
 	
-	/************* Pokemon Moves *************/
+	/************** Base Moves **************/
 	//Name, Move Type, Move Attack, Max PP
-	public static final Move
+	public static final BaseMove
 		
-		Tackle = new Move("Tackle", Normal, 15, 5);
+		Tackle = new BaseMove("Tackle", Normal, 15, 5);
 	
 	/***************** Items *****************/
 	//Item Name, Item Value

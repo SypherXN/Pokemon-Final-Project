@@ -1,37 +1,45 @@
 package PokemonInfo;
 
-/*
- * Created by Matthew 11/15/17
- */
-
 public class Move {
 
-	public final String name;
-	public final Type type;
-	public final int attack, maxPP;
-	
-	/* Creates a reference to Moves to store their information
-	 * @param name - name of the move
-	 * @param type - type of the move
-	 * @param attack - attack of the move
-	 * @param pp - amount of moves
+	/*
+	 * Created by Matthew 11/17/17
 	 */
-	public Move(String name, Type type, int attack, int maxPP) {
+	
+	public BaseMove base;
+	public int pp;
+	
+	/* Creates an reference to the Move
+	 * @param base - base stats of the move
+	 */
+	public Move(BaseMove base) {
 		
-		this.name = name;
-		this.type = type;
-		this.attack = attack;
-		this.maxPP = maxPP;
+		this.base = base;
+		this.pp = base.getMaxPP();
 		
 	}
 	
-	public String getName() { return name; }
+	public boolean attemptUseMove() {
+		
+		if (pp > 0) {
+			
+			pp -= 1;
+			return true;
+			
+		} else {
+			
+			return false;
+			
+		}
+		
+	}
 	
-	public Type getType() { return type; }
+	public Type getType() { return base.getType(); }
 	
-	public int getAttack() { return attack; }
+	public int getAttack() { return base.getAttack(); }
 	
-	public int getMaxPP() { return maxPP; }
+	public int getPP() { return pp; }
+	
 	
 	
 }

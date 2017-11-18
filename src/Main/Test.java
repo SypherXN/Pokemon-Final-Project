@@ -12,6 +12,11 @@ public class Test {
 		
 		Pokedex.Dragon.printInformation();
 		
+		Pokemon Ivysaur = new Pokemon(Pokedex.Ivysaur, 15);
+		
+		System.out.println();
+		System.out.println(Ivysaur);
+		
 	}
 	
 }

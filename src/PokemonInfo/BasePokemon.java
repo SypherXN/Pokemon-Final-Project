@@ -36,6 +36,12 @@ public class BasePokemon {
 		
 	}
 	
+	public String getName() { return name; }
+	
+	public Type getFirstType() { return firstType; }
+	
+	public Type getSecondType() { return secondType; }
+	
 	public int getHP() { return hp; }
 	
 	public int getAttack() { return attack; }

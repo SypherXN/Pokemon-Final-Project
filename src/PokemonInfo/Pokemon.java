@@ -6,16 +6,21 @@ public class Pokemon {
 	 * Created by Matthew 11/17/17
 	 */
 	
-	public int hp, attack, defense, speed, level, exp;
+	public int maxHP, hp, attack, defense, speed, level, exp;
 	public final BasePokemon base;
 	
 	/* Creates a reference for Pokemon based off the BasePokemon
 	 * @param base - basepokemon object
+	 * @param one - move in slot 1
+	 * @param two - move in slot 2
+	 * @param three - move in slot 3
+	 * @param four - move in slot 4
 	 * @param level - level of the pokemon object
 	 */
 	public Pokemon(BasePokemon base, int level) {
 
 		this.base = 	base;
+		this.maxHP = base.getHP();
 		this.hp = base.getHP();
 		this.attack = base.getAttack();
 		this.defense = base.getDefense();
@@ -24,6 +29,8 @@ public class Pokemon {
 		
 	}
 	
+	public void increaseMaxHP() {	}
+
 	public void increaseHP() {	}
 	
 	public void increaseAttack() {	}
@@ -36,6 +43,8 @@ public class Pokemon {
 	
 	public void increaseEXP() {	}
 	
+	public int getMaxHP() 	{ return maxHP; }
+	
 	public int getHP() 		{ return hp; }
 	
 	public int getAttack() 	{ return attack; }
@@ -47,5 +56,15 @@ public class Pokemon {
 	public int getLevel() 	{ return level; }
 	
 	public int getExp() 		{ return exp; }
+	
+	public String toString() {
+		
+		String output = "Name: " + base.getName() + "\nType: " + base.getFirstType().getName() + " " + base.getSecondType().getName() + 
+				"\nMax HP: " + maxHP + "\nCurrent HP: " + hp + "\nAttack: " + attack + "\nDefense: " + defense + "\nSpeed: " + speed + 
+				"\nLevel: " + level;
+		
+		return output;
+		
+	}
 	
 }
