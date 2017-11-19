@@ -9,7 +9,8 @@ public class Pokedex {
 	/************* Pokemon Types *************/
 	//Type Name, Type Index
 	public static final Type
-	
+		
+		None = 		new Type("", 0),
 		Bug = 		new Type("Bug", 1),
 		Dragon = 	new Type("Dragon", 2),
 		Ice = 		new Type("Ice", 3),
@@ -93,7 +94,7 @@ public class Pokedex {
 	//Pokemon Name, First Type, Second Type, Base HP, Base Attack, Base Defense, Base Speed, ID Number 
 	public static final BasePokemon
 	
-		Bulbasaur = 	new BasePokemon("Bulbasaur", Grass, null, 45, 49, 49, 45, 1),
+		Bulbasaur = 	new BasePokemon("Bulbasaur", Grass, None, 45, 49, 49, 45, 1),
 		Ivysaur = 	new BasePokemon("Ivysaur", Grass, Poison, 60, 62, 63, 60, 2);
 	
 	/************** Base Moves **************/
