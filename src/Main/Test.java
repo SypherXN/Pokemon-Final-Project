@@ -1,5 +1,6 @@
 package Main;
 
+import Combat.UI;
 import PokemonInfo.*;
 
 public class Test {
@@ -16,6 +17,8 @@ public class Test {
 		
 		System.out.println();
 		System.out.println(Ivysaur);
+		
+		UI.combatMenu();
 		
 	}
 	

@@ -16,15 +16,15 @@ public class Pokedex {
 		Fighting = 	new Type("Fighting", 4),
 		Fire = 		new Type("Fire", 5),
 		Flying = 	new Type("Flying", 6),
-		Grass = 		new Type("Grass", 7),
-		Ghost = 		new Type("Ghost", 8),
+		Grass = 	new Type("Grass", 7),
+		Ghost = 	new Type("Ghost", 8),
 		Ground = 	new Type("Ground", 9),
 		Electric = 	new Type("Electric", 10),
 		Normal = 	new Type("Normal", 11),
 		Poison = 	new Type("Poison", 12),
 		Psychic = 	new Type("Psychic", 13),
 		Rock = 		new Type("Rock", 14),
-		Water = 		new Type("Water", 15);
+		Water = 	new Type("Water", 15);
 	
 	//Initializes the Weaknesses of the Types
 	public static void initWeaknesses() {
