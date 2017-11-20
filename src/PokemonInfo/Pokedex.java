@@ -10,22 +10,22 @@ public class Pokedex {
 	//Type Name, Type Index
 	public static final Type
 		
-		None = 		new Type("", 0),
+		NoType = 	new Type("", 0),
 		Bug = 		new Type("Bug", 1),
 		Dragon = 	new Type("Dragon", 2),
 		Ice = 		new Type("Ice", 3),
 		Fighting = 	new Type("Fighting", 4),
 		Fire = 		new Type("Fire", 5),
 		Flying = 	new Type("Flying", 6),
-		Grass = 	new Type("Grass", 7),
-		Ghost = 	new Type("Ghost", 8),
+		Grass = 		new Type("Grass", 7),
+		Ghost = 		new Type("Ghost", 8),
 		Ground = 	new Type("Ground", 9),
 		Electric = 	new Type("Electric", 10),
 		Normal = 	new Type("Normal", 11),
 		Poison = 	new Type("Poison", 12),
 		Psychic = 	new Type("Psychic", 13),
 		Rock = 		new Type("Rock", 14),
-		Water = 	new Type("Water", 15);
+		Water = 		new Type("Water", 15);
 	
 	//Initializes the Weaknesses of the Types
 	public static void initWeaknesses() {
@@ -94,13 +94,14 @@ public class Pokedex {
 	//Pokemon Name, First Type, Second Type, Base HP, Base Attack, Base Defense, Base Speed, ID Number 
 	public static final BasePokemon
 	
-		Bulbasaur = 	new BasePokemon("Bulbasaur", Grass, None, 45, 49, 49, 45, 1),
+		Bulbasaur = 	new BasePokemon("Bulbasaur", Grass, NoType, 45, 49, 49, 45, 1),
 		Ivysaur = 	new BasePokemon("Ivysaur", Grass, Poison, 60, 62, 63, 60, 2);
 	
 	/************** Base Moves **************/
 	//Name, Move Type, Move Attack, Max PP
 	public static final BaseMove
 		
+		NoBaseMove = new BaseMove("", NoType, 0, 0),
 		Tackle = new BaseMove("Tackle", Normal, 15, 5);
 	
 	/***************** Items *****************/

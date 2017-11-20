@@ -8,6 +8,7 @@ public class Pokemon {
 	
 	public int maxHP, hp, attack, defense, speed, level, exp;
 	public final BasePokemon base;
+	public Move[] moves = new Move[4];
 	
 	/* Creates a reference for Pokemon based off the BasePokemon
 	 * @param base - basepokemon object
@@ -28,6 +29,10 @@ public class Pokemon {
 		this.level = level;
 		
 	}
+	
+	public void changeMove(Move move, int moveIndex) { moves[moveIndex] = move; }
+	
+	public Move getMove(int index) { return moves[index]; }
 	
 	public void increaseMaxHP() {	}
 
