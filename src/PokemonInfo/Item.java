@@ -7,16 +7,16 @@ public class Item {
 	 */
 	
 	public final String name;
-	public final int value;
+	public final int heal;
 	
 	/* Creates a reference for the item information
 	 * @param name - name of the item
-	 * @param value - value of the effect of the item
+	 * @param value - healing amount
 	 */
-	public Item(String name, int value) {
+	public Item(String name, int heal) {
 		
 		this.name = name;
-		this.value = value;
+		this.heal = heal;
 		
 	}
 	

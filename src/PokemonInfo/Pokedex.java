@@ -17,15 +17,15 @@ public class Pokedex {
 		Fighting = 	new Type("Fighting", 4),
 		Fire = 		new Type("Fire", 5),
 		Flying = 	new Type("Flying", 6),
-		Grass = 		new Type("Grass", 7),
-		Ghost = 		new Type("Ghost", 8),
+		Grass = 	new Type("Grass", 7),
+		Ghost = 	new Type("Ghost", 8),
 		Ground = 	new Type("Ground", 9),
 		Electric = 	new Type("Electric", 10),
 		Normal = 	new Type("Normal", 11),
 		Poison = 	new Type("Poison", 12),
 		Psychic = 	new Type("Psychic", 13),
 		Rock = 		new Type("Rock", 14),
-		Water = 		new Type("Water", 15);
+		Water = 	new Type("Water", 15);
 	
 	//Initializes the Weaknesses of the Types
 	public static void initWeaknesses() {
@@ -93,9 +93,10 @@ public class Pokedex {
 	/********** Base Pokemon Stats **********/
 	//Pokemon Name, First Type, Second Type, Base HP, Base Attack, Base Defense, Base Speed, ID Number 
 	public static final BasePokemon
-	
+		
+		NoBasePokemon = new BasePokemon("", NoType, NoType, 0, 0, 0, 0, 0),
 		Bulbasaur = 	new BasePokemon("Bulbasaur", Grass, NoType, 45, 49, 49, 45, 1),
-		Ivysaur = 	new BasePokemon("Ivysaur", Grass, Poison, 60, 62, 63, 60, 2);
+		Ivysaur = 		new BasePokemon("Ivysaur", Grass, Poison, 60, 62, 63, 60, 2);
 	
 	/************** Base Moves **************/
 	//Name, Move Type, Move Attack, Max PP
@@ -109,6 +110,14 @@ public class Pokedex {
 	public static final Item
 	
 		Potion = new Item("Potion", 50);
+	
+	/*************** Pokemon ****************/
+	//PLACE HOLDER POKEMON WHEN THERE IS NOTHING
+	public static final Pokemon NoPokemon = new Pokemon(NoBasePokemon, 0);
+	
+	/***************** Move *****************/
+	//PLACE HOLDER POKEMON MOVE WHEN THERE IS NONE
+	public static final Move NoMove = new Move(NoBaseMove);
 	
 	
 	

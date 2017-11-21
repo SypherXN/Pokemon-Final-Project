@@ -8,7 +8,7 @@ public class Pokemon {
 	
 	public int maxHP, hp, attack, defense, speed, level, exp;
 	public final BasePokemon base;
-	public Move[] moves = new Move[4];
+	public Move[] moves = {Pokedex.NoMove, Pokedex.NoMove, Pokedex.NoMove, Pokedex.NoMove};
 	
 	/* Creates a reference for Pokemon based off the BasePokemon
 	 * @param base - basepokemon object
@@ -30,7 +30,7 @@ public class Pokemon {
 		
 	}
 	
-	public void changeMove(Move move, int moveIndex) { moves[moveIndex] = move; }
+	public void changeMove(Move move, int index) { moves[index] = move; }
 	
 	public Move getMove(int index) { return moves[index]; }
 	
