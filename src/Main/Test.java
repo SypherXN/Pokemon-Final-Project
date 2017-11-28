@@ -1,6 +1,7 @@
 package Main;
 
 import Combat.UI;
+import Player.PokemonStorage;
 import PokemonInfo.*;
 
 public class Test {
@@ -19,17 +20,21 @@ public class Test {
 		
 		Pokemon Ivysaur = new Pokemon(Pokedex.Ivysaur, 15);
 		
+		PokemonStorage storage = new PokemonStorage();
+		
+		storage.changePokemon(Ivysaur, 0);
+		
 		System.out.println();
 		System.out.println(Ivysaur);
 		
 		Move Tackle = new Move(Pokedex.Tackle);
-		Move Nothing = new Move(Pokedex.NoBaseMove);
+		Move RazorLeaf = new Move(Pokedex.RazorLeaf);
 		Ivysaur.changeMove(Tackle, 0);
-		Ivysaur.changeMove(Nothing, 1);
+		Ivysaur.changeMove(Pokedex.NoMove, 1);
 		Ivysaur.changeMove(Tackle, 2);
-		Ivysaur.changeMove(Nothing, 3);
+		Ivysaur.changeMove(RazorLeaf, 3);
 		
-		UI ui = new UI(Ivysaur);
+		UI ui = new UI(storage);
 		UI.combatMenu();
 		
 	}

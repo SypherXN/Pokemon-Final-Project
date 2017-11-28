@@ -103,13 +103,17 @@ public class Pokedex {
 	public static final BaseMove
 		
 		NoBaseMove = new BaseMove("", NoType, 0, 0),
-		Tackle = new BaseMove("Tackle", Normal, 15, 5);
+		Tackle = new BaseMove("Tackle", Normal, 15, 5),
+		RazorLeaf = new BaseMove("Razor Leaf", Grass, 35, 15);
 	
 	/***************** Items *****************/
 	//Item Name, Item Value
 	public static final Item
 	
-		Potion = new Item("Potion", 50);
+		Potion = new Item("Potion", 20),
+		SuperPotion = new Item("Super Potion", 50),
+		HyperPotion = new Item("Hyper Potion", 200),
+		MaxPotion = new Item("Max Potion", 9999999);
 	
 	/*************** Pokemon ****************/
 	//PLACE HOLDER POKEMON WHEN THERE IS NOTHING

@@ -26,13 +26,51 @@ public class Pokemon {
 		this.attack = base.getAttack();
 		this.defense = base.getDefense();
 		this.speed = base.getSpeed();
+		this.exp = 0;
 		this.level = level;
 		
 	}
 	
 	public void changeMove(Move move, int index) { moves[index] = move; }
 	
-	public Move getMove(int index) { return moves[index]; }
+	public boolean attemptLevelUp() {
+		
+		int target = 0;
+		
+		if (exp >= target) {
+			
+			exp -= target;
+			target += 30;
+			level += 1;
+			return true;
+			
+		}
+		
+		return false;
+		
+	}
+	
+	public boolean canEvolve() {
+		
+		int targetLevel = 0;
+		
+		if (level >= targetLevel) {
+			
+			return true;
+			
+		}
+		
+		return false;
+		
+	}
+	
+	public void heal(int healAmount) {
+		
+		this.hp += healAmount;
+		if (this.hp >= maxHP)
+			hp = maxHP;
+		
+	}
 	
 	public void increaseMaxHP() {	}
 
@@ -61,6 +99,10 @@ public class Pokemon {
 	public int getLevel() 	{ return level; }
 	
 	public int getExp() 		{ return exp; }
+
+	public Move getMove(int index) { return moves[index]; }
+	
+	public Move[] getMoves() { return moves; }
 	
 	public String toString() {
 		
