@@ -5,7 +5,9 @@ import java.util.Scanner;
 
 import Player.PokemonStorage;
 import Player.Story;
+import PokemonInfo.Item;
 import PokemonInfo.Move;
+import PokemonInfo.Pokedex;
 import PokemonInfo.Pokemon;
 
 public class UI {
@@ -17,6 +19,7 @@ public class UI {
 	private static Scanner input = new Scanner(System.in);
 	private static PokemonStorage storage;
 	private static Pokemon pokemon;
+	private static Item[] bag = {Pokedex.Potion, Pokedex.SuperPotion, Pokedex.HyperPotion, Pokedex.MaxPotion};
 	
 	public UI(PokemonStorage storage) {
 		
@@ -120,14 +123,28 @@ public class UI {
 	
 	public static void itemMenu() {
 		
-		String itemMenu = "Which item would you like to use?\n1. " /*+POTION NAME*/ + "\n2. " /*+SUPER POTION*/ + "\n3. " /*+HYPER POTION*/ + "\n4. " /*+MAX POTION*/ + "\n5. Cancel";
+		String itemMenu = "Which item would you like to use?\n1. " + bag[0].getName() + "\n2. " + bag[1].getName() + "\n3. " + bag[2].getName() + "\n4. " + bag[3].getName() + "\n5. Cancel";
 		System.out.println(itemMenu);
 		int choice = 0;
-		while (choice < 1 || choice > 7) {
+		while (choice < 0 || choice > 4) {
 			
 			try {
 				
-				choice = input.nextInt();
+				choice = input.nextInt() - 1;
+				
+				if (choice >= 0 && choice < 4) {
+					
+					if (!bag[choice].attemptUseItem()) System.out.println("You have no " + bag[choice].getName());
+					else {
+						
+						System.out.println("Which Pokemon would you like to heal?");
+						System.out.println(storage.getPokemon(0).base.getName() + "\n2. " + storage.getPokemon(1).base.getName() + "\n3. " + storage.getPokemon(2).base.getName() + "\n4. " + storage.getPokemon(3).base.getName() +
+											"\n5. " + storage.getPokemon(4).base.getName() + "\n6. " + storage.getPokemon(5).base.getName() + "\n7. Cancel");
+						
+						
+					}
+					
+				}
 				
 			} catch(InputMismatchException e) { System.out.println("That is an invalid choice, try again"); } finally { input.nextLine(); }
 			

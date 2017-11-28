@@ -16,16 +16,11 @@ public class Test {
 		Pokedex.initWeaknesses();
 		Pokedex.initNoEffect();
 		
-		Pokedex.Dragon.printInformation();
-		
 		Pokemon Ivysaur = new Pokemon(Pokedex.Ivysaur, 15);
 		
 		PokemonStorage storage = new PokemonStorage();
 		
 		storage.changePokemon(Ivysaur, 0);
-		
-		System.out.println();
-		System.out.println(Ivysaur);
 		
 		Move Tackle = new Move(Pokedex.Tackle);
 		Move RazorLeaf = new Move(Pokedex.RazorLeaf);

@@ -8,6 +8,7 @@ public class Item {
 	
 	public final String name;
 	public final int heal;
+	public int numberOwned = 0;
 	
 	/* Creates a reference for the item information
 	 * @param name - name of the item
@@ -20,8 +21,25 @@ public class Item {
 		
 	}
 	
+	public void obtainItem() { numberOwned++; }
+	
+	public boolean attemptUseItem() {
+		
+		if (numberOwned > 0) {
+			
+			numberOwned--;
+			return true;
+			
+		}
+		
+		return false;
+		
+	}
+	
 	public String getName() { return name; }
 	
 	public int getHeal() { return heal; }
+	
+	public int getNumberOwned() { return numberOwned; }
 	
 }
