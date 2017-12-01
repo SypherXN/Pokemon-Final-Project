@@ -17,16 +17,8 @@ public class UI {
 	 */
 	
 	private static Scanner input = new Scanner(System.in);
-	private static PokemonStorage storage;
 	private static Pokemon pokemon;
 	private static Item[] bag = {Pokedex.Potion, Pokedex.SuperPotion, Pokedex.HyperPotion, Pokedex.MaxPotion};
-	
-	public UI(PokemonStorage storage) {
-		
-		this.storage = storage;
-		this.pokemon = storage.getPokemon(0);
-		
-	}
 	
 	public static void combatMenu() {
 		
@@ -86,8 +78,8 @@ public class UI {
 	
 	public static void pokemonMenu() {
 		
-		String pokemonMenu = "Which Pokemon would you like to switch in?\n1. " + storage.getPokemon(0).base.getName() + "\n2. " + storage.getPokemon(1).base.getName() + "\n3. " + storage.getPokemon(2).base.getName() + "\n4. " + storage.getPokemon(3).base.getName() +
-				"\n5. " + storage.getPokemon(4).base.getName() + "\n6. " + storage.getPokemon(5).base.getName() + "\n7. Cancel";
+		String pokemonMenu = "Which Pokemon would you like to switch in?\n1. " + PokemonStorage.getPokemon(0).base.getName() + "\n2. " + PokemonStorage.getPokemon(1).base.getName() + "\n3. " + PokemonStorage.getPokemon(2).base.getName() + "\n4. " + PokemonStorage.getPokemon(3).base.getName() +
+				"\n5. " + PokemonStorage.getPokemon(4).base.getName() + "\n6. " + PokemonStorage.getPokemon(5).base.getName() + "\n7. Cancel";
 		System.out.println(pokemonMenu);
 		int choice = 0;
 		while (choice < 1 || choice > 7) {
@@ -98,9 +90,9 @@ public class UI {
 				
 				if (choice >= 0 && choice < 6) {
 					
-					if (storage.getPokemon(choice).getHP() > 0) {
+					if (PokemonStorage.getPokemon(choice).getHP() > 0) {
 						
-						pokemon = storage.getPokemon(choice);
+						pokemon = PokemonStorage.getPokemon(choice);
 						System.out.println("You sent out " + pokemon.base.getName());
 						
 					} else {
@@ -138,8 +130,8 @@ public class UI {
 					else {
 						
 						System.out.println("Which Pokemon would you like to heal?");
-						System.out.println(storage.getPokemon(0).base.getName() + "\n2. " + storage.getPokemon(1).base.getName() + "\n3. " + storage.getPokemon(2).base.getName() + "\n4. " + storage.getPokemon(3).base.getName() +
-											"\n5. " + storage.getPokemon(4).base.getName() + "\n6. " + storage.getPokemon(5).base.getName() + "\n7. Cancel");
+						System.out.println(PokemonStorage.getPokemon(0).base.getName() + "\n2. " + PokemonStorage.getPokemon(1).base.getName() + "\n3. " + PokemonStorage.getPokemon(2).base.getName() + "\n4. " + PokemonStorage.getPokemon(3).base.getName() +
+											"\n5. " + PokemonStorage.getPokemon(4).base.getName() + "\n6. " + PokemonStorage.getPokemon(5).base.getName() + "\n7. Cancel");
 						
 						
 					}

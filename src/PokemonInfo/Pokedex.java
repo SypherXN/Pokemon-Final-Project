@@ -91,12 +91,12 @@ public class Pokedex {
 	}
 	
 	/********** Base Pokemon Stats **********/
-	//Pokemon Name, First Type, Second Type, Base HP, Base Attack, Base Defense, Base Speed, ID Number 
+	//Pokemon Name, First Type, Second Type, Base HP, Base Attack, Base Defense, Base Speed, ID Number, HP Modifier, Attack Modifier, Defense Modifier, Speed Modifier
 	public static final BasePokemon
 		
-		NoBasePokemon = new BasePokemon("", NoType, NoType, 0, 0, 0, 0, 0),
-		Bulbasaur = 	new BasePokemon("Bulbasaur", Grass, NoType, 45, 49, 49, 45, 1),
-		Ivysaur = 		new BasePokemon("Ivysaur", Grass, Poison, 60, 62, 63, 60, 2);
+		NoBasePokemon = new BasePokemon("", NoType, NoType, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+		Bulbasaur = 	new BasePokemon("Bulbasaur", Grass, NoType, 45, 49, 49, 45, 1, 2, 1, 1, 1),
+		Ivysaur = 		new BasePokemon("Ivysaur", Grass, Poison, 60, 62, 63, 60, 2, 2, 2, 2, 2);
 	
 	/************** Base Moves **************/
 	//Name, Move Type, Move Attack, Max PP

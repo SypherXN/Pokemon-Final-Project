@@ -11,6 +11,7 @@ public class BasePokemon {
 	public final String name;
 	public final Type firstType, secondType;
 	public final int hp, attack, defense, speed, number;
+	public final int hpMod, attackMod, defenseMod, speedMod;
 	
 	/* Creates a reference to Pokemon that contains their stats and info
 	 * @param name - name of the Pokemon
@@ -20,7 +21,7 @@ public class BasePokemon {
 	 * @param defense - base defense of the Pokemon when caught
 	 * @param speed - base speed of the Pokemon when caught
 	 */
-	public BasePokemon(String name, Type firstType, Type secondType, int hp, int attack, int defense, int speed, int number) {
+	public BasePokemon(String name, Type firstType, Type secondType, int hp, int attack, int defense, int speed, int number, int hpMod, int attackMod, int defenseMod, int speedMod) {
 		
 		//Pokemon Info
 		this.name = name;
@@ -33,6 +34,12 @@ public class BasePokemon {
 		this.attack = attack;
 		this.defense = defense;
 		this.speed = speed;
+		
+		//Pokemon Stats Modifiers
+		this.hpMod = hpMod;
+		this.attackMod = attackMod;
+		this.defenseMod = defenseMod;
+		this.speedMod = speedMod;
 		
 	}
 	
@@ -49,6 +56,14 @@ public class BasePokemon {
 	public int getDefense() { return defense; }
 	
 	public int getSpeed() { return speed; }
+	
+	public int getMaxHPMod() { return maxHPMod; }
+	
+	public int getAttackMod() { return attackMod; }
+	
+	public int getDefenseMod() { return defenseMod; }
+	
+	public int getSpeedMod() { return speedMod; }
 	
 	public String toString() {
 		

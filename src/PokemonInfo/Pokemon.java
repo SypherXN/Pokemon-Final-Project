@@ -21,13 +21,13 @@ public class Pokemon {
 	public Pokemon(BasePokemon base, int level) {
 
 		this.base = 	base;
-		this.maxHP = base.getHP();
-		this.hp = base.getHP();
-		this.attack = base.getAttack();
-		this.defense = base.getDefense();
-		this.speed = base.getSpeed();
-		this.exp = 0;
 		this.level = level;
+		this.exp = 0;
+		this.maxHP = base.getHP() + (base.getMaxHPMod() * level);
+		this.attack = base.getAttack() + (base.getAttackMod() * level);
+		this.defense = base.getDefense() + (base.getDefenseMod() * level);
+		this.speed = base.getSpeed() + (base.getSpeedMod() * level);
+		this.hp = this.maxHP;
 		
 	}
 	
@@ -42,6 +42,11 @@ public class Pokemon {
 			exp -= target;
 			target += 30;
 			level += 1;
+			maxHP += base.getMaxHPMod();
+			hp = maxHP;
+			attack += base.getAttackMod();
+			defense += base.getDefenseMod();
+			speed += base.getSpeedMod();
 			return true;
 			
 		}
@@ -73,8 +78,6 @@ public class Pokemon {
 	}
 	
 	public void increaseMaxHP() {	}
-
-	public void increaseHP() {	}
 	
 	public void increaseAttack() {	}
 	

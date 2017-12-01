@@ -28,8 +28,6 @@ public class Test {
 		Ivysaur.changeMove(Pokedex.NoMove, 1);
 		Ivysaur.changeMove(Tackle, 2);
 		Ivysaur.changeMove(RazorLeaf, 3);
-		
-		UI ui = new UI(storage);
 		UI.combatMenu();
 		
 	}

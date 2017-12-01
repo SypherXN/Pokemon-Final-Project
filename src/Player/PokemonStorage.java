@@ -11,12 +11,12 @@ public class PokemonStorage {
 	
 	public static Pokemon[] storage = {Pokedex.NoPokemon, Pokedex.NoPokemon, Pokedex.NoPokemon, Pokedex.NoPokemon, Pokedex.NoPokemon, Pokedex.NoPokemon};
 	
-	public void changePokemon(Pokemon pokemon, int index) {
+	public static void changePokemon(Pokemon pokemon, int index) {
 		
 		storage[index] = pokemon;
 		
 	}
 	
-	public Pokemon getPokemon(int index) { return storage[index]; }
+	public static Pokemon getPokemon(int index) { return storage[index]; }
 	
 }

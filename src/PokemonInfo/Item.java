@@ -12,7 +12,7 @@ public class Item {
 	
 	/* Creates a reference for the item information
 	 * @param name - name of the item
-	 * @param value - healing amount
+	 * @param heal - healing amount
 	 */
 	public Item(String name, int heal) {
 		
