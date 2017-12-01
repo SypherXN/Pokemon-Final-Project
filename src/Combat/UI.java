@@ -13,7 +13,7 @@ public class UI {
 	 */
 	
 	private static Scanner input = new Scanner(System.in);
-	private static Pokemon pokemon = PokemonStorage.getPokemon(0);
+	public static Pokemon pokemon = PokemonStorage.getPokemon(0);
 	private static Item[] bag = {Pokedex.Potion, Pokedex.SuperPotion, Pokedex.HyperPotion, Pokedex.MaxPotion};
 	
 	public static void combatMenu() {
