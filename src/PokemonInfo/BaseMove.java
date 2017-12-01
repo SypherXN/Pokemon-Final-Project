@@ -25,6 +25,16 @@ public class BaseMove {
 		
 	}
 	
+	//Zero-Arg Constructor for NoBaseMove
+	public BaseMove() {
+		
+		this.name = "";
+		this.type = Pokedex.NoType;
+		this.attack = 0;
+		this.maxPP = 0;
+		
+	}
+	
 	public String getName() { return name; }
 	
 	public Type getType() { return type; }

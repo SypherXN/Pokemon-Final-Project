@@ -10,7 +10,7 @@ public class Pokedex {
 	//Type Name, Type Index
 	public static final Type
 		
-		NoType = 	new Type("", 0),
+		NoType = 	new Type(),
 		Bug = 		new Type("Bug", 1),
 		Dragon = 	new Type("Dragon", 2),
 		Ice = 		new Type("Ice", 3),
@@ -94,7 +94,7 @@ public class Pokedex {
 	//Pokemon Name, First Type, Second Type, Base HP, Base Attack, Base Defense, Base Speed, ID Number, HP Modifier, Attack Modifier, Defense Modifier, Speed Modifier, Evolve Level
 	public static final BasePokemon
 		
-		NoBasePokemon = new BasePokemon("", NoType, NoType, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+		NoBasePokemon = new BasePokemon(),
 		Bulbasaur = 	new BasePokemon("Bulbasaur", Grass, Poison, 45, 49, 49, 45, 1, 2, 1, 1, 1, 16),
 		Ivysaur = 		new BasePokemon("Ivysaur", Grass, Poison, 60, 62, 63, 60, 2, 2, 2, 2, 2, 32),
 		Venasaur =		new BasePokemon("Venasaur", Grass, Poison, 80, 82, 83, 80, 3, 3, 2, 2, 2, 101);

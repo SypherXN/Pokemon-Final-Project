@@ -26,6 +26,17 @@ public class Type {
 		
 	}
 	
+	//Zero-Arg Constructor Meant for NoType
+	public Type() {
+		
+		this.name = "";
+		this.type = 0;
+		this.weaknessList = new ArrayList<> ();
+		this.resistanceList = new ArrayList<> ();
+		this.noEffectList = new ArrayList<> ();
+		
+	}
+	
 	//Adds Weaknesses of Types to weaknessList
 	public void addWeaknesses(Type...types) {
 		

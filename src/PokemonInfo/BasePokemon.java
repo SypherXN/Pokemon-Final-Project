@@ -52,6 +52,30 @@ public class BasePokemon {
 		
 	}
 	
+	//Zero-Arg Constructor for NoBasePokemon
+	public BasePokemon() {
+		
+		//Pokemon Info
+		this.name = "";
+		this.firstType = Pokedex.NoType;
+		this.secondType = Pokedex.NoType;
+		this.number = 0;
+		this.evolveLevel = 101;
+		
+		//Pokemon Base Stats
+		this.hp = 0;
+		this.attack = 0;
+		this.defense = 0;
+		this.speed = 0;
+		
+		//Pokemon Stats Modifiers
+		this.hpMod = 0;
+		this.attackMod = 0;
+		this.defenseMod = 0;
+		this.speedMod = 0;
+		
+	}
+	
 	public String getName() { return name; }
 	
 	public Type getFirstType() { return firstType; }
