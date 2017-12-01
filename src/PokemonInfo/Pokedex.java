@@ -30,42 +30,42 @@ public class Pokedex {
 	//Initializes the Weaknesses of the Types
 	public static void initWeaknesses() {
 		
-		Bug.addWeaknesses();
+		Bug.addWeaknesses(Flying, Poison, Rock, Fire);
 		Dragon.addWeaknesses(Dragon, Ice);
-		Ice.addWeaknesses();
-		Fighting.addWeaknesses();
-		Fire.addWeaknesses();
-		Flying.addWeaknesses();
-		Grass.addWeaknesses();
-		Ghost.addWeaknesses();
-		Ground.addWeaknesses(Water);
-		Electric.addWeaknesses();
-		Normal.addWeaknesses();
-		Poison.addWeaknesses();
-		Psychic.addWeaknesses();
-		Rock.addWeaknesses();
-		Water.addWeaknesses();
+		Ice.addWeaknesses(Fighting, Rock, Fire);
+		Fighting.addWeaknesses(Flying, Psychic);
+		Fire.addWeaknesses(Ground, Rock, Water);
+		Flying.addWeaknesses(Rock, Electric, Ice);
+		Grass.addWeaknesses(Flying, Poison, Bug, Fire, Ice);
+		Ghost.addWeaknesses(Ghost);
+		Ground.addWeaknesses(Water, Grass, Ice);
+		Electric.addWeaknesses(Ground);
+		Normal.addWeaknesses(Fighting);
+		Poison.addWeaknesses(Ground, Bug);
+		Psychic.addWeaknesses(Bug);
+		Rock.addWeaknesses(Fighting, Ground, Water, Grass);
+		Water.addWeaknesses(Grass, Electric);
 		
 	}
 	
 	//Initializes the Resistances of the Types
 	public static void initResistances() {
 		
-		Bug.addResistances();
-		Dragon.addResistances(Fire, Grass);
-		Ice.addResistances();
-		Fighting.addResistances();
-		Fire.addResistances();
-		Flying.addResistances();
-		Grass.addResistances();
-		Ghost.addResistances();
-		Ground.addResistances();
-		Electric.addResistances();
+		Bug.addResistances(Fighting, Ground, Grass);
+		Dragon.addResistances(Fire, Water, Grass, Electric);
+		Ice.addResistances(Ice);
+		Fighting.addResistances(Rock, Bug);
+		Fire.addResistances(Bug, Fire, Grass);
+		Flying.addResistances(Fighting, Bug, Grass);
+		Grass.addResistances(Ground, Water, Grass, Electric);
+		Ghost.addResistances(Poison, Bug);
+		Ground.addResistances(Poison, Rock);
+		Electric.addResistances(Flying, Electric);
 		Normal.addResistances();
-		Poison.addResistances();
-		Psychic.addResistances();
-		Rock.addResistances();
-		Water.addResistances();
+		Poison.addResistances(Fighting, Poison, Grass);
+		Psychic.addResistances(Fighting, Psychic);
+		Rock.addResistances(Normal, Flying, Poison, Fire);
+		Water.addResistances(Fire, Water, Ice);
 		
 	}
 	
@@ -77,14 +77,14 @@ public class Pokedex {
 		Ice.addNoEffect();
 		Fighting.addNoEffect();
 		Fire.addNoEffect();
-		Flying.addNoEffect();
+		Flying.addNoEffect(Ground);
 		Grass.addNoEffect();
-		Ghost.addNoEffect();
+		Ghost.addNoEffect(Normal, Fighting);
 		Ground.addNoEffect(Electric);
 		Electric.addNoEffect();
-		Normal.addNoEffect();
+		Normal.addNoEffect(Ghost);
 		Poison.addNoEffect();
-		Psychic.addNoEffect();
+		Psychic.addNoEffect(Ghost);
 		Rock.addNoEffect();
 		Water.addNoEffect();
 		
@@ -97,7 +97,12 @@ public class Pokedex {
 		NoBasePokemon = new BasePokemon(),
 		Bulbasaur = 	new BasePokemon("Bulbasaur", Grass, Poison, 45, 49, 49, 45, 1, 2, 1, 1, 1, 16),
 		Ivysaur = 		new BasePokemon("Ivysaur", Grass, Poison, 60, 62, 63, 60, 2, 2, 2, 2, 2, 32),
-		Venasaur =		new BasePokemon("Venasaur", Grass, Poison, 80, 82, 83, 80, 3, 3, 2, 2, 2, 101);
+		Venasaur =		new BasePokemon("Venasaur", Grass, Poison, 80, 82, 83, 80, 3, 3, 2, 2, 2, 101),
+		Charmander =	new BasePokemon("Charmander", Fire, NoType, 39, 52, 43, 65, 4, 2, 2, 2, 2, 16),
+		Charmeleon =	new BasePokemon("Charmeleon", Fire, NoType, 58, 64, 58, 80, 5, 3, 2, 2, 2, 36);
+	
+	
+	
 	
 	/************** Base Moves **************/
 	//Name, Move Type, Move Attack, Max PP
