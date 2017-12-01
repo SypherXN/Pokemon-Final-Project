@@ -16,18 +16,30 @@ public class Test {
 		Pokedex.initWeaknesses();
 		Pokedex.initNoEffect();
 		
-		Pokemon Ivysaur = new Pokemon(Pokedex.Ivysaur, 15);
+		Pokemon Bulbasaur = new Pokemon(Pokedex.Bulbasaur, 30);
+		Pokemon Ivysaur = new Pokemon(Pokedex.Ivysaur, 42);
+		Pokemon Venasaur = new Pokemon(Pokedex.Venasaur, 100);
 		
-		PokemonStorage storage = new PokemonStorage();
+		System.out.println(Bulbasaur);
+		System.out.println(Ivysaur);
+		System.out.println(Venasaur);
 		
-		storage.changePokemon(Ivysaur, 0);
+		PokemonStorage.changePokemon(Bulbasaur,0);
+		PokemonStorage.changePokemon(Ivysaur, 1);
+		PokemonStorage.changePokemon(Venasaur, 2);
 		
 		Move Tackle = new Move(Pokedex.Tackle);
 		Move RazorLeaf = new Move(Pokedex.RazorLeaf);
-		Ivysaur.changeMove(Tackle, 0);
-		Ivysaur.changeMove(Pokedex.NoMove, 1);
-		Ivysaur.changeMove(Tackle, 2);
-		Ivysaur.changeMove(RazorLeaf, 3);
+		
+		Bulbasaur.changeMove(Tackle, 0);
+		Bulbasaur.changeMove(RazorLeaf, 1);
+		
+		Ivysaur.changeMove(Tackle, 1);
+		Ivysaur.changeMove(RazorLeaf, 2);
+		
+		Venasaur.changeMove(Tackle, 2);
+		Venasaur.changeMove(RazorLeaf, 3);
+		
 		UI.combatMenu();
 		
 	}

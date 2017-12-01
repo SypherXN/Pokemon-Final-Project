@@ -12,22 +12,31 @@ public class BasePokemon {
 	public final Type firstType, secondType;
 	public final int hp, attack, defense, speed, number;
 	public final int hpMod, attackMod, defenseMod, speedMod;
+	public final int evolveLevel;
 	
 	/* Creates a reference to Pokemon that contains their stats and info
 	 * @param name - name of the Pokemon
-	 * @param type - type of the Pokemon
+	 * @param firstType - first type of the Pokemon
+	 * @param secondType - second type of the Pokemon
+	 * @param number - pokedex number of the Pokemon
+	 * @param evolveLevel - level the Pokemon can evolve at
 	 * @param hp - base hp of the Pokemon when caught
 	 * @param attack - base attack of the Pokemon when caught
 	 * @param defense - base defense of the Pokemon when caught
 	 * @param speed - base speed of the Pokemon when caught
+	 * @param hpMod - hp modifier for leveling up
+	 * @param attackMod - attack modifier for leveling up
+	 * @param defenseMod - defense modifier for leveling up
+	 * @param speedMod - speed modifier for leveling up
 	 */
-	public BasePokemon(String name, Type firstType, Type secondType, int hp, int attack, int defense, int speed, int number, int hpMod, int attackMod, int defenseMod, int speedMod) {
+	public BasePokemon(String name, Type firstType, Type secondType, int hp, int attack, int defense, int speed, int number, int hpMod, int attackMod, int defenseMod, int speedMod, int evolveLevel) {
 		
 		//Pokemon Info
 		this.name = name;
 		this.firstType = firstType;
 		this.secondType = secondType;
 		this.number = number;
+		this.evolveLevel = evolveLevel;
 		
 		//Pokemon Base Stats
 		this.hp = hp;
@@ -48,22 +57,6 @@ public class BasePokemon {
 	public Type getFirstType() { return firstType; }
 	
 	public Type getSecondType() { return secondType; }
-	
-	public int getHP() { return hp; }
-	
-	public int getAttack() { return attack; }
-	
-	public int getDefense() { return defense; }
-	
-	public int getSpeed() { return speed; }
-	
-	public int getMaxHPMod() { return maxHPMod; }
-	
-	public int getAttackMod() { return attackMod; }
-	
-	public int getDefenseMod() { return defenseMod; }
-	
-	public int getSpeedMod() { return speedMod; }
 	
 	public String toString() {
 		

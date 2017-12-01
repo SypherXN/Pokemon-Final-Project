@@ -155,8 +155,6 @@ Based off of Pokémon Red
  #150	Mewtwo		Psychic					Cerulean Cave
  #151	Mew			Psychic					Unobtainable Outside Mew Glitch
 
-Location
-
-
-
 Moves
+	LINK THAT WE SHOULD USE FOR MOVE INFORMATION
+	https://pokemondb.net/move/generation/1

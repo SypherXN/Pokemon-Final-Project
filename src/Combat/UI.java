@@ -4,11 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import Player.PokemonStorage;
-import Player.Story;
-import PokemonInfo.Item;
-import PokemonInfo.Move;
-import PokemonInfo.Pokedex;
-import PokemonInfo.Pokemon;
+import PokemonInfo.*;
 
 public class UI {
 	
@@ -17,7 +13,7 @@ public class UI {
 	 */
 	
 	private static Scanner input = new Scanner(System.in);
-	private static Pokemon pokemon;
+	private static Pokemon pokemon = PokemonStorage.getPokemon(0);
 	private static Item[] bag = {Pokedex.Potion, Pokedex.SuperPotion, Pokedex.HyperPotion, Pokedex.MaxPotion};
 	
 	public static void combatMenu() {
