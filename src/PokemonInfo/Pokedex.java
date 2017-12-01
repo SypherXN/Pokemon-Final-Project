@@ -59,7 +59,7 @@ public class Pokedex {
 		Flying.addResistances();
 		Grass.addResistances();
 		Ghost.addResistances();
-		Ground.addResistances(Fire);
+		Ground.addResistances();
 		Electric.addResistances();
 		Normal.addResistances();
 		Poison.addResistances();
