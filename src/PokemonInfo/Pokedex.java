@@ -159,7 +159,7 @@ public class Pokedex {
 		Barrage = new BaseMove("Barrage", Normal, 15, 20),
 		Bind = new BaseMove("Bind", Normal, 15, 20),
 		Tackle = new BaseMove("Tackle", Normal, 15, 5),
-		RazorLeaf = new BaseMove("Razor Leaf", Grass, 35, 15);
+		RazorLeaf = new BaseMove("Razor Leaf", Grass, 55, 25);
 	
 	/***************** Items *****************/
 	//Item Name, Item Value

@@ -18,7 +18,7 @@ public class UI {
 	
 	public static void combatMenu() {
 		
-		if (UI.pokemon.hp < 1) { pokemonMenu(); return;}
+		if (UI.pokemon.hp < 1) { System.out.println(pokemon.base.getName() + " has fainted"); pokemonMenu(); return;}
 		
 		String combatMenu = "What would you like to do?\n1. Attack\n2. Change Pokemon\n3. Use Item\n4. Run";
 		System.out.println(combatMenu);
@@ -63,7 +63,6 @@ public class UI {
 					
 					Battle.dealDamage(moves[choice - 1]);
 					Battle.enemyDealDamage();
-					System.out.println(Battle.enemy.hp);
 					System.out.println("PP: " + moves[choice - 1].getPP());
 					
 				}
