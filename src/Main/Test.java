@@ -1,6 +1,6 @@
 package Main;
 
-import Combat.UI;
+import Combat.*;
 import Player.PokemonStorage;
 import PokemonInfo.*;
 
@@ -19,6 +19,7 @@ public class Test {
 		Pokemon Bulbasaur = new Pokemon(Pokedex.Bulbasaur, 30);
 		Pokemon Ivysaur = new Pokemon(Pokedex.Ivysaur, 42);
 		Pokemon Venasaur = new Pokemon(Pokedex.Venasaur, 100);
+		Pokemon Venasaur2 = new Pokemon(Pokedex.Venasaur, 100);
 		
 		System.out.println(Bulbasaur);
 		System.out.println(Ivysaur);
@@ -40,8 +41,20 @@ public class Test {
 		Venasaur.changeMove(Tackle, 2);
 		Venasaur.changeMove(RazorLeaf, 3);
 		
-		UI.combatMenu();
+		Venasaur.changeMove(Tackle, 0);
+		Venasaur.changeMove(RazorLeaf, 1);
+		Venasaur.changeMove(Tackle, 2);
+		Venasaur.changeMove(RazorLeaf, 3);
 		
+		Battle.setEnemy(Venasaur2);
+		
+		while (Battle.enemy.hp > 0) {
+			
+			UI.combatMenu();
+			System.out.println(Battle.enemy.hp);
+			System.out.println(UI.pokemon.hp);
+		
+		}
 	}
 	
 }

@@ -75,6 +75,12 @@ public class Pokemon {
 		
 	}
 	
+	public void takeDamage(int damageTaken) {
+		
+		hp -= damageTaken;
+		
+	}
+	
 	public void increaseMaxHP() {	}
 	
 	public void increaseAttack() {	}

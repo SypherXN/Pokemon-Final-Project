@@ -59,6 +59,9 @@ public class UI {
 						
 					}
 					
+					Battle.dealDamage(moves[choice]);
+					Battle.enemyDealDamage();
+					System.out.println(Battle.enemy.hp);
 					System.out.println("PP: " + moves[choice].getPP());
 					
 				}
