@@ -32,9 +32,11 @@ public class Battle {
 		
 		}	
 			
-		int damageDealt = (((((2 * enemy.level) / 5) + 2) * usedMove().getAttack() * (enemy.attack / UI.pokemon.defense) / 50 ) * modifier);
+		double damageDealt = (((((2 * enemy.level) / 5) + 2) * usedMove().getAttack() * ((double)enemy.attack / (double) UI.pokemon.defense) / 50 ) * modifier);
 		
-		UI.pokemon.hp -= damageDealt;
+		System.out.println("Enemy Damage: " + damageDealt);
+		
+		UI.pokemon.hp -= (int)damageDealt;
 		
 	}
 	
@@ -49,9 +51,9 @@ public class Battle {
 			
 		}
 		
-		int damageDealt = (((((2 * UI.pokemon.level) / 5) + 2) * usedMove.getAttack() * (UI.pokemon.attack / enemy.defense) / 50 ) * modifier);
+		double damageDealt = (((((2 * UI.pokemon.level) / 5) + 2) * usedMove.getAttack() * ((double)UI.pokemon.attack / (double)enemy.defense) / 50 ) * modifier);
 	
-		enemy.hp -= damageDealt;
+		enemy.hp -= (int)damageDealt;
 		
 	}
 

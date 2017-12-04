@@ -106,7 +106,7 @@ public class Pokedex {
 		Blastoise = 	new BasePokemon("Blastoise", Water, NoType, 79, 83, 100, 78, 9, 3, 2, 2, 2, 101),
 		Caterpie = 		new BasePokemon("Caterpie", Bug, NoType, 45, 30, 35, 45, 10, 2, 1, 2, 2, 7),
 		Metapod = 		new BasePokemon("Metapod", Bug, NoType, 50, 20, 55, 30, 11, 3, 1, 2, 1, 10),
-		Butterfree = 	new BasePokemon("Butterfree", Bug, Flying, 60, 45, 50, 70, 12, 3, 2, 2, 2, 101),
+		Butterfree = 	new BasePokemon("Butterfree", Bug, Flying, 60, 45, 50, 70, 12, 3, 2, 2, 2, 101);/*,
 		Weedle = 		new BasePokemon("Weedle", Bug, Poison, 40, 35, 30, 50, 13, ),
 		Kakuna = 		new BasePokemon("Kakuna", Bug, Poison, 45, 25, 50, 35, 25, 14),
 		Beedrill = 		new BasePokemon("Beedrill", Bug, Poison, 65, 80, 40, 75, 15),
@@ -145,7 +145,7 @@ public class Pokedex {
 		Venonat = 		new BasePokemon("Venonant", Bug, Poison, 60, 55, 50, 45, 40, 48),
 		Venomoth = 		new BasePokemon("Venomoth", Bug, Poison, 70, 65, 60, 90, 49),
 		Diglett = 		new BasePokemon("Diglett", Ground, NoType, 10, 55, 25, 95, 50),
-		Dugtrio = 		new BasePokemon("Dugtrio", Ground, NoType, 35, 80, 50, 120, 51);
+		Dugtrio = 		new BasePokemon("Dugtrio", Ground, NoType, 35, 80, 50, 120, 51);*/
 	
 	
 	/************** Base Moves **************/

@@ -18,6 +18,8 @@ public class UI {
 	
 	public static void combatMenu() {
 		
+		if (UI.pokemon.hp < 1) { pokemonMenu(); return;}
+		
 		String combatMenu = "What would you like to do?\n1. Attack\n2. Change Pokemon\n3. Use Item\n4. Run";
 		System.out.println(combatMenu);
 		int choice = 0;
@@ -33,7 +35,7 @@ public class UI {
 				else if (choice == 4) run();
 				else System.out.println("That is an invalid choice, try again");
 				
-			} catch(InputMismatchException e) { System.out.println("That is an invalid choice, try again"); } finally { input.nextLine(); }
+			} catch(InputMismatchException e) { System.out.println("That is an invalid choice, try again"); } finally { if (choice < 1 || choice > 4) { input.nextLine(); } else { } }
 			
 		}
 		
@@ -48,28 +50,28 @@ public class UI {
 			
 			try {
 				
-				choice = input.nextInt() - 1;
+				choice = input.nextInt();
 				
-				if (choice >= 0 && choice < moves.length) {
+				if (choice > 0 && choice < moves.length + 1) {
 					
-					if (!moves[choice].attemptUseMove()) {
+					if (!moves[choice - 1].attemptUseMove()) {
 						
 						System.out.println("Out of PP");
 						attackMenu(moves);
 						
 					}
 					
-					Battle.dealDamage(moves[choice]);
+					Battle.dealDamage(moves[choice - 1]);
 					Battle.enemyDealDamage();
 					System.out.println(Battle.enemy.hp);
-					System.out.println("PP: " + moves[choice].getPP());
+					System.out.println("PP: " + moves[choice - 1].getPP());
 					
 				}
 				
-				else if (choice == 4) combatMenu();
+				else if (choice == 5) combatMenu();
 				else System.out.println("That is an invalid choice, try again");
 				
-			} catch(InputMismatchException e) { System.out.println("That is an invalid choice, try again"); } finally { input.nextLine(); }
+			} catch(InputMismatchException e) { System.out.println("That is an invalid choice, try again"); } finally { if (choice < 1 || choice > 5) { input.nextLine(); } else { } }
 			
 		}
 		
@@ -85,13 +87,13 @@ public class UI {
 			
 			try {
 				
-				choice = input.nextInt() - 1;
+				choice = input.nextInt();
 				
-				if (choice >= 0 && choice < 6) {
+				if (choice > 0 && choice < 7) {
 					
-					if (PokemonStorage.getPokemon(choice).getHP() > 0) {
+					if (PokemonStorage.getPokemon(choice - 1).getHP() > 0) {
 						
-						pokemon = PokemonStorage.getPokemon(choice);
+						pokemon = PokemonStorage.getPokemon(choice - 1);
 						System.out.println("You sent out " + pokemon.base.getName());
 						
 					} else {
@@ -103,10 +105,10 @@ public class UI {
 					
 				} 
 				
-				else if (choice == 6) combatMenu();
+				else if (choice == 7) combatMenu();
 				else System.out.println("That is an invalid choice, try again");
 				
-			} catch(InputMismatchException e) { System.out.println("That is an invalid choice, try again"); } finally { input.nextLine(); }
+			} catch(InputMismatchException e) { System.out.println("That is an invalid choice, try again"); } finally { if (choice < 1 || choice > 7) { input.nextLine(); } else { } }
 		
 		}	
 		
@@ -117,13 +119,13 @@ public class UI {
 		String itemMenu = "Which item would you like to use?\n1. " + bag[0].getName() + "\n2. " + bag[1].getName() + "\n3. " + bag[2].getName() + "\n4. " + bag[3].getName() + "\n5. Cancel";
 		System.out.println(itemMenu);
 		int choice = 0;
-		while (choice < 0 || choice > 4) {
+		while (choice < 0 || choice > 5) {
 			
 			try {
 				
-				choice = input.nextInt() - 1;
+				choice = input.nextInt();
 				
-				if (choice >= 0 && choice < 4) {
+				if (choice > 0 && choice < 5) {
 					
 					if (!bag[choice].attemptUseItem()) System.out.println("You have no " + bag[choice].getName());
 					else {
@@ -137,7 +139,9 @@ public class UI {
 					
 				}
 				
-			} catch(InputMismatchException e) { System.out.println("That is an invalid choice, try again"); } finally { input.nextLine(); }
+				else if (choice == 5) { combatMenu(); }
+				
+			} catch(InputMismatchException e) { System.out.println("That is an invalid choice, try again"); } finally { if (choice < 0 || choice > 5) { input.nextLine(); } else { } }
 			
 		}
 		

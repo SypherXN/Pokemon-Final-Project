@@ -46,13 +46,21 @@ public class Test {
 		Venasaur.changeMove(Tackle, 2);
 		Venasaur.changeMove(RazorLeaf, 3);
 		
+		Venasaur2.changeMove(Tackle, 0);
+		Venasaur2.changeMove(RazorLeaf, 1);
+		Venasaur2.changeMove(Tackle, 2);
+		Venasaur2.changeMove(RazorLeaf, 3);
+		
 		Battle.setEnemy(Venasaur2);
+		System.out.println("-----------\n" + Battle.enemy);
 		
 		while (Battle.enemy.hp > 0) {
 			
+			System.out.println(Battle.enemy.hp);
 			UI.combatMenu();
 			System.out.println(Battle.enemy.hp);
-			System.out.println(UI.pokemon.hp);
+			System.out.println(Battle.enemy.hp + "Enemy");
+			System.out.println(UI.pokemon.hp + "User");
 		
 		}
 	}
