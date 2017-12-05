@@ -154,12 +154,104 @@ public class Pokedex {
 		
 		NoBaseMove = new BaseMove("", NoType, 0, 0),
 		Absorb = new BaseMove("Absorb", Grass, 20, 25),
-		Acid = new BaseMove("Acid", Poison,40, 30),
+		Acid = new BaseMove("Acid", Poison, 40, 30),
 		AuroraBeam = new BaseMove("Aurora Beam", Ice, 65, 20),
 		Barrage = new BaseMove("Barrage", Normal, 15, 20),
 		Bind = new BaseMove("Bind", Normal, 15, 20),
-		Tackle = new BaseMove("Tackle", Normal, 15, 5),
+		Blizzard = new BaseMove("Blizzard", Ice, 110, 5),
+		BodySlam = new BaseMove("Body Slam", Normal, 85, 15),
+		BoneClub = new BaseMove("Bone Club", Ground, 65, 20),
+		Bonemerang = new BaseMove("Bonemerange", Ground, 50, 10),
+		Bubble = new BaseMove("Bubble", Water, 40, 30),
+		BubbleBeam = new BaseMove("Bubble Beam", Water, 65, 20),
+		Clamp = new BaseMove("Clamp", Water, 35, 10),
+		CometPunch = new BaseMove("Comet Punch", Normal, 18, 15),
+		Confusion = new BaseMove("Confusion", Psychic, 50, 25),
+		Constrict = new BaseMove("Constrict", Normal, 10, 35),
+		Crabhammer = new BaseMove("Crabhammer", Water, 100, 10),
+		Cut = new BaseMove("Cut", Normal, 50, 30),
+		Dig = new BaseMove("Dig", Ground, 80, 10),
+		DizzyPunch = new BaseMove("Dizzy Punch", Normal, 70, 10),
+		/*DoubleKick
+		DoubleSlap
+		DoubleEdge
+		DragonRage
+		DreamEater
+		DrillPeck
+		Earthquake
+		EggBomb
+		Ember
+		Explosion
+		FireBlast
+		FirePunch
+		FireSpin
+		Flamethrower
+		Fly
+		FuryAttack
+		FurySwipes
+		Gust
+		Headbutt
+		HighJumpKick
+		HornAttack
+		HydroPump
+		HyperBeam
+		HyperFang
+		IceBeam
+		IcePunch
+		JumpKick
+		KarateChop
+		LeechLife
+		Lick
+		MegaDrain
+		MegaKick
+		MegaPunch
+		PayDay
+		Peck
+		PetalDance
+		PinMissile
+		PoisonSting
+		Pound
+		Psybeam
+		Psychic
+		QuickAttack
+		Rage
 		RazorLeaf = new BaseMove("Razor Leaf", Grass, 55, 25);
+		RazorWind
+		RockSlide
+		RockThrow
+		RollingKick
+		Scratch
+		SelfDestruct
+		SkullBash
+		SkyAttack
+		Slam
+		Slash
+		Sludge
+		Smog
+		SolarBeam
+		SpikeCannon
+		Stomp
+		Strength
+		Struggle
+		Submission
+		Surf
+		Swift
+		Tackle = new BaseMove("Tackle", Normal, 15, 5),
+		TakeDown
+		Thrash
+		Thunder
+		ThunderPunch
+		ThunderShock
+		ThunderBolt
+		TriAttack
+		Twineedle
+		ViceGrip
+		VineWhip
+		WaterGun
+		Waterfall
+		WingAttack
+		Wrap*/
+		
 	
 	/***************** Items *****************/
 	//Item Name, Item Value
