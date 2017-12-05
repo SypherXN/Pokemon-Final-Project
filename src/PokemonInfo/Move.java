@@ -19,6 +19,7 @@ public class Move {
 		
 	}
 	
+	//Attempts to use the move
 	public boolean attemptUseMove() {
 		
 		if (pp > 0) {

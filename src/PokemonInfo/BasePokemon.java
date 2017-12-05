@@ -76,12 +76,7 @@ public class BasePokemon {
 		
 	}
 	
-	public String getName() { return name; }
-	
-	public Type getFirstType() { return firstType; }
-	
-	public Type getSecondType() { return secondType; }
-	
+	//Test print to make sure BasePokemon objects work
 	public String toString() {
 		
 		String output = new String();

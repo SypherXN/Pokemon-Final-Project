@@ -31,8 +31,10 @@ public class Pokemon {
 		
 	}
 	
+	//Changes the element in the array at index to Move move
 	public void changeMove(Move move, int index) { moves[index] = move; }
 	
+	//Attempts to level up the Pokemon
 	public boolean attemptLevelUp() {
 		
 		int target = 0;
@@ -55,6 +57,7 @@ public class Pokemon {
 		
 	}
 	
+	//Checks to see if the Pokemon can evolve
 	public boolean canEvolve() {
 		
 		if (level >= base.evolveLevel) {
@@ -67,17 +70,12 @@ public class Pokemon {
 		
 	}
 	
+	//Increases hp and checks if it exceeds the max hp
 	public void heal(int healAmount) {
 		
 		this.hp += healAmount;
 		if (this.hp >= maxHP)
 			hp = maxHP;
-		
-	}
-	
-	public void takeDamage(int damageTaken) {
-		
-		hp -= damageTaken;
 		
 	}
 	
@@ -107,13 +105,16 @@ public class Pokemon {
 	
 	public int getExp() 		{ return exp; }
 
+	//Returns the specific element in the array
 	public Move getMove(int index) { return moves[index]; }
 	
+	//Returns the array of moves
 	public Move[] getMoves() { return moves; }
 	
+	//Uses to print the information of the Pokemon
 	public String toString() {
 		
-		String output = "Name: " + base.getName() + "\nType: " + base.getFirstType().getName() + " " + base.getSecondType().getName() + 
+		String output = "Name: " + base.name + "\nType: " + base.firstType.getName() + " " + base.secondType.getName() + 
 				"\nMax HP: " + maxHP + "\nCurrent HP: " + hp + "\nAttack: " + attack + "\nDefense: " + defense + "\nSpeed: " + speed + 
 				"\nLevel: " + level;
 		

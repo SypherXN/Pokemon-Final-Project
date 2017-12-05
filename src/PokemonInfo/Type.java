@@ -113,12 +113,14 @@ public class Type {
 	
 	public String getName() { return name; }
 	
+	//Prints out the information for the Type
 	public void printInformation() {
 		
 		System.out.println("Type Name: " + name + "\nWeaknesses: " + weaknessList + "\nResistances: " + resistanceList + "\nNo Effect: " + noEffectList);
 		
 	}
 	
+	//Used to display the name of the type
 	public String toString() { return name; }
 	
 }

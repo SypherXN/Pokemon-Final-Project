@@ -21,8 +21,10 @@ public class Item {
 		
 	}
 	
+	//Increases the number of items owned by 1
 	public void obtainItem() { numberOwned++; }
 	
+	//Attempts the use of the item
 	public boolean attemptUseItem() {
 		
 		if (numberOwned > 0) {

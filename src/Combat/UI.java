@@ -16,9 +16,10 @@ public class UI {
 	public static Pokemon pokemon = PokemonStorage.getPokemon(0);
 	private static Item[] bag = {Pokedex.Potion, Pokedex.SuperPotion, Pokedex.HyperPotion, Pokedex.MaxPotion};
 	
+	//Overall menu for combat
 	public static void combatMenu() {
 		
-		if (UI.pokemon.hp < 1) { System.out.println(pokemon.base.getName() + " has fainted"); pokemonMenu(); return;}
+		if (UI.pokemon.hp < 1) { System.out.println(pokemon.base.name + " has fainted"); pokemonMenu(); return;}
 		
 		String combatMenu = "What would you like to do?\n1. Attack\n2. Change Pokemon\n3. Use Item\n4. Run";
 		System.out.println(combatMenu);
@@ -41,6 +42,7 @@ public class UI {
 		
 	}
 	
+	//Attack menu to choose attacks
 	public static void attackMenu(Move[] moves) {
 		
 		String attackMenu = "Which move would you like to use?\n1. " + moves[0].base.getName() + "\n2. " + moves[1].base.getName() + "\n3. " + moves[2].base.getName() + "\n4. " + moves[3].base.getName() + "\n5. Cancel";
@@ -76,10 +78,11 @@ public class UI {
 		
 	}
 	
+	//Pokemon menu to choose Pokemon to switch in
 	public static void pokemonMenu() {
 		
-		String pokemonMenu = "Which Pokemon would you like to switch in?\n1. " + PokemonStorage.getPokemon(0).base.getName() + "\n2. " + PokemonStorage.getPokemon(1).base.getName() + "\n3. " + PokemonStorage.getPokemon(2).base.getName() + "\n4. " + PokemonStorage.getPokemon(3).base.getName() +
-				"\n5. " + PokemonStorage.getPokemon(4).base.getName() + "\n6. " + PokemonStorage.getPokemon(5).base.getName() + "\n7. Cancel";
+		String pokemonMenu = "Which Pokemon would you like to switch in?\n1. " + PokemonStorage.getPokemon(0).base.name + "\n2. " + PokemonStorage.getPokemon(1).base.name + "\n3. " + PokemonStorage.getPokemon(2).base.name + "\n4. " + PokemonStorage.getPokemon(3).base.name +
+				"\n5. " + PokemonStorage.getPokemon(4).base.name + "\n6. " + PokemonStorage.getPokemon(5).base.name + "\n7. Cancel";
 		System.out.println(pokemonMenu);
 		int choice = 0;
 		while (choice < 1 || choice > 7) {
@@ -93,7 +96,7 @@ public class UI {
 					if (PokemonStorage.getPokemon(choice - 1).getHP() > 0) {
 						
 						pokemon = PokemonStorage.getPokemon(choice - 1);
-						System.out.println("You sent out " + pokemon.base.getName());
+						System.out.println("You sent out " + pokemon.base.name);
 						
 					} else {
 						
@@ -113,6 +116,7 @@ public class UI {
 		
 	}
 	
+	//Item menu to choose what item to use
 	public static void itemMenu() {
 		
 		String itemMenu = "Which item would you like to use?\n1. " + bag[0].getName() + "\n2. " + bag[1].getName() + "\n3. " + bag[2].getName() + "\n4. " + bag[3].getName() + "\n5. Cancel";
@@ -130,8 +134,8 @@ public class UI {
 					else {
 						
 						System.out.println("Which Pokemon would you like to heal?");
-						System.out.println(PokemonStorage.getPokemon(0).base.getName() + "\n2. " + PokemonStorage.getPokemon(1).base.getName() + "\n3. " + PokemonStorage.getPokemon(2).base.getName() + "\n4. " + PokemonStorage.getPokemon(3).base.getName() +
-											"\n5. " + PokemonStorage.getPokemon(4).base.getName() + "\n6. " + PokemonStorage.getPokemon(5).base.getName() + "\n7. Cancel");
+						System.out.println(PokemonStorage.getPokemon(0).base.name + "\n2. " + PokemonStorage.getPokemon(1).base.name + "\n3. " + PokemonStorage.getPokemon(2).base.name + "\n4. " + PokemonStorage.getPokemon(3).base.name +
+											"\n5. " + PokemonStorage.getPokemon(4).base.name + "\n6. " + PokemonStorage.getPokemon(5).base.name + "\n7. Cancel");
 						
 						
 					}
@@ -146,9 +150,10 @@ public class UI {
 		
 	}
 	
+	//Option to run and leave the battle
 	public static void run() {
 		
-		System.out.println("You have fled the battle");
+		System.out.println("You have forfeited the battle...");
 		
 	}
 	
