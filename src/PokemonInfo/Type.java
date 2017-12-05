@@ -40,13 +40,19 @@ public class Type {
 	//Adds Weaknesses of Types to weaknessList
 	public void addWeaknesses(Type...types) {
 		
-		for(int i = 0; i < types.length; i++) {
+		int i = 0;
+		
+		do {
 			
 			this.weaknessList.add(types[i]);
+			i++;
 			
-		}
+		} while (i < types.length);
 		
 	}
+	
+	//Overloaded method for if there is none for this list
+	public void addWeaknesses() { this.weaknessList.add(Pokedex.NoType); }
 	
 	//Adds Resistances of Types to resistanceList
 	public void addResistances(Type...types) {
@@ -59,6 +65,9 @@ public class Type {
 		
 	}
 	
+	//Overloaded method for if there is none for this list
+	public void addResistances() { this.resistanceList.add(Pokedex.NoType); }
+	
 	//Adds Nullification of Types to noEffectList
 	public void addNoEffect(Type...types) {
 		
@@ -70,10 +79,13 @@ public class Type {
 		
 	}
 	
+	//Overloaded method for if there is none for this list
+	public void addNoEffect() { this.noEffectList.add(Pokedex.NoType); }
+	
 	//Checks if otherType is found in weaknessList
 	public boolean isEffective(Type otherType) {
 		
-		if(weaknessList.contains(otherType)) {
+		if (weaknessList.contains(otherType)) {
 			
 			return true;
 			
@@ -86,7 +98,7 @@ public class Type {
 	//Checks if otherType is found in resistanceList
 	public boolean isResisted(Type otherType) {
 		
-		if(resistanceList.contains(otherType)) {
+		if (resistanceList.contains(otherType)) {
 			
 			return true;
 			
@@ -99,7 +111,7 @@ public class Type {
 	//Checks if otherType is found in noEffectList
 	public boolean noEffect(Type otherType) {
 		
-		if(noEffectList.contains(otherType)) {
+		if (noEffectList.contains(otherType)) {
 			
 			return true;
 			
