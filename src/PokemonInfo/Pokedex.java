@@ -153,105 +153,105 @@ public class Pokedex {
 	public static final BaseMove
 		
 		NoBaseMove = new BaseMove("", NoType, 0, 0),
-		Absorb = new BaseMove("Absorb", Grass, 20, 25),
-		Acid = new BaseMove("Acid", Poison, 40, 30),
-		AuroraBeam = new BaseMove("Aurora Beam", Ice, 65, 20),
-		Barrage = new BaseMove("Barrage", Normal, 15, 20),
-		Bind = new BaseMove("Bind", Normal, 15, 20),
-		Blizzard = new BaseMove("Blizzard", Ice, 110, 5),
-		BodySlam = new BaseMove("Body Slam", Normal, 85, 15),
-		BoneClub = new BaseMove("Bone Club", Ground, 65, 20),
-		Bonemerang = new BaseMove("Bonemerange", Ground, 50, 10),
-		Bubble = new BaseMove("Bubble", Water, 40, 30),
-		BubbleBeam = new BaseMove("Bubble Beam", Water, 65, 20),
-		Clamp = new BaseMove("Clamp", Water, 35, 10),
-		CometPunch = new BaseMove("Comet Punch", Normal, 18, 15),
-		Confusion = new BaseMove("Confusion", Psychic, 50, 25),
-		Constrict = new BaseMove("Constrict", Normal, 10, 35),
-		Crabhammer = new BaseMove("Crabhammer", Water, 100, 10),
-		Cut = new BaseMove("Cut", Normal, 50, 30),
-		Dig = new BaseMove("Dig", Ground, 80, 10),
-		DizzyPunch = new BaseMove("Dizzy Punch", Normal, 70, 10),
-		/*DoubleKick
-		DoubleSlap
-		DoubleEdge
-		DragonRage
-		DreamEater
-		DrillPeck
-		Earthquake
-		EggBomb
-		Ember
-		Explosion
-		FireBlast
-		FirePunch
-		FireSpin
-		Flamethrower
-		Fly
-		FuryAttack
-		FurySwipes
-		Gust
-		Headbutt
-		HighJumpKick
-		HornAttack
-		HydroPump
-		HyperBeam
-		HyperFang
-		IceBeam
-		IcePunch
-		JumpKick
-		KarateChop
-		LeechLife
-		Lick
-		MegaDrain
-		MegaKick
-		MegaPunch
-		PayDay
-		Peck
-		PetalDance
-		PinMissile
-		PoisonSting
-		Pound
-		Psybeam
-		Psychic
-		QuickAttack
-		Rage
-		RazorLeaf = new BaseMove("Razor Leaf", Grass, 55, 25);
-		RazorWind
-		RockSlide
-		RockThrow
-		RollingKick
-		Scratch
-		SelfDestruct
-		SkullBash
-		SkyAttack
-		Slam
-		Slash
-		Sludge
-		Smog
-		SolarBeam
-		SpikeCannon
-		Stomp
-		Strength
-		Struggle
-		Submission
-		Surf
-		Swift
-		Tackle = new BaseMove("Tackle", Normal, 15, 5),
-		TakeDown
-		Thrash
-		Thunder
-		ThunderPunch
-		ThunderShock
-		ThunderBolt
-		TriAttack
-		Twineedle
-		ViceGrip
-		VineWhip
-		WaterGun
-		Waterfall
-		WingAttack
-		Wrap*/
-		
+		absorb = new BaseMove("Absorb", Grass, 20, 25),
+		acid = new BaseMove("Acid", Poison, 40, 30),
+		auroraBeam = new BaseMove("Aurora Beam", Ice, 65, 20),
+		barrage = new BaseMove("Barrage", Normal, 15, 20),
+		bind = new BaseMove("Bind", Normal, 15, 20),
+		blizzard = new BaseMove("Blizzard", Ice, 110, 5),
+		bodySlam = new BaseMove("Body Slam", Normal, 85, 15),
+		boneClub = new BaseMove("Bone Club", Ground, 65, 20),
+		bonemerang = new BaseMove("Bonemerange", Ground, 50, 10),
+		bubble = new BaseMove("Bubble", Water, 40, 30),
+		bubbleBeam = new BaseMove("Bubble Beam", Water, 65, 20),
+		clamp = new BaseMove("Clamp", Water, 35, 10),
+		cometPunch = new BaseMove("Comet Punch", Normal, 18, 15),
+		confusion = new BaseMove("Confusion", Psychic, 50, 25),
+		constrict = new BaseMove("Constrict", Normal, 10, 35),
+		crabhammer = new BaseMove("Crabhammer", Water, 100, 10),
+		cut = new BaseMove("Cut", Normal, 50, 30),
+		dig = new BaseMove("Dig", Ground, 80, 10),
+		dizzyPunch = new BaseMove("Dizzy Punch", Normal, 70, 10),
+		doubleKick = new BaseMove("Double Kick", Fighting, 30, 30),
+		doubleSlap = new BaseMove("Double Slap", Normal, 15, 10),
+		doubleEdge = new BaseMove("Double Edge", Normal, 120, 15),
+		dragonRage = new BaseMove("Dragon Rage", Dragon, 40, 10),
+		dreamEater = new BaseMove("Dream Eater", Psychic, 100, 15),
+		drillPeck = new BaseMove("Drill Peck", Flying, 80, 20),
+		earthquake = new BaseMove("Earthquake", Ground, 100, 10),
+		eggBomb = new BaseMove("Egg Bomb", Normal, 100, 10),
+		ember = new BaseMove("Ember", Fire, 40, 25),
+		explosion = new BaseMove("Explosion", Normal, 250, 5),
+		fireBlast = new BaseMove("Fire Blast", Fire, 110, 5),
+		firePunch = new BaseMove("Fire Punch", Fire, 75, 15),
+		fireSpin = new BaseMove("Fire Spin", Fire, 35, 15),
+		flamethrower = new BaseMove("Flamethrower", Fire, 90, 15),
+		fly = new BaseMove("Fly", Flying, 90, 15),
+		furyAttack = new BaseMove("Fury Attack", Normal, 15, 20),
+		furySwipes = new BaseMove("Fury Swipes", Normal, 18, 15),
+		gust = new BaseMove("Gust", Flying, 40, 35),
+		GG = new BaseMove("GG", Dragon, 999999999, 999999999),
+		headbutt = new BaseMove("Headbutt", Normal, 70, 15),
+		highJumpKick = new BaseMove("High Jump Kick", Fighting, 130, 10), 
+		hornAttack = new BaseMove("Horn Attack", Normal, 65, 25),
+		hydroPump = new BaseMove("Hydro Pump", Water, 110, 5),
+		hyperBeam = new BaseMove("Hyper Beam", Normal, 150, 5),
+		hyperFang = new BaseMove("Hyper Fang", Normal, 80, 15),
+		iceBeam = new BaseMove("Ice Beam", Ice, 90, 10),
+		icePunch = new BaseMove("Ice Punch", Ice, 75, 15),
+		jumpKick = new BaseMove("Jump Kick", Fighting, 100, 10),
+		karateChop = new BaseMove("Karate Chop", Fighting, 50, 25),
+		leechLife = new BaseMove("Leech Life", Bug, 80, 10),
+		lick = new BaseMove("Lick", Ghost, 30, 30),
+		megaDrain = new BaseMove("Mega Drain", Grass, 40, 15),
+		megaKick = new BaseMove("Mega Kick", Normal, 120, 5),
+		megaPunch = new BaseMove("Mega Punch", Normal, 80, 20),
+		payDay = new BaseMove("Pay Day", Normal, 40, 20),
+		peck = new BaseMove("Peck", Flying, 35, 35),
+		petalDance = new BaseMove("Petal Dance", Grass, 120, 10),
+		pinMissile = new BaseMove("Pin Missile", Bug, 25, 20),
+		poisonSting = new BaseMove("Poison Sting", Poison, 15, 35),
+		pound = new BaseMove("Pound", Normal, 40, 35),
+		psybeam = new BaseMove("Psybeam", Psychic, 65, 20),
+		psychic = new BaseMove("Psychic", Psychic, 90, 10),
+		quickAttack = new BaseMove("Quick Attack", Normal, 40, 30),
+		rage = new BaseMove("Rage", Normal, 20, 20),
+		razorLeaf = new BaseMove("Razor Leaf", Grass, 55, 25),
+		razorWind = new BaseMove("Razor Wind", Normal, 80, 10),
+		rockSlide = new BaseMove("Rock Slide", Rock, 75, 10),
+		rockThrow = new BaseMove("Rock Throw", Rock, 50, 15),
+		rollingKick = new BaseMove("Rolling Kick", Fighting, 60, 15),
+		scratch = new BaseMove("Scratch", Normal, 40, 35),
+		selfDestruct = new BaseMove("Self Destruct", Normal, 200, 5),
+		skullBash = new BaseMove("Skull Bash", Normal, 130, 10),
+		skyAttack = new BaseMove("Sky Attack", Flying, 140, 5),
+		slam = new BaseMove("Slam", Normal, 80, 20),
+		slash = new BaseMove("Slash", Normal, 70, 20),
+		sludge = new BaseMove("Sludge", Poison, 65, 20),
+		smog = new BaseMove("Smog", Poison, 30, 20),
+		solarBeam = new BaseMove("Solar Beam", Grass, 120, 10),
+		spikeCannon = new BaseMove("Spike Cannon", Normal, 20, 10),
+		stomp = new BaseMove("Stomp", Normal, 65, 20),
+		strength = new BaseMove("Strength", Normal, 80, 15),
+		struggle = new BaseMove("Struggle", Normal, 50, 0),
+		submission = new BaseMove("Submission", Fighting, 80, 20),
+		surf = new BaseMove("Surf", Water, 90, 15),
+		swift = new BaseMove("Swift", Normal, 60, 20),
+		tackle = new BaseMove("Tackle", Normal, 15, 5),
+		takeDown = new BaseMove("Take Down", Normal, 90, 20),
+		thrash = new BaseMove("Thrash", Normal, 120, 10),
+		thunder = new BaseMove("Thunder", Electric, 110, 10),
+		thunderPunch = new BaseMove("Thunder Punch", Electric, 75, 15),
+		thunderShock = new BaseMove("Thunder Shock", Electric, 40, 30),
+		thunderBolt = new BaseMove("Thunder Bolt", Electric, 90, 15),
+		triAttack = new BaseMove("Tri Attack", Normal, 80, 10),
+		twineedle = new BaseMove("Twineedle", Bug, 25, 20),
+		viceGrip = new BaseMove("Vice Grip", Normal, 55, 30),
+		vineWhip = new BaseMove("Vine Whip", Grass, 45, 25),
+		waterGun = new BaseMove("Water Gun", Water, 40, 25),
+		waterfall = new BaseMove("Waterfall", Water, 80, 15),
+		wingAttack = new BaseMove("Wing Attack", Flying, 60, 35),
+		wrap = new BaseMove("Wrap", Normal, 15, 20);
 	
 	/***************** Items *****************/
 	//Item Name, Item Value
