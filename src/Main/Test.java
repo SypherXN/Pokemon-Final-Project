@@ -16,10 +16,10 @@ public class Test {
 		Pokedex.initWeaknesses();
 		Pokedex.initNoEffect();
 		
-		Pokemon Bulbasaur = new Pokemon(Pokedex.Bulbasaur, 30);
-		Pokemon Ivysaur = new Pokemon(Pokedex.Ivysaur, 42);
-		Pokemon Venasaur = new Pokemon(Pokedex.Venasaur, 100);
-		Pokemon Venasaur2 = new Pokemon(Pokedex.Venasaur, 100);
+		Pokemon Bulbasaur = new Pokemon(Pokedex.basePokemons[1], 30);
+		Pokemon Ivysaur = new Pokemon(Pokedex.basePokemons[2], 42);
+		Pokemon Venasaur = new Pokemon(Pokedex.basePokemons[3], 100);
+		Pokemon Venasaur2 = new Pokemon(Pokedex.basePokemons[3], 100);
 		
 		System.out.println(Bulbasaur);
 		System.out.println(Ivysaur);
@@ -29,27 +29,27 @@ public class Test {
 		PokemonStorage.changePokemon(Ivysaur, 1);
 		PokemonStorage.changePokemon(Venasaur, 2);
 		
-		Move Tackle = new Move(Pokedex.Tackle);
-		Move RazorLeaf = new Move(Pokedex.RazorLeaf);
+		Move move1 = new Move(Pokedex.baseMoves[12]);
+		Move move2 = new Move(Pokedex.baseMoves[45]);
 		
-		Bulbasaur.changeMove(Tackle, 0);
-		Bulbasaur.changeMove(RazorLeaf, 1);
+		Bulbasaur.changeMove(move1, 0);
+		Bulbasaur.changeMove(move2, 1);
 		
-		Ivysaur.changeMove(Tackle, 1);
-		Ivysaur.changeMove(RazorLeaf, 2);
+		Ivysaur.changeMove(move1, 1);
+		Ivysaur.changeMove(move2, 2);
 		
-		Venasaur.changeMove(Tackle, 2);
-		Venasaur.changeMove(RazorLeaf, 3);
+		Venasaur.changeMove(move1, 2);
+		Venasaur.changeMove(move2, 3);
 		
-		Venasaur.changeMove(Tackle, 0);
-		Venasaur.changeMove(RazorLeaf, 1);
-		Venasaur.changeMove(Tackle, 2);
-		Venasaur.changeMove(RazorLeaf, 3);
+		Venasaur.changeMove(move1, 0);
+		Venasaur.changeMove(move2, 1);
+		Venasaur.changeMove(move1, 2);
+		Venasaur.changeMove(move2, 3);
 		
-		Venasaur2.changeMove(RazorLeaf, 0);
-		Venasaur2.changeMove(RazorLeaf, 1);
-		Venasaur2.changeMove(RazorLeaf, 2);
-		Venasaur2.changeMove(RazorLeaf, 3);
+		Venasaur2.changeMove(move2, 0);
+		Venasaur2.changeMove(move2, 1);
+		Venasaur2.changeMove(move2, 2);
+		Venasaur2.changeMove(move2, 3);
 		
 		Battle.setEnemy(Venasaur2);
 		

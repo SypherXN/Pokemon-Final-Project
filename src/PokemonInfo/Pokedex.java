@@ -268,11 +268,11 @@ public class Pokedex {
 	
 	/*************** Pokemon ****************/
 	//PLACE HOLDER POKEMON WHEN THERE IS NOTHING
-	public static final Pokemon NoPokemon = new Pokemon(NoBasePokemon, 0);
+	public static final Pokemon NoPokemon = new Pokemon(basePokemons[0], 0);
 	
 	/***************** Move *****************/
 	//PLACE HOLDER POKEMON MOVE WHEN THERE IS NONE
-	public static final Move NoMove = new Move(NoBaseMove);
+	public static final Move NoMove = new Move(baseMoves[0]);
 	
 	//temp
 	
