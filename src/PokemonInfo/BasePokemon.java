@@ -29,7 +29,7 @@ public class BasePokemon {
 	 * @param defenseMod - defense modifier for leveling up
 	 * @param speedMod - speed modifier for leveling up
 	 */
-	public BasePokemon(String name, Type firstType, Type secondType, int hp, int attack, int defense, int speed, int number, int hpMod, int attackMod, int defenseMod, int speedMod, int evolveLevel) {
+	public BasePokemon(String name, Type firstType, Type secondType, int hp, int attack, int defense, int speed, int number, int topHP, int topAttack, int topDefense, int topSpeed, int evolveLevel) {
 		
 		//Pokemon Info
 		this.name = name;
@@ -45,10 +45,10 @@ public class BasePokemon {
 		this.speed = speed;
 		
 		//Pokemon Stats Modifiers
-		this.hpMod = hpMod;
-		this.attackMod = attackMod;
-		this.defenseMod = defenseMod;
-		this.speedMod = speedMod;
+		this.hpMod = (topHP - hp) / 100;
+		this.attackMod = (topAttack - attack) / 100;
+		this.defenseMod = (topDefense - defense) / 100;
+		this.speedMod = (topSpeed - speed) / 100;
 		
 	}
 	
