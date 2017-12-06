@@ -21,35 +21,34 @@ public class Test {
 		Pokemon Venasaur = new Pokemon(Pokedex.basePokemons[3], 100);
 		Pokemon Venasaur2 = new Pokemon(Pokedex.basePokemons[3], 100);
 		
-		System.out.println(Bulbasaur);
-		System.out.println(Ivysaur);
-		System.out.println(Venasaur);
-		
 		PokemonStorage.changePokemon(Bulbasaur,0);
 		PokemonStorage.changePokemon(Ivysaur, 1);
 		PokemonStorage.changePokemon(Venasaur, 2);
 		
-		Move move1 = new Move(Pokedex.baseMoves[12]);
-		Move move2 = new Move(Pokedex.baseMoves[45]);
+		Move move1 = new Move(Pokedex.baseMoves[(int)(Math.random() * (Pokedex.baseMoves.length - 1)) + 1]);
+		Move move2 = new Move(Pokedex.baseMoves[(int)(Math.random() * (Pokedex.baseMoves.length - 1)) + 1]);
+		Move move3 = new Move(Pokedex.baseMoves[(int)(Math.random() * (Pokedex.baseMoves.length - 1)) + 1]);
+		Move move4 = new Move(Pokedex.baseMoves[(int)(Math.random() * (Pokedex.baseMoves.length - 1)) + 1]);
 		
 		Bulbasaur.changeMove(move1, 0);
 		Bulbasaur.changeMove(move2, 1);
+		Bulbasaur.changeMove(move3, 2);
+		Bulbasaur.changeMove(move4, 3);
 		
-		Ivysaur.changeMove(move1, 1);
-		Ivysaur.changeMove(move2, 2);
-		
-		Venasaur.changeMove(move1, 2);
-		Venasaur.changeMove(move2, 3);
+		Ivysaur.changeMove(move1, 0);
+		Ivysaur.changeMove(move2, 1);
+		Ivysaur.changeMove(move3, 2);
+		Ivysaur.changeMove(move4, 3);
 		
 		Venasaur.changeMove(move1, 0);
 		Venasaur.changeMove(move2, 1);
-		Venasaur.changeMove(move1, 2);
-		Venasaur.changeMove(move2, 3);
+		Venasaur.changeMove(move3, 2);
+		Venasaur.changeMove(move4, 3);
 		
-		Venasaur2.changeMove(move2, 0);
+		Venasaur2.changeMove(move1, 0);
 		Venasaur2.changeMove(move2, 1);
-		Venasaur2.changeMove(move2, 2);
-		Venasaur2.changeMove(move2, 3);
+		Venasaur2.changeMove(move3, 2);
+		Venasaur2.changeMove(move4, 3);
 		
 		Battle.setEnemy(Venasaur2);
 		
