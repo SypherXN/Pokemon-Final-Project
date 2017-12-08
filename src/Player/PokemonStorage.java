@@ -37,7 +37,7 @@ public class PokemonStorage {
 					
 				} else if (storage[b].hp > 0) {
 					
-					loss = false;
+					return false;
 					
 				}
 				
