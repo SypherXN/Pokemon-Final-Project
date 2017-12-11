@@ -6,16 +6,38 @@ public class Battle {
 	 * Created by William 12/1/17
 	 */
 	
-	public static Pokemon enemy;
-	
-	//Used to set the opposing Pokemon
-	public static void setEnemy(Pokemon other) { enemy = other; }
+	public static Pokemon enemy = EnemyStorage.storage[0];
 	
 	//Randomly picks a move for the opposing Pokemon
 	public static Move usedMove() {
 		
-		int index = (int)Math.random() * 4;
+		int index = (int)(Math.random() * 4);
 		return enemy.getMove(index);
+		
+	}
+	
+	//Randomly picks the next Pokemon to send out
+	public static boolean nextPokemon() {
+		
+		int index = 0;
+		
+		if (enemy.hp <= 0) {
+			
+			do {
+				
+				index = (int)(Math.random() * EnemyStorage.storage.length);
+				enemy = EnemyStorage.storage[index];
+				if (enemy.hp > 0) {
+					
+					return true;
+					
+				}
+				
+			} while (enemy.hp <= 0);
+		
+		}
+		
+		return false;
 		
 	}
 	

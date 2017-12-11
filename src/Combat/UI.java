@@ -46,6 +46,7 @@ public class UI {
 	public static void attackMenu(Move[] moves) {
 		
 		String attackMenu = "Which move would you like to use?\n1. " + moves[0].base.getName() + "\n2. " + moves[1].base.getName() + "\n3. " + moves[2].base.getName() + "\n4. " + moves[3].base.getName() + "\n5. Cancel";
+		System.out.println();
 		System.out.println(attackMenu);
 		int choice = 0;
 		while (choice < 1 || choice > 5) {
@@ -83,6 +84,7 @@ public class UI {
 		
 		String pokemonMenu = "Which Pokemon would you like to switch in?\n1. " + PokemonStorage.getPokemon(0).base.name + "\n2. " + PokemonStorage.getPokemon(1).base.name + "\n3. " + PokemonStorage.getPokemon(2).base.name + "\n4. " + PokemonStorage.getPokemon(3).base.name +
 				"\n5. " + PokemonStorage.getPokemon(4).base.name + "\n6. " + PokemonStorage.getPokemon(5).base.name + "\n7. Cancel";
+		System.out.println();
 		System.out.println(pokemonMenu);
 		int choice = 0;
 		while (choice < 1 || choice > 7) {
@@ -120,6 +122,7 @@ public class UI {
 	public static void itemMenu() {
 		
 		String itemMenu = "Which item would you like to use?\n1. " + bag[0].getName() + "\n2. " + bag[1].getName() + "\n3. " + bag[2].getName() + "\n4. " + bag[3].getName() + "\n5. Cancel";
+		System.out.println();
 		System.out.println(itemMenu);
 		int choice = 0;
 		while (choice < 0 || choice > 5) {
