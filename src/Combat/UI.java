@@ -66,7 +66,6 @@ public class UI {
 					
 					Battle.dealDamage(moves[choice - 1]);
 					Battle.enemyDealDamage();
-					System.out.println("PP: " + moves[choice - 1].getPP());
 					
 				}
 				
@@ -159,6 +158,5 @@ public class UI {
 		System.out.println("You have forfeited the battle...");
 		
 	}
-	
 	
 }

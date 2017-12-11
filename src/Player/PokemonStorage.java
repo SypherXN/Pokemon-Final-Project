@@ -27,23 +27,19 @@ public class PokemonStorage {
 		
 		boolean loss = false;
 		
-		for (int a = 0; a < storage.length; a++) {
+		for (int b = 0; b < EnemyStorage.storage.length; b++) {
 			
-			for (int b = 0; b < EnemyStorage.storage.length; b++) {
+			if (storage[b].hp <= 0) {
 				
-				if (storage[b].hp <= 0) {
-					
-					loss = true;
-					
-				} else if (storage[b].hp > 0) {
-					
-					return false;
-					
-				}
+				loss = true;
 				
-			}	
+			} else if (storage[b].hp > 0) {
+				
+				return false;
+				
+			}
 			
-		}
+		}	
 		
 		return loss;
 		
