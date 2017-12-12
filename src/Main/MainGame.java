@@ -24,6 +24,13 @@ public class MainGame {
 		//Creates the initial Enemy Pokemon
 		EnemyStorage.changeAll();
 		
+		//Gives Player random number of Items
+		for (int a = 0; a < UI.bag.length; a++) {
+			
+			for (int i = 0; i < (int)(Math.random() * 11); i++)
+			
+		}
+		
 		//Prints out the information of Player Pokemon
 		System.out.println("---------Pokemon 1---------");
 		System.out.println(PokemonStorage.storage[0]);
