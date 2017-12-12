@@ -55,6 +55,7 @@ public class GuessThatPokemon {
 						
 						blank = blank.substring(0, i) + upperCharGuess + blank.substring(i);
 						System.out.println(blank);
+						//hi
 						
 					}
 			
