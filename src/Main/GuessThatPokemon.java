@@ -13,86 +13,90 @@ public class GuessThatPokemon {
 	public static int tries;
 	public static boolean correct;
 	
-	public static void pokemonGuess() {
+	public static int pokemonGuess() {
 		
 		pokemonName = Pokedex.basePokemons[(int)(Math.random() * Pokedex.basePokemons.length - 1) + 1].name;
+		String upperPokemonName = pokemonName.toUpperCase();
 		tries = pokemonName.length();
-		correct = false;
-		
-		do {
-			
-			switch(guessLetter(pokemonName)) {
-			
-			case 0:
-				tries--;
-				break;
-				
-			case 1:
-				tries--;
-				break;
-				
-			case 2:
-				correct = true;
-				break;
-				
-			}
-			
-		} while (!correct);
-		
-	}
-	
-	public static int guessLetter(String pokemon) {
-		
 		int a = 0;
 		
+		System.out.println(pokemonName);
+		
+		String blank = "";
+		
 		do {
 			
-			pokemon += "*";
+			blank += "*";
 			a++;
 			
-		} while (a < pokemonName.length());
+		} while(a < tries);
 		
-		for (int i = 0; i < pokemonName.length(); i++) {
+		
+		for(int i = tries; i > 0; i--) {
 			
-			for (int x = 0; i < pokemonName.length(); x++) {
+			System.out.println("The pokemon you are trying to guess has " + tries + " letters in its name.");
+			System.out.println("Enter a letter to guess: ");
+			
+			char charGuess = input.nextLine().charAt(0);
+			
+			char upperCharGuess = Character.toUpperCase(charGuess);
+			
+			if (blank.equals(upperPokemonName)) { return 1; }
+			
+			if(upperPokemonName.indexOf(upperCharGuess) == -1) {
 				
-				System.out.println("Guess a letter in the pokemon's name: ");
-				char userInput = input.nextLine().charAt(0);
-				
-				if (pokemonName.indexOf(userInput) == -1) {
+				System.out.println("The letter " + charGuess + " is not in the pokemon's name. Please try again.");
+			
+			} else {
+			
+				for(int x = 0; x < pokemonName.length(); x++) {
 					
-					return 0;
-					
-				} else if (pokemonName.indexOf(userInput) != -1) {
-					
-					pokemon.replace(pokemon.charAt(x), userInput);
-					return 1;
-					
+					if (upperCharGuess == upperPokemonName.charAt(x)) {
+						
+						blank = blank.substring(0, i) + upperCharGuess + blank.substring(i);
+						System.out.println(blank);
+						
+					}
+			
 				}
-				
-			}
-			
-			if(pokemon.equals(pokemonName.substring(0, pokemonName.length()))) {
-				
-				System.out.println("\nThe pokemon is " + pokemonName + ", which took you " + (pokemon.length() - tries) + " time(s) to guess.");
-				return 3;
 				
 			}
 			
 		}
 		
-		return 1;
+		if (blank.equals(upperPokemonName)) { return 1; }
 		
+		return 0;
+	}	
+	
+	public static void switchProcessor() {
+		
+		switch(pokemonGuess()) {
+		
+		case 0:
+			System.out.println("You failed");
+			break;
+		
+		case 1:
+			System.out.println("Good job");
+			break;
+			
+		default:
+			break;
+		}
+		
+	}
+	
+	
 		/*
 		 * For-loop that gives certain amount of tries
 		 * Ask for input
 		 * Do indexOf and if = -1 return 0
-		 * Do .equals to check if they are equal and if so return 2
+		 * Do .equals to check if they are equal 
 		 * Nested For-loop inside to traverse the word for matching character
 		 * Checks different indexes of word to find matching
 		 * Changes overall guess string
-		 * return 1
 		 * 
 		 */
-	}
+	
 }
