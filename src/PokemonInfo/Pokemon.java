@@ -31,6 +31,17 @@ public class Pokemon {
 		
 	}
 	
+	//Changes all moves in the array
+	public void changeAllMoves() {
+		
+		for(int i = 0; i < moves.length; i++) {
+			
+			moves[i] = new Move(Pokedex.baseMoves[(int)(Math.random() * Pokedex.baseMoves.length - 1) + 1]);
+			
+		}
+		
+	}
+	
 	//Changes the element in the array at index to Move move
 	public void changeMove(Move move, int index) { moves[index] = move; }
 	

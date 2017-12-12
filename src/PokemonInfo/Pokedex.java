@@ -276,8 +276,4 @@ public class Pokedex {
 	//PLACE HOLDER POKEMON MOVE WHEN THERE IS NONE
 	public static final Move NoMove = new Move(baseMoves[0]);
 	
-	//temp
-	
-	
-	
 }

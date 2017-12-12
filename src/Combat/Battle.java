@@ -1,5 +1,7 @@
 package Combat;
+
 import PokemonInfo.*;
+
 public class Battle {
 
 	/*
@@ -55,22 +57,24 @@ public class Battle {
 		
 		}
 		
+		Move usedMove = usedMove();
+		
 		//Checks for effectiveness
-		if (UI.pokemon.base.firstType.isEffective(usedMove().base.type)) { modifier *= 2; }
-		if (UI.pokemon.base.secondType.isEffective(usedMove().base.type)) { modifier *= 2; }
+		if (UI.pokemon.base.firstType.isEffective(usedMove.base.type)) { modifier *= 2; }
+		if (UI.pokemon.base.secondType.isEffective(usedMove.base.type)) { modifier *= 2; }
 		
 		//Checks for resistances
-		if (UI.pokemon.base.firstType.isResisted(usedMove().base.type)) { modifier /= 2; }
-		if (UI.pokemon.base.secondType.isResisted(usedMove().base.type)) { modifier /= 2; }
+		if (UI.pokemon.base.firstType.isResisted(usedMove.base.type)) { modifier /= 2; }
+		if (UI.pokemon.base.secondType.isResisted(usedMove.base.type)) { modifier /= 2; }
 		
 		//Checks for nullification
-		if (UI.pokemon.base.firstType.noEffect(usedMove().base.type)) { modifier = 0; }
-		if (UI.pokemon.base.secondType.noEffect(usedMove().base.type)) { modifier = 0; }
+		if (UI.pokemon.base.firstType.noEffect(usedMove.base.type)) { modifier = 0; }
+		if (UI.pokemon.base.secondType.noEffect(usedMove.base.type)) { modifier = 0; }
 			
 		//Calculates damage dealt
-		double damageDealt = (((((2 * (double)enemy.level) / 5) + 2) * (double)usedMove().getAttack() * ((double)enemy.attack / (double)UI.pokemon.defense) / 50 ) * (double)modifier);
+		double damageDealt = (((((2 * (double)enemy.level) / 5) + 2) * (double)usedMove.getAttack() * ((double)enemy.attack / (double)UI.pokemon.defense) / 50 ) * (double)modifier);
 		
-		System.out.println("The enemy " + enemy.base.name + " used " + usedMove().base.name + " and dealt " + (int)damageDealt + " damage");
+		System.out.println("The enemy " + enemy.base.name + " used " + usedMove.base.name + " and dealt " + (int)damageDealt + " damage");
 		
 		//Deals damage to player Pokemon
 		UI.pokemon.hp -= (int)damageDealt;

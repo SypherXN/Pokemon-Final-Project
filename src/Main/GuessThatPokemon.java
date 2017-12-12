@@ -1,12 +1,12 @@
 package Main;
 import java.util.Scanner;
-/*
- * Created by William 12/6/17
- */
-
 import PokemonInfo.Pokedex;
 
 public class GuessThatPokemon {
+	
+	/*
+	 * Created by William 12/6/17
+	 */
 	
 	public static String pokemonName, capName;
 	public static Scanner input = new Scanner(System.in);
@@ -14,28 +14,35 @@ public class GuessThatPokemon {
 	public static boolean correct;
 	
 	public static void pokemonGuess() {
-		pokemonName = Pokedex.basePokemons[(int)(Math.random()*Pokedex.basePokemons.length - 1) + 1].name;
+		
+		pokemonName = Pokedex.basePokemons[(int)(Math.random() * Pokedex.basePokemons.length - 1) + 1].name;
 		tries = pokemonName.length();
 		correct = false;
 		
 		do {
 			
 			switch(guessLetter(pokemonName)) {
+			
 			case 0:
 				tries--;
 				break;
+				
 			case 1:
 				tries--;
 				break;
+				
 			case 2:
 				correct = true;
 				break;
+				
 			}
 			
-			}while(!correct);
-		}
+		} while (!correct);
+		
+	}
 	
 	public static int guessLetter(String pokemon) {
+		
 		int a = 0;
 		
 		do {
@@ -43,30 +50,37 @@ public class GuessThatPokemon {
 			pokemon += "*";
 			a++;
 			
-		}while (a < pokemonName.length());
+		} while (a < pokemonName.length());
 		
-		for(int i = 0; i < pokemonName.length(); i++) {
+		for (int i = 0; i < pokemonName.length(); i++) {
 			
-			for(int x = 0; i < pokemonName.length(); x++) {
+			for (int x = 0; i < pokemonName.length(); x++) {
 				
 				System.out.println("Guess a letter in the pokemon's name: ");
 				char userInput = input.nextLine().charAt(0);
 				
-				if(pokemonName.indexOf(userInput) == -1) {
+				if (pokemonName.indexOf(userInput) == -1) {
+					
 					return 0;
-				}
-				else if(pokemonName.indexOf(userInput) != -1) {
+					
+				} else if (pokemonName.indexOf(userInput) != -1) {
+					
 					pokemon.replace(pokemon.charAt(x), userInput);
 					return 1;
+					
 				}
+				
 			}
 			
-			if(pokemon.equals(pokemonName)) {
+			if(pokemon.equals(pokemonName.substring(0, pokemonName.length()))) {
+				
 				System.out.println("\nThe pokemon is " + pokemonName + ", which took you " + (pokemon.length() - tries) + " time(s) to guess.");
 				return 3;
+				
 			}
 			
 		}
+		
 		return 1;
 		
 		/*

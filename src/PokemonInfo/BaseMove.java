@@ -1,10 +1,10 @@
 package PokemonInfo;
 
-/*
- * Created by Matthew 11/15/17
- */
-
 public class BaseMove {
+	
+	/*
+	 * Created by Matthew 11/15/17
+	 */
 
 	public final String name;
 	public final Type type;

@@ -45,4 +45,16 @@ public class EnemyStorage {
 		
 	}
 	
+	//Fills the array storage with new random Pokemon
+	public static void changeAll() {
+		
+		for (int i = 0; i < storage.length; i++) {
+			
+			storage[i] = new Pokemon(Pokedex.basePokemons[(int)(Math.random() * Pokedex.basePokemons.length - 1) + 1], (int)(Math.random() * 100) + 1);
+			storage[i].changeAllMoves();
+			
+		}
+		
+	}
+	
 }

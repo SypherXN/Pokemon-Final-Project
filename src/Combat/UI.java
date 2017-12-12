@@ -62,10 +62,12 @@ public class UI {
 						System.out.println("Out of PP");
 						attackMenu(moves);
 						
-					}
+					} else {
 					
-					Battle.dealDamage(moves[choice - 1]);
-					Battle.enemyDealDamage();
+						Battle.dealDamage(moves[choice - 1]);
+						Battle.enemyDealDamage();
+					
+					}
 					
 				}
 				

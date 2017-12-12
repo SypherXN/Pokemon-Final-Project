@@ -2,11 +2,11 @@ package PokemonInfo;
 
 import java.util.*;
 
-/*
- * Created by Matthew 11/15/17
- */
-
 public class BasePokemon {
+
+	/*
+	 * Created by Matthew 11/15/17
+	 */
 
 	public final String name;
 	public final Type firstType, secondType;
