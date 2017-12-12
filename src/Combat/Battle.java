@@ -57,6 +57,7 @@ public class Battle {
 		
 		}
 		
+		//Placeholder variable to hold the Move chosen
 		Move usedMove = usedMove();
 		
 		//Checks for effectiveness
@@ -74,6 +75,7 @@ public class Battle {
 		//Calculates damage dealt
 		double damageDealt = (((((2 * (double)enemy.level) / 5) + 2) * (double)usedMove.getAttack() * ((double)enemy.attack / (double)UI.pokemon.defense) / 50 ) * (double)modifier);
 		
+		//Prints out information
 		System.out.println("The enemy " + enemy.base.name + " used " + usedMove.base.name + " and dealt " + (int)damageDealt + " damage");
 		
 		//Deals damage to player Pokemon
@@ -110,6 +112,7 @@ public class Battle {
 		//Calculates damage dealt
 		double damageDealt = (((((2 * (double)UI.pokemon.level) / 5) + 2) * (double)usedMove.getAttack() * ((double)UI.pokemon.attack / (double)enemy.defense) / 50 ) * (double)modifier);
 	
+		//Prints out information
 		System.out.println("Your " + UI.pokemon.base.name + " used " + usedMove.base.name + " and dealt " + (int)damageDealt + " damage");
 		
 		//Deals damage to the enemy

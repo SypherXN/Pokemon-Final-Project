@@ -158,6 +158,7 @@ public class UI {
 	public static void run() {
 		
 		System.out.println("You have forfeited the battle...");
+		System.exit(0);
 		
 	}
 	
