@@ -20,8 +20,6 @@ public class GuessThatPokemon {
 		tries = pokemonName.length();
 		int a = 0;
 		
-		System.out.println(pokemonName);
-		
 		String blank = "";
 		
 		do {
@@ -31,10 +29,10 @@ public class GuessThatPokemon {
 			
 		} while(a < tries);
 		
+		System.out.println("The pokemon you are trying to guess has " + tries + " letters in its name.");
 		
 		for(int i = tries; i > 0; i--) {
 			
-			System.out.println("The pokemon you are trying to guess has " + tries + " letters in its name.");
 			System.out.println("Enter a letter to guess: ");
 			
 			char charGuess = input.nextLine().charAt(0);
@@ -53,9 +51,17 @@ public class GuessThatPokemon {
 					
 					if (upperCharGuess == upperPokemonName.charAt(x)) {
 						
-						blank = blank.substring(0, i) + upperCharGuess + blank.substring(i);
-						System.out.println(blank);
-						//hi
+						if (x == pokemonName.length()) {
+							
+							blank = blank.substring(0, x) + upperCharGuess;
+							System.out.println(blank);
+							
+						} else {
+							
+							blank = blank.substring(0, x) + upperCharGuess + blank.substring(x + 1);
+							System.out.println(blank);
+							
+						}
 						
 					}
 			
