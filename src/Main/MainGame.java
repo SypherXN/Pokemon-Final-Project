@@ -27,7 +27,11 @@ public class MainGame {
 		//Gives Player random number of Items
 		for (int a = 0; a < UI.bag.length; a++) {
 			
-			for (int i = 0; i < (int)(Math.random() * 11); i++)
+			for (int i = 0; i < (int)(Math.random() * 11); i++) {
+				
+				UI.bag[a].obtainItem();
+				
+			}
 			
 		}
 		

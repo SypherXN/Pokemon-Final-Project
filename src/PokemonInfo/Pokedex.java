@@ -266,7 +266,7 @@ public class Pokedex {
 		Potion = new Item("Potion", 20),
 		SuperPotion = new Item("Super Potion", 50),
 		HyperPotion = new Item("Hyper Potion", 200),
-		MaxPotion = new Item("Max Potion", 9999999);
+		MaxPotion = new Item("Max Potion", 999);
 	
 	/*************** Pokemon ****************/
 	//PLACE HOLDER POKEMON WHEN THERE IS NOTHING

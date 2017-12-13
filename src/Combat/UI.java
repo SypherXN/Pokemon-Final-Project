@@ -14,7 +14,7 @@ public class UI {
 	
 	private static Scanner input = new Scanner(System.in);
 	public static Pokemon pokemon = PokemonStorage.getPokemon(0);
-	private static Item[] bag = {Pokedex.Potion, Pokedex.SuperPotion, Pokedex.HyperPotion, Pokedex.MaxPotion};
+	public static Item[] bag = {Pokedex.Potion, Pokedex.SuperPotion, Pokedex.HyperPotion, Pokedex.MaxPotion};
 	
 	//Overall menu for combat
 	public static void combatMenu() {
@@ -160,11 +160,11 @@ public class UI {
 						
 						try {
 							
-							choice = input.nextInt();
+							 int choice2 = input.nextInt();
 							
-							if (choice > 0 && choice < 7) {
+							if (choice2 > 0 && choice2 < 7) {
 								
-								if (PokemonStorage.getPokemon(choice - 1).getHP() > 0) {
+								if (PokemonStorage.getPokemon(choice2 - 1).getHP() > 0) {
 									
 									System.out.println("You healed " + pokemon.base.name + " for " + bag[choice - 1].heal);
 									pokemon.heal(bag[choice - 1].heal);
@@ -178,7 +178,7 @@ public class UI {
 								
 							} 
 							
-							else if (choice == 7) itemMenu();
+							else if (choice2 == 7) itemMenu();
 							else System.out.println("That is an invalid choice, try again");
 							
 						} catch(InputMismatchException e) { System.out.println("That is an invalid choice, try again"); } finally { if (choice < 1 || choice > 7) { input.nextLine(); } else { } }

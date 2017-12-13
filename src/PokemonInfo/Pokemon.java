@@ -20,10 +20,10 @@ public class Pokemon {
 	 */
 	public Pokemon(BasePokemon base, int level) {
 
-		this.base = 	base;
+		this.base = base;
 		this.level = level;
 		this.exp = 0;
-		this.maxHP = base.hp + (base.hpMod* level);
+		this.maxHP = base.hp + (base.hpMod * level);
 		this.attack = base.attack + (base.attackMod * level);
 		this.defense = base.defense + (base.defenseMod * level);
 		this.speed = base.speed + (base.speedMod * level);
