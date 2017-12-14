@@ -28,13 +28,17 @@ public class UI {
 				
 				pokeNames[i] = PokemonStorage.getPokemon(i).base.name + "\t\t";
 				
-			} else if (pokeNames[i].length() < 7) {
+			} else if (pokeNames[i].length() < 8) {
 				
 				pokeNames[i] = PokemonStorage.getPokemon(i).base.name + "\t";
 				
-			} else {
+			} else if (pokeNames[i].length() > 12){
 				
 				pokeNames[i] = PokemonStorage.getPokemon(i).base.name;
+				
+			} else {
+				
+				pokeNames[i] = PokemonStorage.getPokemon(i).base.name + "\t";
 				
 			}
 			
@@ -42,9 +46,17 @@ public class UI {
 		
 		for(int i = 0; i < moveNames.length; i++) {
 			
-			if (moveNames[i].length() < 7) {
+			if (moveNames[i].length() < 4) {
+				
+				moveNames[i] = pokemon.getMove(i).base.name + "\t\t";
+				
+			} else if (moveNames[i].length() < 8) {
 				
 				moveNames[i] = pokemon.getMove(i).base.name + "\t";
+				
+			} else if (moveNames[i].length() > 12){
+				
+				moveNames[i] = pokemon.getMove(i).base.name;
 				
 			} else {
 				
@@ -124,12 +136,12 @@ public class UI {
 	public static void pokemonMenu() {
 		
 		String pokemonMenu = "Which Pokemon would you like to switch in?"
-							+ "\n1. " + pokeNames[0] + "\t" + PokemonStorage.getPokemon(0).hp + "/" + PokemonStorage.getPokemon(0).maxHP
-							+ "\n2. " + pokeNames[1] + "\t" + PokemonStorage.getPokemon(1).hp + "/" + PokemonStorage.getPokemon(1).maxHP
-							+ "\n3. " + pokeNames[2] + "\t" + PokemonStorage.getPokemon(2).hp + "/" + PokemonStorage.getPokemon(2).maxHP
-							+ "\n4. " + pokeNames[3] + "\t" + PokemonStorage.getPokemon(3).hp + "/" + PokemonStorage.getPokemon(3).maxHP
-							+ "\n5. " + pokeNames[4] + "\t" + PokemonStorage.getPokemon(4).hp + "/" + PokemonStorage.getPokemon(4).maxHP
-							+ "\n6. " + pokeNames[5] + "\t" + PokemonStorage.getPokemon(5).hp + "/" + PokemonStorage.getPokemon(5).maxHP
+							+ "\n1. " + pokeNames[0] + "\t" + PokemonStorage.getPokemon(0).hp + "/" + PokemonStorage.getPokemon(0).maxHP + "\tLevel: " + PokemonStorage.getPokemon(0).level
+							+ "\n2. " + pokeNames[1] + "\t" + PokemonStorage.getPokemon(1).hp + "/" + PokemonStorage.getPokemon(1).maxHP + "\tLevel: " + PokemonStorage.getPokemon(1).level
+							+ "\n3. " + pokeNames[2] + "\t" + PokemonStorage.getPokemon(2).hp + "/" + PokemonStorage.getPokemon(2).maxHP + "\tLevel: " + PokemonStorage.getPokemon(2).level
+							+ "\n4. " + pokeNames[3] + "\t" + PokemonStorage.getPokemon(3).hp + "/" + PokemonStorage.getPokemon(3).maxHP + "\tLevel: " + PokemonStorage.getPokemon(3).level
+							+ "\n5. " + pokeNames[4] + "\t" + PokemonStorage.getPokemon(4).hp + "/" + PokemonStorage.getPokemon(4).maxHP + "\tLevel: " + PokemonStorage.getPokemon(4).level
+							+ "\n6. " + pokeNames[5] + "\t" + PokemonStorage.getPokemon(5).hp + "/" + PokemonStorage.getPokemon(5).maxHP + "\tLevel: " + PokemonStorage.getPokemon(5).level
 							+ "\n7. Cancel";
 		System.out.println();
 		System.out.println(pokemonMenu);
@@ -196,14 +208,13 @@ public class UI {
 						
 						bag[choice - 1].obtainItem();
 						
-						System.out.println("Which Pokemon would you like to heal?");
-						System.out.println("Which Pokemon would you like to switch in?"
-											+ "\n1. " + pokeNames[0] + "\t" + PokemonStorage.getPokemon(0).hp + "/" + PokemonStorage.getPokemon(0).maxHP
-											+ "\n2. " + pokeNames[1] + "\t" + PokemonStorage.getPokemon(1).hp + "/" + PokemonStorage.getPokemon(1).maxHP
-											+ "\n3. " + pokeNames[2] + "\t" + PokemonStorage.getPokemon(2).hp + "/" + PokemonStorage.getPokemon(2).maxHP
-											+ "\n4. " + pokeNames[3] + "\t" + PokemonStorage.getPokemon(3).hp + "/" + PokemonStorage.getPokemon(3).maxHP
-											+ "\n5. " + pokeNames[4] + "\t" + PokemonStorage.getPokemon(4).hp + "/" + PokemonStorage.getPokemon(4).maxHP
-											+ "\n6. " + pokeNames[5] + "\t" + PokemonStorage.getPokemon(5).hp + "/" + PokemonStorage.getPokemon(5).maxHP
+						System.out.println("Which Pokemon would you like to heal?"
+											+ "\n1. " + pokeNames[0] + "\t" + PokemonStorage.getPokemon(0).hp + "/" + PokemonStorage.getPokemon(0).maxHP + "\tLevel: " + PokemonStorage.getPokemon(0).level
+											+ "\n2. " + pokeNames[1] + "\t" + PokemonStorage.getPokemon(1).hp + "/" + PokemonStorage.getPokemon(1).maxHP + "\tLevel: " + PokemonStorage.getPokemon(1).level
+											+ "\n3. " + pokeNames[2] + "\t" + PokemonStorage.getPokemon(2).hp + "/" + PokemonStorage.getPokemon(2).maxHP + "\tLevel: " + PokemonStorage.getPokemon(2).level
+											+ "\n4. " + pokeNames[3] + "\t" + PokemonStorage.getPokemon(3).hp + "/" + PokemonStorage.getPokemon(3).maxHP + "\tLevel: " + PokemonStorage.getPokemon(3).level
+											+ "\n5. " + pokeNames[4] + "\t" + PokemonStorage.getPokemon(4).hp + "/" + PokemonStorage.getPokemon(4).maxHP + "\tLevel: " + PokemonStorage.getPokemon(4).level
+											+ "\n6. " + pokeNames[5] + "\t" + PokemonStorage.getPokemon(5).hp + "/" + PokemonStorage.getPokemon(5).maxHP + "\tLevel: " + PokemonStorage.getPokemon(5).level
 											+ "\n7. Cancel");
 						
 						try {
@@ -229,11 +240,15 @@ public class UI {
 							
 							else if (choice2 == 7) { 
 								
+								bag[choice - 1].obtainItem();
 								itemMenu();
+								
+							} else { 
+								
+								System.out.println("That is an invalid choice, try again");
 								bag[choice - 1].obtainItem();
 								
 							}
-							else System.out.println("That is an invalid choice, try again");
 							
 						} catch(InputMismatchException e) { System.out.println("That is an invalid choice, try again"); } finally { if (choice < 1 || choice > 7) { input.nextLine(); } else { } }
 						
