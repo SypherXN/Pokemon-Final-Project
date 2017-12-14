@@ -31,14 +31,15 @@ public class Points {
 			
 		}
 				
-		if(yourPoints <= enemyPoints) {
-			currentScore += 10;	
-			
+		if(yourPoints >= enemyPoints) {
+			currentScore += 1000;	
+			currentScore -= (yourPoints - enemyPoints);
 			overallScore += currentScore;
 			return 1;
 			
-		}else if (yourPoints > enemyPoints) {
-			currentScore += (yourPoints - enemyPoints).Math.pow(2);
+		}else if (yourPoints < enemyPoints) {
+			currentScore += Math.pow(10*(yourPoints - enemyPoints), 2);
+			overallScore += currentScore;
 			return 1;
 			
 		}else {
