@@ -62,7 +62,7 @@ public class Points {
 			break;
 			
 		case 1:
-			System.out.println("You have won! You have gained " + currentScore + " and you have " + overallScore + " points overall.");
+			System.out.println("You have gained " + currentScore + " and you have " + overallScore + " points overall.");
 			break;
 			
 		default:

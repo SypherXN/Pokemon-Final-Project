@@ -81,6 +81,12 @@ public class Battle {
 		//Deals damage to player Pokemon
 		UI.pokemon.hp -= (int)damageDealt;
 		
+		if (UI.pokemon.hp < 0) {
+			
+			UI.pokemon.hp = 0;
+			
+		}
+		
 	}
 	
 	//Player Pokemon dealing damage calculations
@@ -117,6 +123,12 @@ public class Battle {
 		
 		//Deals damage to the enemy
 		enemy.hp -= (int)damageDealt;
+		
+		if (enemy.hp < 0) {
+			
+			enemy.hp = 0;
+			
+		}
 		
 	}
 
