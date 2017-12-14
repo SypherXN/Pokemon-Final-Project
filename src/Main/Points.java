@@ -40,7 +40,7 @@ public class Points {
 			
 		} else if (yourPoints < enemyPoints) {
 			
-			currentScore += Math.pow(10*(yourPoints - enemyPoints), 2);
+			currentScore += Math.pow(2*(yourPoints - enemyPoints), 2);
 			overallScore += currentScore;
 			return 1;
 			
@@ -52,7 +52,7 @@ public class Points {
 		
 	}
 	
-	//Prints out results based on winning or losing, and the number of points received.h
+	//Prints out results based on winning or losing, and the number of points received.
 	public static void pointSwitch() {
 		
 		switch(pointCalculator()) {

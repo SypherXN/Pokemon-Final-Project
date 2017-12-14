@@ -95,6 +95,7 @@ public class Pokedex {
 	public static final BasePokemon[] basePokemons = {
 		
 		new BasePokemon(),
+		new BasePokemon("Test", Dragon, Ghost, 100, 100, 100, 100, 0, 500, 500, 500, 500, 101),
 		new BasePokemon("Bulbasaur", Grass, Poison, 45, 49, 49, 45, 1, 293, 196, 196, 188, 16),
 		new BasePokemon("Ivysaur", Grass, Poison, 60, 62, 63, 60, 2, 323, 222, 224, 218, 32),
 		new BasePokemon("Venasaur", Grass, Poison, 80, 82, 83, 80, 3, 363, 262, 264, 258, 101),
