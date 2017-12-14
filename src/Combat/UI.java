@@ -24,15 +24,15 @@ public class UI {
 		
 		for (int i = 0; i < pokeNames.length; i++) {
 			
-			if (pokeNames[i].length() < 4) {
+			if (PokemonStorage.getPokemon(i).base.name.length() < 4) {
 				
-				pokeNames[i] = PokemonStorage.getPokemon(i).base.name + "\t\t\t";
+				pokeNames[i] = PokemonStorage.getPokemon(i).base.name + "\t\t";
 				
-			} else if (pokeNames[i].length() < 8) {
+			} else if (PokemonStorage.getPokemon(i).base.name.length() < 8) {
 				
 				pokeNames[i] = PokemonStorage.getPokemon(i).base.name + "\t";
 				
-			} else if (pokeNames[i].length() > 12){
+			} else if (PokemonStorage.getPokemon(i).base.name.length() > 12){
 				
 				pokeNames[i] = PokemonStorage.getPokemon(i).base.name;
 				
@@ -46,15 +46,15 @@ public class UI {
 		
 		for(int i = 0; i < moveNames.length; i++) {
 			
-			if (moveNames[i].length() < 4) {
+			if (pokemon.getMove(i).base.name.length() < 5) {
 				
-				moveNames[i] = pokemon.getMove(i).base.name + "\t\t\t";
+				moveNames[i] = pokemon.getMove(i).base.name + "\t\t";
 				
-			} else if (moveNames[i].length() < 8) {
+			} else if (pokemon.getMove(i).base.name.length() < 8) {
 				
 				moveNames[i] = pokemon.getMove(i).base.name + "\t";
 				
-			} else if (moveNames[i].length() > 12){
+			} else if (pokemon.getMove(i).base.name.length() > 12){
 				
 				moveNames[i] = pokemon.getMove(i).base.name;
 				
