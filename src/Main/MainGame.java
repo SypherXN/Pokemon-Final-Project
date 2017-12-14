@@ -92,8 +92,10 @@ public class MainGame {
 				System.out.println();
 				System.out.println("You won the battle");
 				
+				//Resets battle for next 
 				PokemonStorage.healAll();
 				EnemyStorage.changeAll();
+				//Gives player points
 				Points.pointSwitch();
 				System.out.println("You move on to the next battle");
 				Battle.nextPokemon();

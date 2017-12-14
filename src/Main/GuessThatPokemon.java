@@ -78,21 +78,21 @@ public class GuessThatPokemon {
 	}	
 	
 	//Runs the pokemonGuess method and determines the state of the game
-	public static void switchProcessor() {
+	public static boolean switchProcessor() {
 		
 		switch(pokemonGuess()) {
 		
 		case 0:
 			System.out.println("You failed");
-			break;
+			return false;
 		
 		case 1:
 			System.out.println("Good job");
-			break;
+			return true;
 			
-		default:
-			break;
 		}
+		
+		return false;
 		
 	}
 	
