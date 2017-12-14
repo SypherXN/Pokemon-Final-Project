@@ -38,7 +38,7 @@ public class Points {
 			return 1;
 			
 		}else if (yourPoints < enemyPoints) {
-			currentScore += Math.pow(10*(yourPoints - enemyPoints), 2);
+			currentScore += Math.pow(2*(yourPoints - enemyPoints), 2);
 			overallScore += currentScore;
 			return 1;
 			
