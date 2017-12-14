@@ -26,7 +26,7 @@ public class UI {
 			
 			if (pokeNames[i].length() < 4) {
 				
-				pokeNames[i] = PokemonStorage.getPokemon(i).base.name + "\t\t";
+				pokeNames[i] = PokemonStorage.getPokemon(i).base.name + "\t\t\t";
 				
 			} else if (pokeNames[i].length() < 8) {
 				
@@ -48,7 +48,7 @@ public class UI {
 			
 			if (moveNames[i].length() < 4) {
 				
-				moveNames[i] = pokemon.getMove(i).base.name + "\t\t";
+				moveNames[i] = pokemon.getMove(i).base.name + "\t\t\t";
 				
 			} else if (moveNames[i].length() < 8) {
 				
