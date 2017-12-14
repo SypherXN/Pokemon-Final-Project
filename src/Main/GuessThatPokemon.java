@@ -83,11 +83,11 @@ public class GuessThatPokemon {
 		switch(pokemonGuess()) {
 		
 		case 0:
-			System.out.println("You failed");
+			System.out.println("You failed and now lose points");
 			return false;
 		
 		case 1:
-			System.out.println("Good job");
+			System.out.println("You correctly guessed the Pokemon and now gain extra points");
 			return true;
 			
 		}

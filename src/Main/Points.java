@@ -35,12 +35,55 @@ public class Points {
 			
 			currentScore += 1000;	
 			currentScore -= (yourPoints - enemyPoints);
+			
+			if(GuessThatPokemon.switchProcessor()) {
+				
+				currentScore = (int)Math.pow(currentScore, 1.1);
+				
+			} else {
+				
+				currentScore = (int)Math.sqrt(currentScore);
+				
+			}
+			
+			int max = PokemonStorage.getPokemon(0).level;
+			
+			for (int i = 0; i < 6; i++) {
+				
+				if(max < PokemonStorage.getPokemon(i).level) {
+					max = PokemonStorage.getPokemon(i).level;
+				}
+				
+			}
+			
+			currentScore -= max;
 			overallScore += currentScore;
 			return 1;
 			
 		} else if (yourPoints < enemyPoints) {
 			
 			currentScore += Math.pow(2*(yourPoints - enemyPoints), 2);
+			
+			if(GuessThatPokemon.switchProcessor()) {
+				
+				currentScore = (int)Math.pow(currentScore, 1.1);
+				
+			} else {
+				
+				currentScore = (int)Math.sqrt(currentScore);
+				
+			}
+			int max = PokemonStorage.getPokemon(0).level;
+			
+			for (int i = 0; i < 6; i++) {
+				
+				if(max < PokemonStorage.getPokemon(i).level) {
+					max = PokemonStorage.getPokemon(i).level;
+				}
+				
+			}
+			
+			currentScore -= max;
 			overallScore += currentScore;
 			return 1;
 			
