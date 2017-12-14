@@ -29,7 +29,7 @@ public class GuessThatPokemon {
 			
 		} while(a < tries);
 		
-		System.out.println("The pokemon you are trying to guess has " + tries + " letters in its name.");
+		System.out.println("The pokemon you are trying to guess has " + pokemonName.length() + " letters in its name.");
 		
 		for(int i = tries; i > 0; i--) {
 			
