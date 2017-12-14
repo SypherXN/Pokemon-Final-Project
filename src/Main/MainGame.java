@@ -35,6 +35,7 @@ public class MainGame {
 			
 		}
 		
+		/*
 		//Prints out the information of Player Pokemon
 		System.out.println("---------Pokemon 1---------");
 		System.out.println(PokemonStorage.storage[0]);
@@ -66,6 +67,7 @@ public class MainGame {
 		System.out.println(EnemyStorage.storage[5]);
 		
 		System.out.println();
+		*/
 		
 		while (!PokemonStorage.checkLoss() && !EnemyStorage.checkLoss()) {
 			
@@ -89,7 +91,13 @@ public class MainGame {
 				
 				System.out.println();
 				System.out.println("You won the battle");
-				System.exit(0);
+				
+				PokemonStorage.healAll();
+				System.out.println("You move on to the next battle");
+				EnemyStorage.changeAll();
+				Points.pointSwitch();
+				Battle.nextPokemon();
+				System.out.println("The enemy sends out " + Battle.enemy.base.name);
 				
 			}
 			
@@ -98,6 +106,7 @@ public class MainGame {
 				
 				System.out.println();
 				System.out.println("You lost the battle");
+				System.out.println("You ended with " + Points.overallScore + " points");
 				System.exit(0);
 				
 			}

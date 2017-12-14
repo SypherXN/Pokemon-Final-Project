@@ -3,6 +3,7 @@ package Combat;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import Main.Points;
 import Player.PokemonStorage;
 import PokemonInfo.*;
 
@@ -253,6 +254,7 @@ public class UI {
 	public static void run() {
 		
 		System.out.println("You have forfeited the battle...");
+		System.out.println("You ended with " + Points.overallScore + " points");
 		System.exit(0);
 		
 	}

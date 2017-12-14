@@ -19,30 +19,32 @@ public class Points {
 		enemyPoints = 0;
 		currentScore = 0;
 		
-		for(int i = 0; i < 6; i++) {
+		for (int i = 0; i < 6; i++) {
 			
 			yourPoints += PokemonStorage.getPokemon(i).getLevel();
 			
 		}
 		
-		for(int i = 0; i < 6; i++){
+		for (int i = 0; i < 6; i++){
 			
 			enemyPoints += EnemyStorage.getPokemon(i).getLevel();
 			
 		}
 				
-		if(yourPoints >= enemyPoints) {
+		if (yourPoints >= enemyPoints) {
+			
 			currentScore += 1000;	
 			currentScore -= (yourPoints - enemyPoints);
 			overallScore += currentScore;
 			return 1;
 			
-		}else if (yourPoints < enemyPoints) {
+		} else if (yourPoints < enemyPoints) {
+			
 			currentScore += Math.pow(10*(yourPoints - enemyPoints), 2);
 			overallScore += currentScore;
 			return 1;
 			
-		}else {
+		} else {
 			
 			return 0;
 			
@@ -69,9 +71,5 @@ public class Points {
 		}
 		
 	}
-	
-	/*
-	 * 
-	 */
 	
 }
