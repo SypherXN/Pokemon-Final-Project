@@ -76,6 +76,14 @@ public class MainGame {
 			//Calls the Combat Menu from UI
 			UI.combatMenu();
 			
+			//Will change out the Enemy Pokemon and will inform the Player of the new Pokemon
+			if (!PokemonStorage.checkLoss() && !EnemyStorage.checkLoss() && Battle.nextPokemon()) {
+				
+				System.out.println();
+				System.out.println("The enemy sends out " + Battle.enemy.base.name);
+				
+			}
+			
 			//Checks if the Enemy has lost the battle
 			if (EnemyStorage.checkLoss()) {
 				
@@ -91,14 +99,6 @@ public class MainGame {
 				System.out.println();
 				System.out.println("You lost the battle");
 				System.exit(0);
-				
-			}
-			
-			//Will change out the Enemy Pokemon and will inform the Player of the new Pokemon
-			if (!PokemonStorage.checkLoss() && !EnemyStorage.checkLoss() && Battle.nextPokemon()) {
-				
-				System.out.println();
-				System.out.println("The enemy sends out " + Battle.enemy.base.name);
 				
 			}
 		
