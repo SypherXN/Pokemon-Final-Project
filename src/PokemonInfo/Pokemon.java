@@ -84,11 +84,25 @@ public class Pokemon {
 	//Increases hp and checks if it exceeds the max hp
 	public void heal(int healAmount) {
 		
+		int printer = maxHP - hp;
+		
 		this.hp += healAmount;
-		if (this.hp >= maxHP)
-			hp = maxHP;
+		
+		if (this.hp >= maxHP) {
+			
+			System.out.println("You healed " + base.name + " " + printer);
+			hp = maxHP; 
+			
+		} else {
+			
+			System.out.println(healAmount);
+			
+		}
 		
 	}
+	
+	//Sets current HP to max HP
+	public void healFull() { hp = maxHP; }
 	
 	public void increaseMaxHP() {	}
 	

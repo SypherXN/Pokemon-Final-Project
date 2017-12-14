@@ -15,9 +15,43 @@ public class UI {
 	private static Scanner input = new Scanner(System.in);
 	public static Pokemon pokemon = PokemonStorage.getPokemon(0);
 	public static Item[] bag = {Pokedex.Potion, Pokedex.SuperPotion, Pokedex.HyperPotion, Pokedex.MaxPotion};
+	public static String[] pokeNames = {PokemonStorage.getPokemon(0).base.name, PokemonStorage.getPokemon(1).base.name, PokemonStorage.getPokemon(2).base.name, PokemonStorage.getPokemon(3).base.name, PokemonStorage.getPokemon(4).base.name, PokemonStorage.getPokemon(5).base.name};
+	public static String[] moveNames = {pokemon.getMove(0).base.name, pokemon.getMove(1).base.name, pokemon.getMove(2).base.name, pokemon.getMove(3).base.name};
 	
 	//Overall menu for combat
 	public static void combatMenu() {
+		
+		for (int i = 0; i < pokeNames.length; i++) {
+			
+			if (pokeNames[i].length() < 4) {
+				
+				pokeNames[i] = PokemonStorage.getPokemon(i).base.name + "\t\t";
+				
+			} else if (pokeNames[i].length() < 7) {
+				
+				pokeNames[i] = PokemonStorage.getPokemon(i).base.name + "\t";
+				
+			} else {
+				
+				pokeNames[i] = PokemonStorage.getPokemon(i).base.name;
+				
+			}
+			
+		}
+		
+		for(int i = 0; i < moveNames.length; i++) {
+			
+			if (moveNames[i].length() < 7) {
+				
+				moveNames[i] = pokemon.getMove(i).base.name + "\t";
+				
+			} else {
+				
+				moveNames[i] = pokemon.getMove(i).base.name + "\t";
+				
+			}
+			
+		}
 		
 		if (UI.pokemon.hp < 1) { System.out.println(pokemon.base.name + " has fainted"); pokemonMenu(); return;}
 		
@@ -46,10 +80,10 @@ public class UI {
 	public static void attackMenu(Move[] moves) {
 		
 		String attackMenu = "Which move would you like to use?"
-							+ "\n1. " + moves[0].base.getName() + "\t" + moves[0].getPP() + "/" + moves[0].base.getMaxPP()
-							+ "\n2. " + moves[1].base.getName() + "\t" + moves[1].getPP() + "/" + moves[1].base.getMaxPP()
-							+ "\n3. " + moves[2].base.getName() + "\t" + moves[2].getPP() + "/" + moves[2].base.getMaxPP()
-							+ "\n4. " + moves[3].base.getName() + "\t" + moves[3].getPP() + "/" + moves[3].base.getMaxPP()
+							+ "\n1. " + moveNames[0] + "\t" + moves[0].getPP() + "/" + moves[0].base.getMaxPP()
+							+ "\n2. " + moveNames[1] + "\t" + moves[1].getPP() + "/" + moves[1].base.getMaxPP()
+							+ "\n3. " + moveNames[2] + "\t" + moves[2].getPP() + "/" + moves[2].base.getMaxPP()
+							+ "\n4. " + moveNames[3] + "\t" + moves[3].getPP() + "/" + moves[3].base.getMaxPP()
 							+ "\n5. Cancel";
 		System.out.println();
 		System.out.println(attackMenu);
@@ -89,12 +123,12 @@ public class UI {
 	public static void pokemonMenu() {
 		
 		String pokemonMenu = "Which Pokemon would you like to switch in?"
-							+ "\n1. " + PokemonStorage.getPokemon(0).base.name + "\t" + PokemonStorage.getPokemon(0).hp + "/" + PokemonStorage.getPokemon(0).maxHP
-							+ "\n2. " + PokemonStorage.getPokemon(1).base.name + "\t" + PokemonStorage.getPokemon(1).hp + "/" + PokemonStorage.getPokemon(1).maxHP
-							+ "\n3. " + PokemonStorage.getPokemon(2).base.name + "\t" + PokemonStorage.getPokemon(2).hp + "/" + PokemonStorage.getPokemon(2).maxHP
-							+ "\n4. " + PokemonStorage.getPokemon(3).base.name + "\t" + PokemonStorage.getPokemon(3).hp + "/" + PokemonStorage.getPokemon(3).maxHP
-							+ "\n5. " + PokemonStorage.getPokemon(4).base.name + "\t" + PokemonStorage.getPokemon(4).hp + "/" + PokemonStorage.getPokemon(4).maxHP
-							+ "\n6. " + PokemonStorage.getPokemon(5).base.name + "\t" + PokemonStorage.getPokemon(5).hp + "/" + PokemonStorage.getPokemon(5).maxHP
+							+ "\n1. " + pokeNames[0] + "\t" + PokemonStorage.getPokemon(0).hp + "/" + PokemonStorage.getPokemon(0).maxHP
+							+ "\n2. " + pokeNames[1] + "\t" + PokemonStorage.getPokemon(1).hp + "/" + PokemonStorage.getPokemon(1).maxHP
+							+ "\n3. " + pokeNames[2] + "\t" + PokemonStorage.getPokemon(2).hp + "/" + PokemonStorage.getPokemon(2).maxHP
+							+ "\n4. " + pokeNames[3] + "\t" + PokemonStorage.getPokemon(3).hp + "/" + PokemonStorage.getPokemon(3).maxHP
+							+ "\n5. " + pokeNames[4] + "\t" + PokemonStorage.getPokemon(4).hp + "/" + PokemonStorage.getPokemon(4).maxHP
+							+ "\n6. " + pokeNames[5] + "\t" + PokemonStorage.getPokemon(5).hp + "/" + PokemonStorage.getPokemon(5).maxHP
 							+ "\n7. Cancel";
 		System.out.println();
 		System.out.println(pokemonMenu);
@@ -150,35 +184,54 @@ public class UI {
 				
 				if (choice > 0 && choice < 5) {
 					
-					if (!bag[choice - 1].attemptUseItem()) System.out.println("You have no " + bag[choice - 1].getName());
+					if (!bag[choice - 1].attemptUseItem()) {
+						
+						System.out.println("You have no " + bag[choice - 1].getName());
+						bag[choice - 1].obtainItem();
+						
+					}
 					
 					else if (bag[choice - 1].attemptUseItem()) {
 						
+						bag[choice - 1].obtainItem();
+						
 						System.out.println("Which Pokemon would you like to heal?");
-						System.out.println("1. " + PokemonStorage.getPokemon(0).base.name + "\n2. " + PokemonStorage.getPokemon(1).base.name + "\n3. " + PokemonStorage.getPokemon(2).base.name + "\n4. " + PokemonStorage.getPokemon(3).base.name +
-											"\n5. " + PokemonStorage.getPokemon(4).base.name + "\n6. " + PokemonStorage.getPokemon(5).base.name + "\n7. Cancel");
+						System.out.println("Which Pokemon would you like to switch in?"
+											+ "\n1. " + pokeNames[0] + "\t" + PokemonStorage.getPokemon(0).hp + "/" + PokemonStorage.getPokemon(0).maxHP
+											+ "\n2. " + pokeNames[1] + "\t" + PokemonStorage.getPokemon(1).hp + "/" + PokemonStorage.getPokemon(1).maxHP
+											+ "\n3. " + pokeNames[2] + "\t" + PokemonStorage.getPokemon(2).hp + "/" + PokemonStorage.getPokemon(2).maxHP
+											+ "\n4. " + pokeNames[3] + "\t" + PokemonStorage.getPokemon(3).hp + "/" + PokemonStorage.getPokemon(3).maxHP
+											+ "\n5. " + pokeNames[4] + "\t" + PokemonStorage.getPokemon(4).hp + "/" + PokemonStorage.getPokemon(4).maxHP
+											+ "\n6. " + pokeNames[5] + "\t" + PokemonStorage.getPokemon(5).hp + "/" + PokemonStorage.getPokemon(5).maxHP
+											+ "\n7. Cancel");
 						
 						try {
 							
-							 int choice2 = input.nextInt();
+							int choice2 = 0;
+							choice2 = input.nextInt();
 							
 							if (choice2 > 0 && choice2 < 7) {
 								
 								if (PokemonStorage.getPokemon(choice2 - 1).getHP() > 0) {
 									
-									System.out.println("You healed " + pokemon.base.name + " for " + bag[choice - 1].heal);
 									pokemon.heal(bag[choice - 1].heal);
 									
 								} else {
 									
 									System.out.println("This Pokemon is out of HP");
+									bag[choice - 1].obtainItem();
 									itemMenu();
 									
 								}
 								
 							} 
 							
-							else if (choice2 == 7) itemMenu();
+							else if (choice2 == 7) { 
+								
+								itemMenu();
+								bag[choice - 1].obtainItem();
+								
+							}
 							else System.out.println("That is an invalid choice, try again");
 							
 						} catch(InputMismatchException e) { System.out.println("That is an invalid choice, try again"); } finally { if (choice < 1 || choice > 7) { input.nextLine(); } else { } }

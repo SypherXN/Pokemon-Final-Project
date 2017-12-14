@@ -57,4 +57,15 @@ public class PokemonStorage {
 		
 	}
 	
+	//Heals all Pokemon to full
+	public static void healAll() {
+		
+		for (int i = 0; i < storage.length; i++) {
+			
+			storage[i].healFull();
+			
+		}
+		
+	}	
+	
 }
