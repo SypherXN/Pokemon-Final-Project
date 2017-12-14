@@ -50,7 +50,7 @@ public class Points {
 		
 	}
 	
-	//Prints out results based on winning or losing, and the number of points received.
+	//Prints out results based on winning or losing, and the number of points received.h
 	public static void pointSwitch() {
 		
 		switch(pointCalculator()) {
