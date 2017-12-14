@@ -241,7 +241,7 @@ public class Pokedex {
 		new BaseMove("Submission", Fighting, 80, 20),
 		new BaseMove("Surf", Water, 90, 15),
 		new BaseMove("Swift", Normal, 60, 20),
-		new BaseMove("Tackle", Normal, 15, 5),
+		new BaseMove("Tackle", Normal, 15, 35),
 		new BaseMove("Take Down", Normal, 90, 20),
 		new BaseMove("Thrash", Normal, 120, 10),
 		new BaseMove("Thunder", Electric, 110, 10),
