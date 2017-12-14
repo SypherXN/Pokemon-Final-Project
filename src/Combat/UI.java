@@ -93,10 +93,10 @@ public class UI {
 	public static void attackMenu(Move[] moves) {
 		
 		String attackMenu = "Which move would you like to use?"
-							+ "\n1. " + moveNames[0] + moves[0].getPP() + "/" + moves[0].base.getMaxPP()
-							+ "\n2. " + moveNames[1] + moves[1].getPP() + "/" + moves[1].base.getMaxPP()
-							+ "\n3. " + moveNames[2] + moves[2].getPP() + "/" + moves[2].base.getMaxPP()
-							+ "\n4. " + moveNames[3] + moves[3].getPP() + "/" + moves[3].base.getMaxPP()
+							+ "\n1. " + moveNames[0] + "\t" + moves[0].getPP() + "/" + moves[0].base.getMaxPP()
+							+ "\n2. " + moveNames[1] + "\t" + moves[1].getPP() + "/" + moves[1].base.getMaxPP()
+							+ "\n3. " + moveNames[2] + "\t" + moves[2].getPP() + "/" + moves[2].base.getMaxPP()
+							+ "\n4. " + moveNames[3] + "\t" + moves[3].getPP() + "/" + moves[3].base.getMaxPP()
 							+ "\n5. Cancel";
 		System.out.println();
 		System.out.println(attackMenu);
@@ -136,12 +136,12 @@ public class UI {
 	public static void pokemonMenu() {
 		
 		String pokemonMenu = "Which Pokemon would you like to switch in?"
-							+ "\n1. " + pokeNames[0] + PokemonStorage.getPokemon(0).hp + "/" + PokemonStorage.getPokemon(0).maxHP + "\tLevel: " + PokemonStorage.getPokemon(0).level
-							+ "\n2. " + pokeNames[1] + PokemonStorage.getPokemon(1).hp + "/" + PokemonStorage.getPokemon(1).maxHP + "\tLevel: " + PokemonStorage.getPokemon(1).level
-							+ "\n3. " + pokeNames[2] + PokemonStorage.getPokemon(2).hp + "/" + PokemonStorage.getPokemon(2).maxHP + "\tLevel: " + PokemonStorage.getPokemon(2).level
-							+ "\n4. " + pokeNames[3] + PokemonStorage.getPokemon(3).hp + "/" + PokemonStorage.getPokemon(3).maxHP + "\tLevel: " + PokemonStorage.getPokemon(3).level
-							+ "\n5. " + pokeNames[4] + PokemonStorage.getPokemon(4).hp + "/" + PokemonStorage.getPokemon(4).maxHP + "\tLevel: " + PokemonStorage.getPokemon(4).level
-							+ "\n6. " + pokeNames[5] + PokemonStorage.getPokemon(5).hp + "/" + PokemonStorage.getPokemon(5).maxHP + "\tLevel: " + PokemonStorage.getPokemon(5).level
+							+ "\n1. " + pokeNames[0] + "\t" + PokemonStorage.getPokemon(0).hp + "/" + PokemonStorage.getPokemon(0).maxHP + "\tLevel: " + PokemonStorage.getPokemon(0).level
+							+ "\n2. " + pokeNames[1] + "\t" + PokemonStorage.getPokemon(1).hp + "/" + PokemonStorage.getPokemon(1).maxHP + "\tLevel: " + PokemonStorage.getPokemon(1).level
+							+ "\n3. " + pokeNames[2] + "\t" + PokemonStorage.getPokemon(2).hp + "/" + PokemonStorage.getPokemon(2).maxHP + "\tLevel: " + PokemonStorage.getPokemon(2).level
+							+ "\n4. " + pokeNames[3] + "\t" + PokemonStorage.getPokemon(3).hp + "/" + PokemonStorage.getPokemon(3).maxHP + "\tLevel: " + PokemonStorage.getPokemon(3).level
+							+ "\n5. " + pokeNames[4] + "\t" + PokemonStorage.getPokemon(4).hp + "/" + PokemonStorage.getPokemon(4).maxHP + "\tLevel: " + PokemonStorage.getPokemon(4).level
+							+ "\n6. " + pokeNames[5] + "\t" + PokemonStorage.getPokemon(5).hp + "/" + PokemonStorage.getPokemon(5).maxHP + "\tLevel: " + PokemonStorage.getPokemon(5).level
 							+ "\n7. Cancel";
 		System.out.println();
 		System.out.println(pokemonMenu);
@@ -209,12 +209,12 @@ public class UI {
 						bag[choice - 1].obtainItem();
 						
 						System.out.println("Which Pokemon would you like to heal?"
-											+ "\n1. " + pokeNames[0] + PokemonStorage.getPokemon(0).hp + "/" + PokemonStorage.getPokemon(0).maxHP + "\tLevel: " + PokemonStorage.getPokemon(0).level
-											+ "\n2. " + pokeNames[1] + PokemonStorage.getPokemon(1).hp + "/" + PokemonStorage.getPokemon(1).maxHP + "\tLevel: " + PokemonStorage.getPokemon(1).level
-											+ "\n3. " + pokeNames[2] + PokemonStorage.getPokemon(2).hp + "/" + PokemonStorage.getPokemon(2).maxHP + "\tLevel: " + PokemonStorage.getPokemon(2).level
-											+ "\n4. " + pokeNames[3] + PokemonStorage.getPokemon(3).hp + "/" + PokemonStorage.getPokemon(3).maxHP + "\tLevel: " + PokemonStorage.getPokemon(3).level
-											+ "\n5. " + pokeNames[4] + PokemonStorage.getPokemon(4).hp + "/" + PokemonStorage.getPokemon(4).maxHP + "\tLevel: " + PokemonStorage.getPokemon(4).level
-											+ "\n6. " + pokeNames[5] + PokemonStorage.getPokemon(5).hp + "/" + PokemonStorage.getPokemon(5).maxHP + "\tLevel: " + PokemonStorage.getPokemon(5).level
+											+ "\n1. " + pokeNames[0] + "\t" + PokemonStorage.getPokemon(0).hp + "/" + PokemonStorage.getPokemon(0).maxHP + "\tLevel: " + PokemonStorage.getPokemon(0).level
+											+ "\n2. " + pokeNames[1] + "\t" + PokemonStorage.getPokemon(1).hp + "/" + PokemonStorage.getPokemon(1).maxHP + "\tLevel: " + PokemonStorage.getPokemon(1).level
+											+ "\n3. " + pokeNames[2] + "\t" + PokemonStorage.getPokemon(2).hp + "/" + PokemonStorage.getPokemon(2).maxHP + "\tLevel: " + PokemonStorage.getPokemon(2).level
+											+ "\n4. " + pokeNames[3] + "\t" + PokemonStorage.getPokemon(3).hp + "/" + PokemonStorage.getPokemon(3).maxHP + "\tLevel: " + PokemonStorage.getPokemon(3).level
+											+ "\n5. " + pokeNames[4] + "\t" + PokemonStorage.getPokemon(4).hp + "/" + PokemonStorage.getPokemon(4).maxHP + "\tLevel: " + PokemonStorage.getPokemon(4).level
+											+ "\n6. " + pokeNames[5] + "\t" + PokemonStorage.getPokemon(5).hp + "/" + PokemonStorage.getPokemon(5).maxHP + "\tLevel: " + PokemonStorage.getPokemon(5).level
 											+ "\n7. Cancel");
 						
 						try {
