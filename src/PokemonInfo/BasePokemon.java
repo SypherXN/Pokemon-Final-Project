@@ -14,7 +14,9 @@ public class BasePokemon {
 	public final int hpMod, attackMod, defenseMod, speedMod;
 	public final int evolveLevel;
 	
-	/* Creates a reference to Pokemon that contains their stats and info
+	/**
+	 * Creates a reference to Pokemon that contains their stats and info
+	 * 
 	 * @param name - name of the Pokemon
 	 * @param firstType - first type of the Pokemon
 	 * @param secondType - second type of the Pokemon

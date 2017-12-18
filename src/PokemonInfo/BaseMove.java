@@ -10,7 +10,9 @@ public class BaseMove {
 	public final Type type;
 	public final int attack, maxPP;
 	
-	/* Creates a reference to Moves to store their information
+	/** 
+	 * Creates a reference to Moves to store their information
+	 * 
 	 * @param name - name of the move
 	 * @param type - type of the move
 	 * @param attack - attack of the move

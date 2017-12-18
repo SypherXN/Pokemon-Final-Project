@@ -9,7 +9,9 @@ public class Move {
 	public BaseMove base;
 	public int pp;
 	
-	/* Creates an reference to the Move
+	/** 
+	 * Creates an reference to the Move
+	 * 
 	 * @param base - base stats of the move
 	 */
 	public Move(BaseMove base) {

@@ -10,7 +10,9 @@ public class Item {
 	public final int heal;
 	public int numberOwned = 0;
 	
-	/* Creates a reference for the item information
+	/** 
+	 * Creates a reference for the item information
+	 * 
 	 * @param name - name of the item
 	 * @param heal - healing amount
 	 */

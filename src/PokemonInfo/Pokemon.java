@@ -10,7 +10,9 @@ public class Pokemon {
 	public final BasePokemon base;
 	public Move[] moves = {Pokedex.NoMove, Pokedex.NoMove, Pokedex.NoMove, Pokedex.NoMove};
 	
-	/* Creates a reference for Pokemon based off the BasePokemon
+	/** 
+	 * Creates a reference for Pokemon based off the BasePokemon
+	 * 
 	 * @param base - basepokemon object
 	 * @param one - move in slot 1
 	 * @param two - move in slot 2
