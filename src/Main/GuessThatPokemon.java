@@ -23,6 +23,7 @@ public class GuessThatPokemon {
 		
 		String blank = "";
 		
+		//Creates a string of asterisk to signify the length
 		do {
 			
 			blank += "*";
@@ -30,30 +31,38 @@ public class GuessThatPokemon {
 			
 		} while(a < pokemonName.length());
 		
+		//Tells player how many letters are in the name
 		System.out.println("The pokemon you are trying to guess has " + pokemonName.length() + " letters in its name.");
 		
+		//For-loop keeps track of how many tries the user has left
 		for(int i = tries; i > 0; i--) {
 			
 			System.out.println("Enter a letter to guess: ");
 			
+			//Gets the first character of whatever they input
 			char charGuess = input.nextLine().charAt(0);
 			
+			//Changes it to upper case to keep compare it to the upper case string
 			char upperCharGuess = Character.toUpperCase(charGuess);
 			
+			//Prints to tell user if their input was not in the String
 			if(upperPokemonName.indexOf(upperCharGuess) == -1) {
 				
 				System.out.println("The letter " + charGuess + " is not in the pokemon's name. Please try again.");
 			
 			} else {
-			
+				
+				//For-loop traverses the string and looks for matches
 				for(int x = 0; x < pokemonName.length(); x++) {
 					
 					if (upperCharGuess == upperPokemonName.charAt(x)) {
 						
+						//Checks substrings if x is equal to the length
 						if (x == pokemonName.length()) {
 							
 							blank = blank.substring(0, x) + upperCharGuess;
 							
+						//Checks substrings when x is not equal to length
 						} else {
 							
 							blank = blank.substring(0, x) + upperCharGuess + blank.substring(x + 1);
@@ -64,14 +73,17 @@ public class GuessThatPokemon {
 			
 				}
 				
+				//Shows the user the status of their guesses
 				System.out.println(blank);
 				
+				//Will check if they have gotten the question right
 				if (blank.equals(upperPokemonName)) { return 1; }
 				
 			}
 			
 		}
 		
+		//Secondary check if they have gotten the question right
 		if (blank.equals(upperPokemonName)) { return 1; }
 		
 		return 0;
@@ -82,6 +94,7 @@ public class GuessThatPokemon {
 		
 		switch(pokemonGuess()) {
 		
+		//Returns based on the completion of the game
 		case 0:
 			System.out.println("You failed and now lose points");
 			return false;

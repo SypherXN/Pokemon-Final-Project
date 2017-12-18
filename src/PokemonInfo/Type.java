@@ -12,9 +12,11 @@ public class Type {
 	public final String name;
 	public ArrayList<Type> weaknessList, resistanceList, noEffectList;
 	
-	/*Creates a reference for the types of the Pokemon
-	 * @param name - name of the type
-	 * @param type - index of the type
+	/**
+	 * Creates a reference for the types of the Pokemon
+	 * 
+	 * @param name name of the type
+	 * @param type index of the type
 	 */
 	public Type(String name, int type) {
 		

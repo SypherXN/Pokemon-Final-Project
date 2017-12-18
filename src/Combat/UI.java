@@ -22,13 +22,14 @@ public class UI {
 	//Overall menu for combat
 	public static void combatMenu() {
 		
+		//Makes the formatiing of the Pokemon Names line up
 		for (int i = 0; i < pokeNames.length; i++) {
 			
-			if (PokemonStorage.getPokemon(i).base.name.length() < 5) {
+			if (PokemonStorage.getPokemon(i).base.name.length() < 6) {
 				
 				pokeNames[i] = PokemonStorage.getPokemon(i).base.name + "\t\t";
 				
-			} else if (PokemonStorage.getPokemon(i).base.name.length() > 12){
+			} else if (PokemonStorage.getPokemon(i).base.name.length() > 13){
 				
 				pokeNames[i] = PokemonStorage.getPokemon(i).base.name;
 				
@@ -40,13 +41,14 @@ public class UI {
 			
 		}
 		
+		//Makes the formatiing of the Move Names line up
 		for(int i = 0; i < moveNames.length; i++) {
 			
-			if (pokemon.getMove(i).base.name.length() < 5) {
+			if (pokemon.getMove(i).base.name.length() < 6) {
 				
 				moveNames[i] = pokemon.getMove(i).base.name + "\t\t";
 				
-			} else if (pokemon.getMove(i).base.name.length() > 12){
+			} else if (pokemon.getMove(i).base.name.length() > 13){
 				
 				moveNames[i] = pokemon.getMove(i).base.name;
 				
@@ -58,17 +60,22 @@ public class UI {
 			
 		}
 		
+		//Simply forces the player to choose another Pokemon to send when one has fainted
 		if (UI.pokemon.hp < 1) { System.out.println(pokemon.base.name + " has fainted"); pokemonMenu(); return;}
 		
+		//Prints out the combat menu text
 		String combatMenu = "What would you like to do?\n1. Attack\n2. Change Pokemon\n3. Use Item\n4. Run";
 		System.out.println(combatMenu);
 		int choice = 0;
+		
+		//Makes sure that the player types in a valid input
 		while (choice < 1 || choice > 4) {
 			
 			try {
 				
 				choice = input.nextInt();
 				
+				//Chooses which menu to open
 				if (choice == 1) attackMenu(pokemon.getMoves());
 				else if (choice == 2) pokemonMenu();
 				else if (choice == 3) itemMenu();
@@ -84,6 +91,7 @@ public class UI {
 	//Attack menu to choose attacks
 	public static void attackMenu(Move[] moves) {
 		
+		//Prints out the attack menu text
 		String attackMenu = "Which move would you like to use?"
 							+ "\n1. " + moveNames[0] + "\t" + moves[0].getPP() + "/" + moves[0].base.getMaxPP()
 							+ "\n2. " + moveNames[1] + "\t" + moves[1].getPP() + "/" + moves[1].base.getMaxPP()
@@ -93,19 +101,24 @@ public class UI {
 		System.out.println();
 		System.out.println(attackMenu);
 		int choice = 0;
+		
+		//Makes sure that the player input is valid
 		while (choice < 1 || choice > 5) {
 			
 			try {
 				
 				choice = input.nextInt();
 				
+				//Checks to see if they want to use a move
 				if (choice > 0 && choice < moves.length + 1) {
 					
+					//If there is no more PP
 					if (!moves[choice - 1].attemptUseMove()) {
 						
 						System.out.println("Out of PP");
 						attackMenu(moves);
 						
+					//Otherwise it attacks
 					} else {
 					
 						Battle.dealDamage(moves[choice - 1]);
@@ -115,6 +128,7 @@ public class UI {
 					
 				}
 				
+				//If they choose to cancel they return to combat menu
 				else if (choice == 5) combatMenu();
 				else System.out.println("That is an invalid choice, try again");
 				
@@ -127,6 +141,7 @@ public class UI {
 	//Pokemon menu to choose Pokemon to switch in
 	public static void pokemonMenu() {
 		
+		//Prints out the pokemon menu text
 		String pokemonMenu = "Which Pokemon would you like to switch in?"
 							+ "\n1. " + pokeNames[0] + "\t" + PokemonStorage.getPokemon(0).hp + "/" + PokemonStorage.getPokemon(0).maxHP + "\tLevel: " + PokemonStorage.getPokemon(0).level
 							+ "\n2. " + pokeNames[1] + "\t" + PokemonStorage.getPokemon(1).hp + "/" + PokemonStorage.getPokemon(1).maxHP + "\tLevel: " + PokemonStorage.getPokemon(1).level
@@ -138,19 +153,25 @@ public class UI {
 		System.out.println();
 		System.out.println(pokemonMenu);
 		int choice = 0;
+		
+		//Checks to see if the user input is valid
 		while (choice < 1 || choice > 7) {
 			
 			try {
 				
 				choice = input.nextInt();
 				
+				//Checks to see if the player is attempting to switch in a Pokemon
 				if (choice > 0 && choice < 7) {
 					
+					
+					//As long as hp of pokemon is greater than 0 then it can be sent in
 					if (PokemonStorage.getPokemon(choice - 1).getHP() > 0) {
 						
 						pokemon = PokemonStorage.getPokemon(choice - 1);
 						System.out.println("You sent out " + pokemon.base.name);
 						
+					//If Pokemon has fainted then they return back to the pokemon menu
 					} else {
 						
 						System.out.println("This Pokemon is out of HP");
@@ -160,6 +181,7 @@ public class UI {
 					
 				} 
 				
+				//If user chooses to cancel then they return to the combat menu
 				else if (choice == 7) combatMenu();
 				else System.out.println("That is an invalid choice, try again");
 				
@@ -172,6 +194,7 @@ public class UI {
 	//Item menu to choose what item to use
 	public static void itemMenu() {
 		
+		//Prints out the item menu text
 		String itemMenu = "Which item would you like to use?"
 						+ "\n1. " + bag[0].getName() + "\t" + bag[0].getNumberOwned()
 						+ "\n2. " + bag[1].getName() + "\t" + bag[1].getNumberOwned()
@@ -181,21 +204,27 @@ public class UI {
 		System.out.println();
 		System.out.println(itemMenu);
 		int choice = 0;
+		
+		//Checks to see if the player input is valid
 		while (choice < 1 || choice > 5) {
 			
 			try {
 				
 				choice = input.nextInt();
 				
+				//Checks to see if the user wants to use an item
 				if (choice > 0 && choice < 5) {
 					
+					//If there are no more of the chosen item then return to item menu
 					if (!bag[choice - 1].attemptUseItem()) {
 						
 						System.out.println("You have no " + bag[choice - 1].getName());
 						bag[choice - 1].obtainItem();
+						itemMenu();
 						
 					}
 					
+					//If there are items then it uses 1 and prints out the text for the pokemon choice menu
 					else if (bag[choice - 1].attemptUseItem()) {
 						
 						bag[choice - 1].obtainItem();
@@ -209,17 +238,21 @@ public class UI {
 											+ "\n6. " + pokeNames[5] + "\t" + PokemonStorage.getPokemon(5).hp + "/" + PokemonStorage.getPokemon(5).maxHP + "\tLevel: " + PokemonStorage.getPokemon(5).level
 											+ "\n7. Cancel");
 						
+						//Checks to see if the input is valid
 						try {
 							
 							int choice2 = 0;
 							choice2 = input.nextInt();
 							
+							//Checks to see that they want to heal a pokemon
 							if (choice2 > 0 && choice2 < 7) {
 								
+								//Checks to see if they have not fainted
 								if (PokemonStorage.getPokemon(choice2 - 1).getHP() > 0) {
 									
 									pokemon.heal(bag[choice - 1].heal);
 									
+								//Checks to see if the Pokemon has fainted already
 								} else {
 									
 									System.out.println("This Pokemon is out of HP");
@@ -230,6 +263,7 @@ public class UI {
 								
 							} 
 							
+							//If they choose to cancel and returns back to item menu
 							else if (choice2 == 7) { 
 								
 								bag[choice - 1].obtainItem();
@@ -248,6 +282,7 @@ public class UI {
 					
 				}
 				
+				//If user chooses to cancel returns to combat menu
 				else if (choice == 5) { combatMenu(); }
 				else System.out.println("That is an invalid choice, try again");
 				
@@ -260,6 +295,7 @@ public class UI {
 	//Option to run and leave the battle
 	public static void run() {
 		
+		//Prints out the total score and ends the program
 		System.out.println("You have forfeited the battle...");
 		System.out.println("You ended with " + Points.overallScore + " points");
 		System.exit(0);

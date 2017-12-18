@@ -81,6 +81,7 @@ public class Battle {
 		//Deals damage to player Pokemon
 		UI.pokemon.hp -= (int)damageDealt;
 		
+		//Simply sets any fainted Pokemon HP to zero
 		if (UI.pokemon.hp < 0) {
 			
 			UI.pokemon.hp = 0;
@@ -124,6 +125,7 @@ public class Battle {
 		//Deals damage to the enemy
 		enemy.hp -= (int)damageDealt;
 		
+		//Simply sets any fainted Pokemon HP to zero
 		if (enemy.hp < 0) {
 			
 			enemy.hp = 0;

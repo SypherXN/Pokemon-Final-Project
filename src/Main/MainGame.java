@@ -35,41 +35,8 @@ public class MainGame {
 			
 		}
 		
-		/*
-		//Prints out the information of Player Pokemon
-		System.out.println("---------Pokemon 1---------");
-		System.out.println(PokemonStorage.storage[0]);
-		System.out.println("---------Pokemon 2---------");
-		System.out.println(PokemonStorage.storage[1]);
-		System.out.println("---------Pokemon 3---------");
-		System.out.println(PokemonStorage.storage[2]);
-		System.out.println("---------Pokemon 4---------");
-		System.out.println(PokemonStorage.storage[3]);
-		System.out.println("---------Pokemon 5---------");
-		System.out.println(PokemonStorage.storage[4]);
-		System.out.println("---------Pokemon 6---------");
-		System.out.println(PokemonStorage.storage[5]);
-		
-		System.out.println();
-		
-		//Prints out the information for the Enemy Pokemon
-		System.out.println("------Enemy Pokemon 1------");
-		System.out.println(EnemyStorage.storage[0]);
-		System.out.println("------Enemy Pokemon 2------");
-		System.out.println(EnemyStorage.storage[1]);
-		System.out.println("------Enemy Pokemon 3------");
-		System.out.println(EnemyStorage.storage[2]);
-		System.out.println("------Enemy Pokemon 4------");
-		System.out.println(EnemyStorage.storage[3]);
-		System.out.println("------Enemy Pokemon 5------");
-		System.out.println(EnemyStorage.storage[4]);
-		System.out.println("------Enemy Pokemon 6------");
-		System.out.println(EnemyStorage.storage[5]);
-		
-		System.out.println();
-		*/
-		
-		while (!PokemonStorage.checkLoss() && !EnemyStorage.checkLoss()) {
+		//While-loop that continues to run the game while the player has not lost
+		while (!PokemonStorage.checkLoss()) {
 			
 			//Informs the Player of the different states and HP of the Pokemons
 			System.out.println("\nEnemy " + Battle.enemy.base.name + " Health: " + Battle.enemy.hp);
