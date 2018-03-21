@@ -121,8 +121,29 @@ public class UI {
 					//Otherwise it attacks
 					} else {
 					
-						Battle.dealDamage(moves[choice - 1]);
-						Battle.enemyDealDamage();
+						if (Battle.isFaster()) {
+							
+							Battle.dealDamage(moves[choice - 1]);
+							
+							if (Battle.enemy.hp > 0) {
+								
+								Battle.enemyDealDamage();
+								
+							}
+							
+						}
+						
+						if (!Battle.isFaster()) {
+							
+							Battle.enemyDealDamage();
+							
+							if (UI.pokemon.hp > 0) {
+								
+								Battle.dealDamage(moves[choice - 1]);
+								
+							}
+							
+						}
 					
 					}
 					

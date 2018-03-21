@@ -133,5 +133,17 @@ public class Battle {
 		}
 		
 	}
+	
+	public static boolean isFaster() {
+		
+		if (enemy.speed > UI.pokemon.speed) {
+			
+			return false;
+			
+		}
+		
+		return true;
+		
+	}
 
 }
