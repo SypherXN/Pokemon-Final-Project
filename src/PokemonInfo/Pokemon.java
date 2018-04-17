@@ -6,9 +6,9 @@ public class Pokemon {
 	 * Created by Matthew 11/17/17
 	 */
 	
-	public int maxHP, hp, attack, defense, speed, level, exp;
-	public final BasePokemon base;
-	public Move[] moves = {Pokedex.NoMove, Pokedex.NoMove, Pokedex.NoMove, Pokedex.NoMove};
+	private int maxHP, hp, attack, defense, speed, level, exp;
+	private final BasePokemon base;
+	private Move[] moves = {Pokedex.NoMove, Pokedex.NoMove, Pokedex.NoMove, Pokedex.NoMove};
 	
 	/** 
 	 * Creates a reference for Pokemon based off the BasePokemon
@@ -25,10 +25,10 @@ public class Pokemon {
 		this.base = base;
 		this.level = level;
 		this.exp = 0;
-		this.maxHP = base.hp + (base.hpMod * level);
-		this.attack = base.attack + (base.attackMod * level);
-		this.defense = base.defense + (base.defenseMod * level);
-		this.speed = base.speed + (base.speedMod * level);
+		this.maxHP = base.getHP() + (base.getHPMod() * level);
+		this.attack = base.getAttack() + (base.getAttackMod() * level);
+		this.defense = base.getDefense() + (base.getDefenseMod() * level);
+		this.speed = base.getSpeed() + (base.getHPMod() * level);
 		this.hp = this.maxHP;
 		
 	}
@@ -57,11 +57,11 @@ public class Pokemon {
 			exp -= target;
 			target += 30;
 			level += 1;
-			maxHP += base.hpMod;
+			maxHP += base.getHPMod();
 			hp = maxHP;
-			attack += base.attackMod;
-			defense += base.defenseMod;
-			speed += base.speedMod;
+			attack += base.getAttackMod();
+			defense += base.getDefenseMod();
+			speed += base.getSpeedMod();
 			return true;
 			
 		}
@@ -73,7 +73,7 @@ public class Pokemon {
 	//Checks to see if the Pokemon can evolve
 	public boolean canEvolve() {
 		
-		if (level >= base.evolveLevel) {
+		if (level >= base.getEvolveLevel()) {
 			
 			return true;
 			
@@ -92,7 +92,7 @@ public class Pokemon {
 		
 		if (this.hp >= maxHP) {
 			
-			System.out.println("You healed " + base.name + " " + printer);
+			System.out.println("You healed " + base.getName() + " " + printer);
 			hp = maxHP; 
 			
 		} else {
@@ -106,32 +106,20 @@ public class Pokemon {
 	//Sets current HP to max HP
 	public void healFull() { hp = maxHP; }
 	
-	public void increaseMaxHP() {	}
-	
-	public void increaseAttack() {	}
-	
-	public void increaseDefense() {	}
-	
-	public void increaseSpeed() {	}
-	
-	public void increaseLevel() {	}
-	
-	public void increaseEXP() {	}
-	
+	//Accessor methods to get instance variables
+	public BasePokemon getBase() { return base; }
 	public int getMaxHP() 	{ return maxHP; }
-	
 	public int getHP() 		{ return hp; }
-	
 	public int getAttack() 	{ return attack; }
-	
 	public int getDefense() 	{ return defense; }
-	
 	public int getSpeed() 	{ return speed; }
-	
 	public int getLevel() 	{ return level; }
-	
 	public int getExp() 		{ return exp; }
-
+	
+	//Modifier methods to change instance variables
+	public void changeHP(int modifier) { hp += modifier; }
+	public void setHPZero() { hp = 0; }
+	
 	//Returns the specific element in the array
 	public Move getMove(int index) { return moves[index]; }
 	
@@ -141,7 +129,7 @@ public class Pokemon {
 	//Uses to print the information of the Pokemon
 	public String toString() {
 		
-		String output = "Name: " + base.name + "\nType: " + base.firstType.getName() + " " + base.secondType.getName() + 
+		String output = "Name: " + base.getName() + "\nType: " + base.getFirstType().getName() + " " + base.getSecondType().getName() + 
 				"\nMax HP: " + maxHP + "\nCurrent HP: " + hp + "\nAttack: " + attack + "\nDefense: " + defense + "\nSpeed: " + speed + 
 				"\nLevel: " + level;
 		

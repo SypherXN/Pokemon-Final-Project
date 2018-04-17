@@ -8,11 +8,12 @@ public class BasePokemon {
 	 * Created by Matthew 11/15/17
 	 */
 
-	public final String name;
-	public final Type firstType, secondType;
-	public final int hp, attack, defense, speed, number;
-	public final int hpMod, attackMod, defenseMod, speedMod;
-	public final int evolveLevel;
+	private final String name;
+	private final Type firstType, secondType;
+	private final int hp, attack, defense, speed, number;
+	private final int hpMod, attackMod, defenseMod, speedMod;
+	private final int evolveLevel;
+	
 	
 	/**
 	 * Creates a reference to Pokemon that contains their stats and info
@@ -77,6 +78,21 @@ public class BasePokemon {
 		this.speedMod = 0;
 		
 	}
+	
+	//Accessor methods to get instance variables
+	public String getName() { return name; }
+	public Type getFirstType() { return firstType; }
+	public Type getSecondType() { return secondType; }
+	public int getHP() { return hp; }
+	public int getAttack() { return attack; }
+	public int getDefense() { return defense; }
+	public int getSpeed() { return speed; }
+	public int getNumber() { return number; }
+	public int getHPMod() { return hpMod; }
+	public int getAttackMod() { return attackMod; }
+	public int getDefenseMod() { return defenseMod; }
+	public int getSpeedMod() { return speedMod; }
+	public int getEvolveLevel() { return evolveLevel; }
 	
 	//Test print to make sure BasePokemon objects work
 	public String toString() {

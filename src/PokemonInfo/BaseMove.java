@@ -6,9 +6,9 @@ public class BaseMove {
 	 * Created by Matthew 11/15/17
 	 */
 
-	public final String name;
-	public final Type type;
-	public final int attack, maxPP;
+	private final String name;
+	private final Type type;
+	private final int attack, maxPP;
 	
 	/** 
 	 * Creates a reference to Moves to store their information
@@ -37,12 +37,10 @@ public class BaseMove {
 		
 	}
 	
+	//Accessor methods to get instance variables
 	public String getName() { return name; }
-	
 	public Type getType() { return type; }
-	
 	public int getAttack() { return attack; }
-	
 	public int getMaxPP() { return maxPP; }
 	
 	

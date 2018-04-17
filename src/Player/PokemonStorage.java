@@ -10,7 +10,7 @@ public class PokemonStorage {
 	 * Created by William 11/17/17
 	 */
 	
-	public static Pokemon[] storage = {Pokedex.NoPokemon, Pokedex.NoPokemon, Pokedex.NoPokemon, Pokedex.NoPokemon, Pokedex.NoPokemon, Pokedex.NoPokemon};
+	private static Pokemon[] storage = {Pokedex.NoPokemon, Pokedex.NoPokemon, Pokedex.NoPokemon, Pokedex.NoPokemon, Pokedex.NoPokemon, Pokedex.NoPokemon};
 	
 	//Changes the Pokemon in the array at the index and inserts the new Pokemon
 	public static void changePokemon(Pokemon pokemon, int index) {
@@ -18,6 +18,9 @@ public class PokemonStorage {
 		storage[index] = pokemon;
 		
 	}
+	
+	//Accessor methods to get instance variables
+	public static Pokemon[] getStorage() { return storage; }
 	
 	//Returns the Pokemon in the array at the index
 	public static Pokemon getPokemon(int index) { return storage[index]; }
@@ -27,13 +30,13 @@ public class PokemonStorage {
 		
 		boolean loss = false;
 		
-		for (int b = 0; b < EnemyStorage.storage.length; b++) {
+		for (int b = 0; b < EnemyStorage.getStorage().length; b++) {
 			
-			if (storage[b].hp <= 0) {
+			if (storage[b].getHP() <= 0) {
 				
 				loss = true;
 				
-			} else if (storage[b].hp > 0) {
+			} else if (storage[b].getHP() > 0) {
 				
 				return false;
 				

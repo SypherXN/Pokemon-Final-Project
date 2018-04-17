@@ -39,8 +39,8 @@ public class MainGame {
 		while (!PokemonStorage.checkLoss()) {
 			
 			//Informs the Player of the different states and HP of the Pokemons
-			System.out.println("\nEnemy " + Battle.enemy.base.name + " Health: " + Battle.enemy.hp);
-			System.out.println("Your " + UI.pokemon.base.name + " Health: " + UI.pokemon.hp + "\n");
+			System.out.println("\nEnemy " + Battle.getEnemy().getBase().getName() + " Health: " + Battle.getEnemy().getHP());
+			System.out.println("Your " + UI.pokemon.getBase().getName() + " Health: " + UI.pokemon.getHP() + "\n");
 			
 			//Calls the Combat Menu from UI
 			UI.combatMenu();
@@ -49,7 +49,7 @@ public class MainGame {
 			if (!PokemonStorage.checkLoss() && !EnemyStorage.checkLoss() && Battle.nextPokemon()) {
 				
 				System.out.println();
-				System.out.println("The enemy sends out " + Battle.enemy.base.name);
+				System.out.println("The enemy sends out " + Battle.getEnemy().getBase().getName());
 				
 			}
 			
@@ -67,7 +67,7 @@ public class MainGame {
 				System.out.println("You move on to the next battle");
 				Battle.nextPokemon();
 				System.out.println();
-				System.out.println("The enemy sends out " + Battle.enemy.base.name);
+				System.out.println("The enemy sends out " + Battle.getEnemy().getBase().getName());
 				
 			}
 			
@@ -76,7 +76,7 @@ public class MainGame {
 				
 				System.out.println();
 				System.out.println("You lost the battle");
-				System.out.println("You ended with " + Points.overallScore + " points");
+				System.out.println("You ended with " + Points.getOverallScore() + " points");
 				System.exit(0);
 				
 			}

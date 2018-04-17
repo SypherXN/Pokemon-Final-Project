@@ -8,9 +8,9 @@ public class Type {
 	 * Created by Matthew 11/16/17
 	 */
 	
-	public final int type;
-	public final String name;
-	public ArrayList<Type> weaknessList, resistanceList, noEffectList;
+	private final int type;
+	private final String name;
+	private ArrayList<Type> weaknessList, resistanceList, noEffectList;
 	
 	/**
 	 * Creates a reference for the types of the Pokemon

@@ -9,8 +9,13 @@ public class Points {
 	 * created by William 12/13/17
 	 */
 	
-	public static int yourPoints, enemyPoints, currentScore, overallScore;
+	private static int yourPoints, enemyPoints, currentScore, overallScore;
 	
+	//Accessor methods to get instance variables
+	public static int getYourPoints() { return yourPoints; }
+	public static int getEnemyPoints() { return enemyPoints; }
+	public static int getCurrentScore() { return currentScore; }
+	public static int getOverallScore() { return overallScore; }
 	
 	//Calculates the number of points you have based on the difference of levels between you and your enemy.
 	public static int pointCalculator() {
@@ -46,12 +51,12 @@ public class Points {
 				
 			}
 			
-			int max = PokemonStorage.getPokemon(0).level;
+			int max = PokemonStorage.getPokemon(0).getLevel();
 			
 			for (int i = 0; i < 6; i++) {
 				
-				if(max < PokemonStorage.getPokemon(i).level) {
-					max = PokemonStorage.getPokemon(i).level;
+				if(max < PokemonStorage.getPokemon(i).getLevel()) {
+					max = PokemonStorage.getPokemon(i).getLevel();
 				}
 				
 			}
@@ -73,12 +78,12 @@ public class Points {
 				currentScore = (int)Math.sqrt(currentScore);
 				
 			}
-			int max = PokemonStorage.getPokemon(0).level;
+			int max = PokemonStorage.getPokemon(0).getLevel();
 			
 			for (int i = 0; i < 6; i++) {
 				
-				if(max < PokemonStorage.getPokemon(i).level) {
-					max = PokemonStorage.getPokemon(i).level;
+				if(max < PokemonStorage.getPokemon(i).getLevel()) {
+					max = PokemonStorage.getPokemon(i).getLevel();
 				}
 				
 			}

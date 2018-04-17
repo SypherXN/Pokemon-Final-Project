@@ -8,7 +8,10 @@ public class Battle {
 	 * Created by William 12/1/17
 	 */
 	
-	public static Pokemon enemy = EnemyStorage.storage[0];
+	private static Pokemon enemy = EnemyStorage.getStorage()[0];
+	
+	//Accessor methods to get instance variables
+	public static Pokemon getEnemy() { return enemy; }
 	
 	//Randomly picks a move for the opposing Pokemon
 	public static Move usedMove() {
@@ -23,19 +26,19 @@ public class Battle {
 		
 		int index = 0;
 		
-		if (enemy.hp <= 0) {
+		if (enemy.getHP() <= 0) {
 			
 			do {
 				
-				index = (int)(Math.random() * EnemyStorage.storage.length);
-				enemy = EnemyStorage.storage[index];
-				if (enemy.hp > 0) {
+				index = (int)(Math.random() * EnemyStorage.getStorage().length);
+				enemy = EnemyStorage.getStorage()[index];
+				if (enemy.getHP() > 0) {
 					
 					return true;
 					
 				}
 				
-			} while (enemy.hp <= 0);
+			} while (enemy.getHP() <= 0);
 		
 		}
 		
@@ -61,30 +64,30 @@ public class Battle {
 		Move usedMove = usedMove();
 		
 		//Checks for effectiveness
-		if (UI.pokemon.base.firstType.isEffective(usedMove.base.type)) { modifier *= 2; }
-		if (UI.pokemon.base.secondType.isEffective(usedMove.base.type)) { modifier *= 2; }
+		if (UI.pokemon.getBase().getFirstType().isEffective(usedMove.getBase().getType())) { modifier *= 2; }
+		if (UI.pokemon.getBase().getSecondType().isEffective(usedMove.getBase().getType())) { modifier *= 2; }
 		
 		//Checks for resistances
-		if (UI.pokemon.base.firstType.isResisted(usedMove.base.type)) { modifier /= 2; }
-		if (UI.pokemon.base.secondType.isResisted(usedMove.base.type)) { modifier /= 2; }
+		if (UI.pokemon.getBase().getFirstType().isResisted(usedMove.getBase().getType())) { modifier /= 2; }
+		if (UI.pokemon.getBase().getSecondType().isResisted(usedMove.getBase().getType())) { modifier /= 2; }
 		
 		//Checks for nullification
-		if (UI.pokemon.base.firstType.noEffect(usedMove.base.type)) { modifier = 0; }
-		if (UI.pokemon.base.secondType.noEffect(usedMove.base.type)) { modifier = 0; }
+		if (UI.pokemon.getBase().getFirstType().noEffect(usedMove.getBase().getType())) { modifier = 0; }
+		if (UI.pokemon.getBase().getSecondType().noEffect(usedMove.getBase().getType())) { modifier = 0; }
 			
 		//Calculates damage dealt
-		double damageDealt = (((((2 * (double)enemy.level) / 5) + 2) * (double)usedMove.getAttack() * ((double)enemy.attack / (double)UI.pokemon.defense) / 50 ) * (double)modifier);
+		double damageDealt = (((((2 * (double)enemy.getLevel()) / 5) + 2) * (double)usedMove.getAttack() * ((double)enemy.getAttack() / (double)UI.pokemon.getDefense()) / 50 ) * (double)modifier);
 		
 		//Prints out information
-		System.out.println("The enemy " + enemy.base.name + " used " + usedMove.base.name + " and dealt " + (int)damageDealt + " damage");
+		System.out.println("The enemy " + enemy.getBase().getName() + " used " + usedMove.getBase().getName() + " and dealt " + (int)damageDealt + " damage");
 		
 		//Deals damage to player Pokemon
-		UI.pokemon.hp -= (int)damageDealt;
+		UI.pokemon.changeHP(-(int)damageDealt);
 		
 		//Simply sets any fainted Pokemon HP to zero
-		if (UI.pokemon.hp < 0) {
+		if (UI.pokemon.getHP() < 0) {
 			
-			UI.pokemon.hp = 0;
+			UI.pokemon.setHPZero();
 			
 		}
 		
@@ -105,30 +108,30 @@ public class Battle {
 		}
 		
 		//Checks for effectiveness
-		if (enemy.base.firstType.isEffective(usedMove.base.type)) { modifier *= 2; }
-		if (enemy.base.secondType.isEffective(usedMove.base.type)) { modifier *= 2; }
+		if (enemy.getBase().getFirstType().isEffective(usedMove.getBase().getType())) { modifier *= 2; }
+		if (enemy.getBase().getSecondType().isEffective(usedMove.getBase().getType())) { modifier *= 2; }
 		
 		//Checks for resistances
-		if (enemy.base.firstType.isResisted(usedMove.base.type)) { modifier /= 2; }
-		if (enemy.base.secondType.isResisted(usedMove.base.type)) { modifier /= 2; }
+		if (enemy.getBase().getFirstType().isResisted(usedMove.getBase().getType())) { modifier /= 2; }
+		if (enemy.getBase().getSecondType().isResisted(usedMove.getBase().getType())) { modifier /= 2; }
 		
 		//Checks for nullification
-		if (enemy.base.firstType.noEffect(usedMove.base.type)) { modifier = 0; }
-		if (enemy.base.secondType.noEffect(usedMove.base.type)) { modifier = 0; }
+		if (enemy.getBase().getFirstType().noEffect(usedMove.getBase().getType())) { modifier = 0; }
+		if (enemy.getBase().getSecondType().noEffect(usedMove.getBase().getType())) { modifier = 0; }
 		
 		//Calculates damage dealt
-		double damageDealt = (((((2 * (double)UI.pokemon.level) / 5) + 2) * (double)usedMove.getAttack() * ((double)UI.pokemon.attack / (double)enemy.defense) / 50 ) * (double)modifier);
+		double damageDealt = (((((2 * (double)UI.pokemon.getLevel()) / 5) + 2) * (double)usedMove.getAttack() * ((double)UI.pokemon.getAttack() / (double)enemy.getDefense()) / 50 ) * (double)modifier);
 	
 		//Prints out information
-		System.out.println("Your " + UI.pokemon.base.name + " used " + usedMove.base.name + " and dealt " + (int)damageDealt + " damage");
+		System.out.println("Your " + UI.pokemon.getBase().getName() + " used " + usedMove.getBase().getName() + " and dealt " + (int)damageDealt + " damage");
 		
 		//Deals damage to the enemy
-		enemy.hp -= (int)damageDealt;
+		enemy.changeHP(-(int)damageDealt);
 		
 		//Simply sets any fainted Pokemon HP to zero
-		if (enemy.hp < 0) {
+		if (enemy.getHP() < 0) {
 			
-			enemy.hp = 0;
+			enemy.setHPZero();
 			
 		}
 		
@@ -136,7 +139,7 @@ public class Battle {
 	
 	public static boolean isFaster() {
 		
-		if (enemy.speed > UI.pokemon.speed) {
+		if (enemy.getSpeed() > UI.pokemon.getSpeed()) {
 			
 			return false;
 			

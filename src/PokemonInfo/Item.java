@@ -6,9 +6,9 @@ public class Item {
 	 * Created by William 11/17/17
 	 */
 	
-	public final String name;
-	public final int heal;
-	public int numberOwned = 0;
+	private final String name;
+	private final int heal;
+	private int numberOwned = 0;
 	
 	/** 
 	 * Creates a reference for the item information
@@ -40,10 +40,9 @@ public class Item {
 		
 	}
 	
+	//Accessor method to get instance variables
 	public String getName() { return name; }
-	
 	public int getHeal() { return heal; }
-	
 	public int getNumberOwned() { return numberOwned; }
 	
 }

@@ -8,15 +8,15 @@ public class GuessThatPokemon {
 	 * Created by William 12/6/17
 	 */
 	
-	public static String pokemonName, capName;
-	public static Scanner input = new Scanner(System.in);
-	public static int tries;
-	public static boolean correct;
+	private static String pokemonName, capName;
+	private static Scanner input = new Scanner(System.in);
+	private static int tries;
+	private static boolean correct;
 	
 	//Returns an integer based on the state of the game
 	public static int pokemonGuess() {
 		
-		pokemonName = Pokedex.basePokemons[(int)(Math.random() * Pokedex.basePokemons.length - 1) + 1].name;
+		pokemonName = Pokedex.basePokemons[(int)(Math.random() * Pokedex.basePokemons.length - 1) + 1].getName();
 		String upperPokemonName = pokemonName.toUpperCase();
 		tries = pokemonName.length() * 2;
 		int a = 0;
@@ -39,8 +39,17 @@ public class GuessThatPokemon {
 			
 			System.out.println("Enter a letter to guess: ");
 			
+			String next = input.nextLine();
+			
+			while (next.equals("")) {
+				
+				System.out.println("Enter a letter to guess");
+				next = input.nextLine();
+				
+			}
+			
 			//Gets the first character of whatever they input
-			char charGuess = input.nextLine().charAt(0);
+			char charGuess = next.charAt(0);
 			
 			//Changes it to upper case to keep compare it to the upper case string
 			char upperCharGuess = Character.toUpperCase(charGuess);

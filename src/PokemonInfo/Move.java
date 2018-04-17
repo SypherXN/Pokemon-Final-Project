@@ -6,8 +6,8 @@ public class Move {
 	 * Created by Matthew 11/17/17
 	 */
 	
-	public BaseMove base;
-	public int pp;
+	private BaseMove base;
+	private int pp;
 	
 	/** 
 	 * Creates an reference to the Move
@@ -37,12 +37,10 @@ public class Move {
 		
 	}
 	
+	//Accessor methods to get instance variables
 	public Type getType() { return base.getType(); }
-	
 	public int getAttack() { return base.getAttack(); }
-	
 	public int getPP() { return pp; }
-	
-	
+	public BaseMove getBase() { return base; }
 	
 }

@@ -16,8 +16,8 @@ public class UI {
 	private static Scanner input = new Scanner(System.in);
 	public static Pokemon pokemon = PokemonStorage.getPokemon(0);
 	public static Item[] bag = {Pokedex.Potion, Pokedex.SuperPotion, Pokedex.HyperPotion, Pokedex.MaxPotion};
-	public static String[] pokeNames = {PokemonStorage.getPokemon(0).base.name, PokemonStorage.getPokemon(1).base.name, PokemonStorage.getPokemon(2).base.name, PokemonStorage.getPokemon(3).base.name, PokemonStorage.getPokemon(4).base.name, PokemonStorage.getPokemon(5).base.name};
-	public static String[] moveNames = {pokemon.getMove(0).base.name, pokemon.getMove(1).base.name, pokemon.getMove(2).base.name, pokemon.getMove(3).base.name};
+	public static String[] pokeNames = {PokemonStorage.getPokemon(0).getBase().getName(), PokemonStorage.getPokemon(1).getBase().getName(), PokemonStorage.getPokemon(2).getBase().getName(), PokemonStorage.getPokemon(3).getBase().getName(), PokemonStorage.getPokemon(4).getBase().getName(), PokemonStorage.getPokemon(5).getBase().getName()};
+	public static String[] moveNames = {pokemon.getMove(0).getBase().getName(), pokemon.getMove(1).getBase().getName(), pokemon.getMove(2).getBase().getName(), pokemon.getMove(3).getBase().getName()};
 	
 	//Overall menu for combat
 	public static void combatMenu() {
@@ -25,17 +25,17 @@ public class UI {
 		//Makes the formatiing of the Pokemon Names line up
 		for (int i = 0; i < pokeNames.length; i++) {
 			
-			if (PokemonStorage.getPokemon(i).base.name.length() < 6) {
+			if (PokemonStorage.getPokemon(i).getBase().getName().length() < 6) {
 				
-				pokeNames[i] = PokemonStorage.getPokemon(i).base.name + "\t\t";
+				pokeNames[i] = PokemonStorage.getPokemon(i).getBase().getName() + "\t\t";
 				
-			} else if (PokemonStorage.getPokemon(i).base.name.length() > 13){
+			} else if (PokemonStorage.getPokemon(i).getBase().getName().length() > 13){
 				
-				pokeNames[i] = PokemonStorage.getPokemon(i).base.name;
+				pokeNames[i] = PokemonStorage.getPokemon(i).getBase().getName();
 				
 			} else {
 				
-				pokeNames[i] = PokemonStorage.getPokemon(i).base.name + "\t";
+				pokeNames[i] = PokemonStorage.getPokemon(i).getBase().getName() + "\t";
 				
 			}
 			
@@ -44,24 +44,24 @@ public class UI {
 		//Makes the formatiing of the Move Names line up
 		for(int i = 0; i < moveNames.length; i++) {
 			
-			if (pokemon.getMove(i).base.name.length() < 6) {
+			if (pokemon.getMove(i).getBase().getName().length() < 6) {
 				
-				moveNames[i] = pokemon.getMove(i).base.name + "\t\t";
+				moveNames[i] = pokemon.getMove(i).getBase().getName() + "\t\t";
 				
-			} else if (pokemon.getMove(i).base.name.length() > 13){
+			} else if (pokemon.getMove(i).getBase().getName().length() > 13){
 				
-				moveNames[i] = pokemon.getMove(i).base.name;
+				moveNames[i] = pokemon.getMove(i).getBase().getName();
 				
 			} else {
 				
-				moveNames[i] = pokemon.getMove(i).base.name + "\t";
+				moveNames[i] = pokemon.getMove(i).getBase().getName() + "\t";
 				
 			}
 			
 		}
 		
 		//Simply forces the player to choose another Pokemon to send when one has fainted
-		if (UI.pokemon.hp < 1) { System.out.println(pokemon.base.name + " has fainted"); pokemonMenu(); return;}
+		if (UI.pokemon.getHP() < 1) { System.out.println(pokemon.getBase().getName() + " has fainted"); pokemonMenu(); return;}
 		
 		//Prints out the combat menu text
 		String combatMenu = "What would you like to do?\n1. Attack\n2. Change Pokemon\n3. Use Item\n4. Run";
@@ -93,10 +93,10 @@ public class UI {
 		
 		//Prints out the attack menu text
 		String attackMenu = "Which move would you like to use?"
-							+ "\n1. " + moveNames[0] + "\t" + moves[0].getPP() + "/" + moves[0].base.getMaxPP()
-							+ "\n2. " + moveNames[1] + "\t" + moves[1].getPP() + "/" + moves[1].base.getMaxPP()
-							+ "\n3. " + moveNames[2] + "\t" + moves[2].getPP() + "/" + moves[2].base.getMaxPP()
-							+ "\n4. " + moveNames[3] + "\t" + moves[3].getPP() + "/" + moves[3].base.getMaxPP()
+							+ "\n1. " + moveNames[0] + "\t" + moves[0].getPP() + "/" + moves[0].getBase().getMaxPP()
+							+ "\n2. " + moveNames[1] + "\t" + moves[1].getPP() + "/" + moves[1].getBase().getMaxPP()
+							+ "\n3. " + moveNames[2] + "\t" + moves[2].getPP() + "/" + moves[2].getBase().getMaxPP()
+							+ "\n4. " + moveNames[3] + "\t" + moves[3].getPP() + "/" + moves[3].getBase().getMaxPP()
 							+ "\n5. Cancel";
 		System.out.println();
 		System.out.println(attackMenu);
@@ -125,7 +125,7 @@ public class UI {
 							
 							Battle.dealDamage(moves[choice - 1]);
 							
-							if (Battle.enemy.hp > 0) {
+							if (Battle.getEnemy().getHP() > 0) {
 								
 								Battle.enemyDealDamage();
 								
@@ -137,7 +137,7 @@ public class UI {
 							
 							Battle.enemyDealDamage();
 							
-							if (UI.pokemon.hp > 0) {
+							if (UI.pokemon.getHP() > 0) {
 								
 								Battle.dealDamage(moves[choice - 1]);
 								
@@ -164,12 +164,12 @@ public class UI {
 		
 		//Prints out the pokemon menu text
 		String pokemonMenu = "Which Pokemon would you like to switch in?"
-							+ "\n1. " + pokeNames[0] + "\t" + PokemonStorage.getPokemon(0).hp + "/" + PokemonStorage.getPokemon(0).maxHP + "\tLevel: " + PokemonStorage.getPokemon(0).level
-							+ "\n2. " + pokeNames[1] + "\t" + PokemonStorage.getPokemon(1).hp + "/" + PokemonStorage.getPokemon(1).maxHP + "\tLevel: " + PokemonStorage.getPokemon(1).level
-							+ "\n3. " + pokeNames[2] + "\t" + PokemonStorage.getPokemon(2).hp + "/" + PokemonStorage.getPokemon(2).maxHP + "\tLevel: " + PokemonStorage.getPokemon(2).level
-							+ "\n4. " + pokeNames[3] + "\t" + PokemonStorage.getPokemon(3).hp + "/" + PokemonStorage.getPokemon(3).maxHP + "\tLevel: " + PokemonStorage.getPokemon(3).level
-							+ "\n5. " + pokeNames[4] + "\t" + PokemonStorage.getPokemon(4).hp + "/" + PokemonStorage.getPokemon(4).maxHP + "\tLevel: " + PokemonStorage.getPokemon(4).level
-							+ "\n6. " + pokeNames[5] + "\t" + PokemonStorage.getPokemon(5).hp + "/" + PokemonStorage.getPokemon(5).maxHP + "\tLevel: " + PokemonStorage.getPokemon(5).level
+							+ "\n1. " + pokeNames[0] + "\t" + PokemonStorage.getPokemon(0).getHP() + "/" + PokemonStorage.getPokemon(0).getMaxHP() + "\tLevel: " + PokemonStorage.getPokemon(0).getLevel()
+							+ "\n2. " + pokeNames[1] + "\t" + PokemonStorage.getPokemon(1).getHP() + "/" + PokemonStorage.getPokemon(1).getMaxHP() + "\tLevel: " + PokemonStorage.getPokemon(1).getLevel()
+							+ "\n3. " + pokeNames[2] + "\t" + PokemonStorage.getPokemon(2).getHP() + "/" + PokemonStorage.getPokemon(2).getMaxHP() + "\tLevel: " + PokemonStorage.getPokemon(2).getLevel()
+							+ "\n4. " + pokeNames[3] + "\t" + PokemonStorage.getPokemon(3).getHP() + "/" + PokemonStorage.getPokemon(3).getMaxHP() + "\tLevel: " + PokemonStorage.getPokemon(3).getLevel()
+							+ "\n5. " + pokeNames[4] + "\t" + PokemonStorage.getPokemon(4).getHP() + "/" + PokemonStorage.getPokemon(4).getMaxHP() + "\tLevel: " + PokemonStorage.getPokemon(4).getLevel()
+							+ "\n6. " + pokeNames[5] + "\t" + PokemonStorage.getPokemon(5).getHP() + "/" + PokemonStorage.getPokemon(5).getMaxHP() + "\tLevel: " + PokemonStorage.getPokemon(5).getLevel()
 							+ "\n7. Cancel";
 		System.out.println();
 		System.out.println(pokemonMenu);
@@ -190,7 +190,7 @@ public class UI {
 					if (PokemonStorage.getPokemon(choice - 1).getHP() > 0) {
 						
 						pokemon = PokemonStorage.getPokemon(choice - 1);
-						System.out.println("You sent out " + pokemon.base.name);
+						System.out.println("You sent out " + pokemon.getBase().getName());
 						
 					//If Pokemon has fainted then they return back to the pokemon menu
 					} else {
@@ -251,12 +251,12 @@ public class UI {
 						bag[choice - 1].obtainItem();
 						
 						System.out.println("Which Pokemon would you like to heal?"
-											+ "\n1. " + pokeNames[0] + "\t" + PokemonStorage.getPokemon(0).hp + "/" + PokemonStorage.getPokemon(0).maxHP + "\tLevel: " + PokemonStorage.getPokemon(0).level
-											+ "\n2. " + pokeNames[1] + "\t" + PokemonStorage.getPokemon(1).hp + "/" + PokemonStorage.getPokemon(1).maxHP + "\tLevel: " + PokemonStorage.getPokemon(1).level
-											+ "\n3. " + pokeNames[2] + "\t" + PokemonStorage.getPokemon(2).hp + "/" + PokemonStorage.getPokemon(2).maxHP + "\tLevel: " + PokemonStorage.getPokemon(2).level
-											+ "\n4. " + pokeNames[3] + "\t" + PokemonStorage.getPokemon(3).hp + "/" + PokemonStorage.getPokemon(3).maxHP + "\tLevel: " + PokemonStorage.getPokemon(3).level
-											+ "\n5. " + pokeNames[4] + "\t" + PokemonStorage.getPokemon(4).hp + "/" + PokemonStorage.getPokemon(4).maxHP + "\tLevel: " + PokemonStorage.getPokemon(4).level
-											+ "\n6. " + pokeNames[5] + "\t" + PokemonStorage.getPokemon(5).hp + "/" + PokemonStorage.getPokemon(5).maxHP + "\tLevel: " + PokemonStorage.getPokemon(5).level
+											+ "\n1. " + pokeNames[0] + "\t" + PokemonStorage.getPokemon(0).getHP() + "/" + PokemonStorage.getPokemon(0).getMaxHP() + "\tLevel: " + PokemonStorage.getPokemon(0).getLevel()
+											+ "\n2. " + pokeNames[1] + "\t" + PokemonStorage.getPokemon(1).getHP() + "/" + PokemonStorage.getPokemon(1).getMaxHP() + "\tLevel: " + PokemonStorage.getPokemon(1).getLevel()
+											+ "\n3. " + pokeNames[2] + "\t" + PokemonStorage.getPokemon(2).getHP() + "/" + PokemonStorage.getPokemon(2).getMaxHP() + "\tLevel: " + PokemonStorage.getPokemon(2).getLevel()
+											+ "\n4. " + pokeNames[3] + "\t" + PokemonStorage.getPokemon(3).getHP() + "/" + PokemonStorage.getPokemon(3).getMaxHP() + "\tLevel: " + PokemonStorage.getPokemon(3).getLevel()
+											+ "\n5. " + pokeNames[4] + "\t" + PokemonStorage.getPokemon(4).getHP() + "/" + PokemonStorage.getPokemon(4).getMaxHP() + "\tLevel: " + PokemonStorage.getPokemon(4).getLevel()
+											+ "\n6. " + pokeNames[5] + "\t" + PokemonStorage.getPokemon(5).getHP() + "/" + PokemonStorage.getPokemon(5).getMaxHP() + "\tLevel: " + PokemonStorage.getPokemon(5).getLevel()
 											+ "\n7. Cancel");
 						
 						//Checks to see if the input is valid
@@ -271,7 +271,7 @@ public class UI {
 								//Checks to see if they have not fainted
 								if (PokemonStorage.getPokemon(choice2 - 1).getHP() > 0) {
 									
-									pokemon.heal(bag[choice - 1].heal);
+									pokemon.heal(bag[choice - 1].getHeal());
 									
 								//Checks to see if the Pokemon has fainted already
 								} else {
@@ -318,7 +318,7 @@ public class UI {
 		
 		//Prints out the total score and ends the program
 		System.out.println("You have forfeited the battle...");
-		System.out.println("You ended with " + Points.overallScore + " points");
+		System.out.println("You ended with " + Points.getOverallScore() + " points");
 		System.exit(0);
 		
 	}
