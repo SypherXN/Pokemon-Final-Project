@@ -10,8 +10,7 @@ public class Pokemon {
 	private final BasePokemon base;
 	private Move[] moves = {Pokedex.NoMove, Pokedex.NoMove, Pokedex.NoMove, Pokedex.NoMove};
 	
-	/** 
-	 * Creates a reference for Pokemon based off the BasePokemon
+	/** Creates a reference for Pokemon based off the BasePokemon
 	 * 
 	 * @param base - basepokemon object
 	 * @param one - move in slot 1
@@ -33,7 +32,7 @@ public class Pokemon {
 		
 	}
 	
-	//Changes all moves in the array
+	/** Randomizes the Pokemon's moves */
 	public void changeAllMoves() {
 		
 		for(int i = 0; i < moves.length; i++) {
@@ -44,10 +43,17 @@ public class Pokemon {
 		
 	}
 	
-	//Changes the element in the array at index to Move move
+	/** Changes the Move at index to move
+	 * 
+	 * @param move - The Move to change to
+	 * @param index - The index which to change at
+	 */
 	public void changeMove(Move move, int index) { moves[index] = move; }
 	
-	//Attempts to level up the Pokemon
+	/** Attempts to level up Pokemon
+	 * 
+	 * @return - true if it can level up, false if not
+	 */
 	public boolean attemptLevelUp() {
 		
 		int target = 0;
@@ -70,7 +76,7 @@ public class Pokemon {
 		
 	}
 	
-	//Checks to see if the Pokemon can evolve
+	/** Checks to see if Pokemon can evolve */
 	public boolean canEvolve() {
 		
 		if (level >= base.getEvolveLevel()) {
@@ -83,7 +89,10 @@ public class Pokemon {
 		
 	}
 	
-	//Increases hp and checks if it exceeds the max hp
+	/** Increases hp and checks if it exceeds maxHP
+	 * 
+	 * @param healAmount - Amount to heal
+	 */
 	public void heal(int healAmount) {
 		
 		int printer = maxHP - hp;
@@ -103,10 +112,10 @@ public class Pokemon {
 		
 	}
 	
-	//Sets current HP to max HP
+	/** Sets hp to equal maxHP */
 	public void healFull() { hp = maxHP; }
 	
-	//Accessor methods to get instance variables
+	//-----Accessor methods to get instance variables-----//
 	public BasePokemon getBase() { return base; }
 	public int getMaxHP() 	{ return maxHP; }
 	public int getHP() 		{ return hp; }
@@ -115,18 +124,19 @@ public class Pokemon {
 	public int getSpeed() 	{ return speed; }
 	public int getLevel() 	{ return level; }
 	public int getExp() 		{ return exp; }
-	
-	//Modifier methods to change instance variables
-	public void changeHP(int modifier) { hp += modifier; }
-	public void setHPZero() { hp = 0; }
-	
-	//Returns the specific element in the array
 	public Move getMove(int index) { return moves[index]; }
-	
-	//Returns the array of moves
 	public Move[] getMoves() { return moves; }
 	
-	//Uses to print the information of the Pokemon
+	//-----Modifier methods to change instance variables-----//
+	/** Changes hp by modifier
+	 * 
+	 * @param modifier - Amount to change hp by
+	 */
+	public void changeHP(int modifier) { hp += modifier; }
+	/** Sets hp to zero */
+	public void setHPZero() { hp = 0; }
+	
+	/** Used to print information about Pokemon */
 	public String toString() {
 		
 		String output = "Name: " + base.getName() + "\nType: " + base.getFirstType().getName() + " " + base.getSecondType().getName() + 

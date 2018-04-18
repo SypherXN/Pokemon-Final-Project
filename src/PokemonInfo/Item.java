@@ -10,8 +10,7 @@ public class Item {
 	private final int heal;
 	private int numberOwned = 0;
 	
-	/** 
-	 * Creates a reference for the item information
+	/** Creates a reference for the item information
 	 * 
 	 * @param name - name of the item
 	 * @param heal - healing amount
@@ -23,10 +22,10 @@ public class Item {
 		
 	}
 	
-	//Increases the number of items owned by 1
+	/** Increases the number of items owned by 1 */
 	public void obtainItem() { numberOwned++; }
 	
-	//Attempts the use of the item
+	/** Attempts the use of the item */
 	public boolean attemptUseItem() {
 		
 		if (numberOwned > 0) {

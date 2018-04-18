@@ -15,8 +15,7 @@ public class BasePokemon {
 	private final int evolveLevel;
 	
 	
-	/**
-	 * Creates a reference to Pokemon that contains their stats and info
+	/** Creates a reference to Pokemon that contains their stats and info
 	 * 
 	 * @param name - name of the Pokemon
 	 * @param firstType - first type of the Pokemon
@@ -55,7 +54,7 @@ public class BasePokemon {
 		
 	}
 	
-	//Zero-Arg Constructor for NoBasePokemon
+	/** Zero-Arg Constructor for NoBasePokemon */
 	public BasePokemon() {
 		
 		//Pokemon Info
@@ -94,7 +93,7 @@ public class BasePokemon {
 	public int getSpeedMod() { return speedMod; }
 	public int getEvolveLevel() { return evolveLevel; }
 	
-	//Test print to make sure BasePokemon objects work
+	/** Test print to make sure BasePokemon objects work */
 	public String toString() {
 		
 		String output = new String();

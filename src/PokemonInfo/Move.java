@@ -9,8 +9,7 @@ public class Move {
 	private BaseMove base;
 	private int pp;
 	
-	/** 
-	 * Creates an reference to the Move
+	/** Creates an reference to the Move
 	 * 
 	 * @param base - base stats of the move
 	 */
@@ -21,7 +20,7 @@ public class Move {
 		
 	}
 	
-	//Attempts to use the move
+	/** Attempts to use the move */
 	public boolean attemptUseMove() {
 		
 		if (pp > 0) {

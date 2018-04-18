@@ -17,7 +17,7 @@ public class Points {
 	public static int getCurrentScore() { return currentScore; }
 	public static int getOverallScore() { return overallScore; }
 	
-	//Calculates the number of points you have based on the difference of levels between you and your enemy.
+	/** Calculates the number of points you have based on the difference of levels between you and your enemy */
 	public static int pointCalculator() {
 		
 		yourPoints = 0;
@@ -100,7 +100,7 @@ public class Points {
 		
 	}
 	
-	//Prints out results based on winning or losing, and the number of points received.
+	/** Prints out results based on winning or losing, and the number of points received */
 	public static void pointSwitch() {
 		
 		switch(pointCalculator()) {

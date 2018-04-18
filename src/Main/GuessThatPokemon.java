@@ -13,7 +13,10 @@ public class GuessThatPokemon {
 	private static int tries;
 	private static boolean correct;
 	
-	//Returns an integer based on the state of the game
+	/** Returns an integer based on the state of the game
+	 * 
+	 * @return - 1 if successful, 0 if unsuccessful
+	 */
 	public static int pokemonGuess() {
 		
 		pokemonName = Pokedex.basePokemons[(int)(Math.random() * Pokedex.basePokemons.length - 1) + 1].getName();
@@ -98,7 +101,10 @@ public class GuessThatPokemon {
 		return 0;
 	}	
 	
-	//Runs the pokemonGuess method and determines the state of the game
+	/** Runs the pokemonGuess method and determines the state of the game
+	 * 
+	 * @return - true if 1, false if 0
+	 */
 	public static boolean switchProcessor() {
 		
 		switch(pokemonGuess()) {

@@ -10,8 +10,7 @@ public class BaseMove {
 	private final Type type;
 	private final int attack, maxPP;
 	
-	/** 
-	 * Creates a reference to Moves to store their information
+	/** Creates a reference to Moves to store their information
 	 * 
 	 * @param name - name of the move
 	 * @param type - type of the move
@@ -27,7 +26,7 @@ public class BaseMove {
 		
 	}
 	
-	//Zero-Arg Constructor for NoBaseMove
+	/** Zero-Arg Constructor for NoBaseMove */
 	public BaseMove() {
 		
 		this.name = "";

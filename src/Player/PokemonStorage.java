@@ -12,7 +12,11 @@ public class PokemonStorage {
 	
 	private static Pokemon[] storage = {Pokedex.NoPokemon, Pokedex.NoPokemon, Pokedex.NoPokemon, Pokedex.NoPokemon, Pokedex.NoPokemon, Pokedex.NoPokemon};
 	
-	//Changes the Pokemon in the array at the index and inserts the new Pokemon
+	/** Changes the Pokemon in the array at the index and inserts the new Pokemon
+	 * 
+	 * @param pokemon - The Pokemon to change to
+	 * @param index - The index which to put the Pokemon
+	 */
 	public static void changePokemon(Pokemon pokemon, int index) {
 		
 		storage[index] = pokemon;
@@ -22,10 +26,14 @@ public class PokemonStorage {
 	//Accessor methods to get instance variables
 	public static Pokemon[] getStorage() { return storage; }
 	
-	//Returns the Pokemon in the array at the index
+	/** Returns the Pokemon in the array at the index
+	 * 
+	 * @param index - The index which to get the Pokemon
+	 * @return - The Pokemon at index
+	 */
 	public static Pokemon getPokemon(int index) { return storage[index]; }
 	
-	//Checks if all Pokemon have fainted
+	/** Checks if all Pokemon have fainted */
 	public static boolean checkLoss() {
 		
 		boolean loss = false;
@@ -48,7 +56,7 @@ public class PokemonStorage {
 		
 	}	
 	
-	//Fills the array storage with new random Pokemon
+	/** Fills the array storage with new random Pokemon */
 	public static void changeAll() {
 		
 		for (int i = 0; i < storage.length; i++) {
@@ -60,7 +68,7 @@ public class PokemonStorage {
 		
 	}
 	
-	//Heals all Pokemon to full
+	/** Heals all Pokemon to full */
 	public static void healAll() {
 		
 		for (int i = 0; i < storage.length; i++) {
